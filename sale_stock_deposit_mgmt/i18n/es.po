@@ -1,0 +1,65 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_stock_deposit_mgmt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-11 12:06+0000\n"
+"PO-Revision-Date: 2020-11-11 13:11+0100\n"
+"Last-Translator: Sergio Teruel <sergio.teruel@tecnativa.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: sale_stock_deposit_mgmt
+#: model_terms:ir.ui.view,arch_db:sale_stock_deposit_mgmt.view_partner_form
+msgid "<span>Deposits</span>"
+msgstr "<span>Depósitos</span>"
+
+#. module: sale_stock_deposit_mgmt
+#: model:ir.model,name:sale_stock_deposit_mgmt.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: sale_stock_deposit_mgmt
+#: model:ir.actions.server,name:sale_stock_deposit_mgmt.action_delivery_deposit_quant
+msgid "Delivery deposit product"
+msgstr "Entregar productos en depósito"
+
+#. module: sale_stock_deposit_mgmt
+#: model:ir.actions.act_window,name:sale_stock_deposit_mgmt.action_deposit_picking
+#: model:ir.ui.menu,name:sale_stock_deposit_mgmt.menu_deposit_picking
+msgid "Deposit deliveries"
+msgstr "Depósitos"
+
+#. module: sale_stock_deposit_mgmt
+#: model:ir.ui.menu,name:sale_stock_deposit_mgmt.menu_deposit_root
+msgid "Deposits"
+msgstr "Depósitos"
+
+#. module: sale_stock_deposit_mgmt
+#: code:addons/sale_stock_deposit_mgmt/models/stock_quant.py:0
+#, python-format
+msgid "Incorrect owners"
+msgstr ""
+
+#. module: sale_stock_deposit_mgmt
+#: model:ir.model.fields,field_description:sale_stock_deposit_mgmt.field_stock_picking__product_owner_ids
+msgid "Product Owner"
+msgstr "Un producto para un propietario específico"
+
+#. module: sale_stock_deposit_mgmt
+#: model:ir.model,name:sale_stock_deposit_mgmt.model_stock_quant
+msgid "Quants"
+msgstr "Quants"
+
+#. module: sale_stock_deposit_mgmt
+#: model:ir.model,name:sale_stock_deposit_mgmt.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"

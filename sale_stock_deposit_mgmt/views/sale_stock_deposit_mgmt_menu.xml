@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <menuitem
+        id="menu_deposit_root"
+        name="Deposits"
+        parent="sale.sale_menu_root"
+        sequence="100"
+        groups="sales_team.group_sale_salesman"
+    />
+
+    <record id="action_deposit_picking" model="ir.actions.act_window">
+        <field name="name">Deposit deliveries</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[
+            ('owner_restriction', '=', 'partner_picking'),
+            ('partner_id.user_id', '=', uid),
+            ]</field>
+        <field
+            name="context"
+        >{'form_view_ref': 'sale_stock_deposit_mgmt.view_picking_deposit_form', 'deposit_picking_mgmt': True}</field>
+    </record>
+
+    <menuitem
+        id="menu_deposit_picking"
+        parent="menu_deposit_root"
+        action="action_deposit_picking"
+        name="Deposit deliveries"
+        sequence="10"
+    />
+
+</odoo>

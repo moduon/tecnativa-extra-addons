@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_stat_button"
+                    type="object"
+                    context="{'default_owner_id': active_id, 'force_restricted_owner_id': active_id}"
+                    name="action_open_owner_quants"
+                    icon="fa-cubes"
+                >
+                    <span>Deposits</span>
+                </button>
+            </div>
+        </field>
+    </record>
+</odoo>

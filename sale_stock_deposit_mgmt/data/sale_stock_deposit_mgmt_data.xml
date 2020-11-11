@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_delivery_deposit_quant" model="ir.actions.server">
+        <field name="name">Delivery deposit product</field>
+        <field name="model_id" ref="stock.model_stock_quant" />
+        <field name="binding_model_id" ref="stock.model_stock_quant" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.with_context(deposit_picking_mgmt=True).action_create_deposit_picking()
+        </field>
+    </record>
+
+</odoo>
