@@ -16,6 +16,7 @@
         "stock_owner_restriction",
     ],
     "data": [
+        "security/ir.model.access.csv",
         "data/sale_stock_deposit_mgmt_data.xml",
         "views/res_partner_views.xml",
         "views/sale_stock_deposit_mgmt_menu.xml",
