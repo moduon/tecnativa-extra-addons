@@ -12,4 +12,15 @@
         </field>
     </record>
 
+    <record id="action_delivery_deposit_quant_release_owner" model="ir.actions.server">
+        <field name="name">Release owner</field>
+        <field name="model_id" ref="stock.model_stock_quant" />
+        <field name="binding_model_id" ref="stock.model_stock_quant" />
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            records.sudo().filtered("owner_id").write({"owner_id": False})
+        </field>
+    </record>
+
 </odoo>

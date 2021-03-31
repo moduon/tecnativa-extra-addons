@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-11 12:06+0000\n"
-"PO-Revision-Date: 2020-11-11 13:11+0100\n"
+"POT-Creation-Date: 2021-03-31 16:59+0000\n"
+"PO-Revision-Date: 2021-03-31 19:01+0200\n"
 "Last-Translator: Sergio Teruel <sergio.teruel@tecnativa.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -36,7 +36,7 @@ msgstr "Entregar productos en depósito"
 #: model:ir.actions.act_window,name:sale_stock_deposit_mgmt.action_deposit_picking
 #: model:ir.ui.menu,name:sale_stock_deposit_mgmt.menu_deposit_picking
 msgid "Deposit deliveries"
-msgstr "Depósitos"
+msgstr "Entrega de depósitos"
 
 #. module: sale_stock_deposit_mgmt
 #: model:ir.ui.menu,name:sale_stock_deposit_mgmt.menu_deposit_root
@@ -47,7 +47,7 @@ msgstr "Depósitos"
 #: code:addons/sale_stock_deposit_mgmt/models/stock_quant.py:0
 #, python-format
 msgid "Incorrect owners"
-msgstr ""
+msgstr "Propietario incorrecto"
 
 #. module: sale_stock_deposit_mgmt
 #: model:ir.model.fields,field_description:sale_stock_deposit_mgmt.field_stock_picking__product_owner_ids
@@ -60,6 +60,11 @@ msgid "Quants"
 msgstr "Quants"
 
 #. module: sale_stock_deposit_mgmt
+#: model:ir.actions.server,name:sale_stock_deposit_mgmt.action_delivery_deposit_quant_release_owner
+msgid "Release owner"
+msgstr "Liberar propietario"
+
+#. module: sale_stock_deposit_mgmt
 #: model:ir.model,name:sale_stock_deposit_mgmt.model_stock_picking
 msgid "Transfer"
-msgstr "Transferir"
+msgstr "Albarán"
