@@ -60,11 +60,6 @@ msgid "Quants"
 msgstr "Quants"
 
 #. module: sale_stock_deposit_mgmt
-#: model:ir.actions.server,name:sale_stock_deposit_mgmt.action_delivery_deposit_quant_release_owner
-msgid "Release owner"
-msgstr "Liberar propietario"
-
-#. module: sale_stock_deposit_mgmt
 #: model:ir.model,name:sale_stock_deposit_mgmt.model_stock_picking
 msgid "Transfer"
 msgstr "Albarán"

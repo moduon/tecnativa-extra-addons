@@ -20,7 +20,6 @@
         "data/sale_stock_deposit_mgmt_data.xml",
         "views/res_partner_views.xml",
         "views/sale_stock_deposit_mgmt_menu.xml",
-        "views/stock_move_views.xml",
         "views/stock_picking_views.xml",
     ],
 }

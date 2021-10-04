@@ -12,37 +12,4 @@
         </field>
     </record>
 
-    <record id="action_delivery_deposit_quant_release_owner" model="ir.actions.server">
-        <field name="name">Release owner</field>
-        <field name="model_id" ref="stock.model_stock_quant" />
-        <field name="binding_model_id" ref="stock.model_stock_quant" />
-        <field name="binding_view_types">list</field>
-        <field name="state">code</field>
-        <field name="code">
-for quant in records.sudo().filtered("owner_id"):
-    vals = {"inventory_quantity": quant.quantity}
-    existing_quant = model.search([
-        ("product_id", "=", quant.product_id.id),
-        ("location_id", "=", quant.location_id.id),
-        ("lot_id", "=", quant.lot_id.id),
-        ("package_id", "=", quant.package_id.id),
-        ("owner_id", "=", False),
-    ])
-    quant.with_context(inventory_mode=True).write({"inventory_quantity": 0.0})
-    if existing_quant:
-        vals["inventory_quantity"] += existing_quant.quantity
-        existing_quant.with_context(inventory_mode=True).write(vals)
-    else:
-        vals.update({
-            "product_id": quant.product_id.id,
-            "location_id": quant.location_id.id,
-            "lot_id": quant.lot_id.id,
-            "package_id": quant.package_id.id,
-            "owner_id": False,
-        })
-        model.with_context(inventory_mode=True).create(vals)
-model._unlink_zero_quants()
-        </field>
-    </record>
-
 </odoo>
