@@ -1,18 +1,19 @@
+
 [MASTER]
 load-plugins=pylint_odoo
 score=n
 
 [ODOOLINT]
 readme_template_url="https://github.com/OCA/maintainer-tools/blob/master/template/module/README.rst"
-manifest_required_authors=Odoo Community Association (OCA)
+manifest_required_authors=Tecnativa
 manifest_required_keys=license
 manifest_deprecated_keys=description,active
 license_allowed=AGPL-3,GPL-2,GPL-2 or any later version,GPL-3,GPL-3 or any later version,LGPL-3
-valid_odoo_versions={{ odoo_version }}
+valid_odoo_versions=16.0
 
 [MESSAGES CONTROL]
 disable=all
-{% block note %}{% endblock %}
+
 enable=anomalous-backslash-in-string,
     api-one-deprecated,
     api-one-multi-together,
@@ -56,8 +57,7 @@ enable=anomalous-backslash-in-string,
     unreachable,
     use-vim-comment,
     wrong-tabs-instead-of-spaces,
-    xml-syntax-error
-{%- if odoo_version >= 15 %},
+    xml-syntax-error,
     attribute-string-redundant,
     character-not-valid-in-resource-link,
     consider-merging-classes-inherited,
@@ -89,9 +89,8 @@ enable=anomalous-backslash-in-string,
     website-manifest-key-not-valid-uri,
     xml-attribute-translatable,
     xml-deprecated-qweb-directive,
-    xml-deprecated-tree-attribute
-{%- endif %}
-{%- block optional_checks %}{% endblock %}
+    xml-deprecated-tree-attribute,
+    external-request-timeout
 
 [REPORTS]
 msg-template={path}:{line}: [{msg_id}({symbol}), {obj}] {msg}
