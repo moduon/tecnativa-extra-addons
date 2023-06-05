@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_report_stock_out" model="ir.actions.report">
+        <field name="name">Stock out</field>
+        <field name="model">stock.move</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock_report_stock_out.report_stock_out</field>
+        <field name="report_file">stock_report_stock_out.report_stock_out</field>
+        <field name="print_report_name">'Stock out'</field>
+    </record>
+
+</odoo>

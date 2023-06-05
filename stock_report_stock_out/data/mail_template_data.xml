@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+-->
+<odoo noupdate="0">
+    <!--Email template -->
+    <record id="email_template_stock_out" model="mail.template">
+        <field name="name">Stock out - Send by Email</field>
+        <field
+            name="email_from"
+        >${ (object.write_uid.email and '&quot;%s&quot; &lt;%s&gt;' % (object.write_uid.name, object.write_uid.email) or '') }</field>
+        <field name="subject">Products stock out</field>
+        <field name="partner_to" />
+        <field
+            name="model_id"
+            ref="stock_report_stock_out.model_stock_report_stock_out_wiz"
+        />
+        <field name="auto_delete" eval="True" />
+        <field
+            name="report_template"
+            ref="stock_report_stock_out.action_report_stock_out"
+        />
+        <field name="report_name">Products stock out</field>
+        <field
+            name="body_html"
+        ><![CDATA[
+<p>Products stock out summary</p>
+<p>
+The attached file is a PDF document containg the
+products stock out summary.
+</p>
+<p>You can reply to this email if you have any questions.</p>
+<p>Thank you,</p>
+
+]]></field>
+    </record>
+
+</odoo>
