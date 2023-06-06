@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="sale_order_minimal_price_tier" model="tier.definition">
+        <field name="name">Pedido de venta con precio mínimo excedido</field>
+        <field name="model_id" ref="sale.model_sale_order" />
+        <field name="review_type">group</field>
+        <field name="reviewer_group_id" ref="base.group_system" />
+        <field name="sequence">10</field>
+        <field name="notify_on_create">True</field>
+        <field name="has_comment">True</field>
+        <field name="definition_type">domain_formula</field>
+        <field name="definition_domain">[]</field>
+        <field name="active">False</field>
+        <field name="python_code">
+rec.partner_id.sudo().security_price_control and rec.order_line.filtered(lambda l: l.product_id.sudo().security_price_control and l.product_id.qty_available > 0 and round(l.price_reduce, 2) &lt; round(l.security_price, 2))
+        </field>
+    </record>
+
+    <record id="ir_cron_auto_sale_tier_rejection" model="ir.cron">
+        <field
+            name="name"
+        >Sale tier validation: Auto reject all request with security price</field>
+        <field name="model_id" ref="model_sale_order" />
+        <field name="state">code</field>
+        <field name="code">
+definitions = env.ref('sale_tier_validation_security_price.sale_order_minimal_price_tier')
+tier_reviews = env['tier.review'].search([('model', '=', 'sale.order'), ('status', '=', 'pending'), ('definition_id', 'in', definitions.ids)])
+sales = env["sale.order"].browse(tier_reviews.mapped("res_id"))
+for sale in sales:
+  sale.with_user(sale.review_ids[:1].reviewer_ids[:1])._rejected_tier(sale.review_ids)
+        </field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,62 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_tier_validation_security_price
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-09 19:02+0000\n"
+"PO-Revision-Date: 2021-06-09 21:03+0200\n"
+"Last-Translator: Sergio Teruel <sergio.teruel@tecnativa.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: sale_tier_validation_security_price
+#: model_terms:ir.ui.view,arch_db:sale_tier_validation_security_price.message_body
+msgid "-&gt;"
+msgstr ""
+
+#. module: sale_tier_validation_security_price
+#: model_terms:ir.ui.view,arch_db:sale_tier_validation_security_price.message_head
+msgid "<strong>The products has been rejected</strong>"
+msgstr "<strong>Los productos han sido rechazados.</strong>"
+
+#. module: sale_tier_validation_security_price
+#: model:tier.definition,name:sale_tier_validation_security_price.sale_order_minimal_price_tier
+msgid "Pedido de venta con precio mínimo excedido"
+msgstr ""
+
+#. module: sale_tier_validation_security_price
+#: model_terms:ir.ui.view,arch_db:sale_tier_validation_security_price.message_body
+msgid "Price:"
+msgstr "Precio:"
+
+#. module: sale_tier_validation_security_price
+#: model_terms:ir.ui.view,arch_db:sale_tier_validation_security_price.sale_order_form_tier
+msgid "Reject line. Set to security price"
+msgstr "Línea rechazada. Se ha cambiado el importe al precio de seguridad"
+
+#. module: sale_tier_validation_security_price
+#: model:ir.actions.server,name:sale_tier_validation_security_price.ir_cron_auto_sale_tier_rejection_ir_actions_server
+#: model:ir.cron,cron_name:sale_tier_validation_security_price.ir_cron_auto_sale_tier_rejection
+#: model:ir.cron,name:sale_tier_validation_security_price.ir_cron_auto_sale_tier_rejection
+msgid "Sale tier validation: Auto reject all request with security price"
+msgstr ""
+"Validación de nivel de venta:  Auto rechazar todas las solicitudes con el "
+"precio de seguridad"
+
+#. module: sale_tier_validation_security_price
+#: model:ir.model,name:sale_tier_validation_security_price.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: sale_tier_validation_security_price
+#: model:ir.model,name:sale_tier_validation_security_price.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Líneas de pedidos de venta"
