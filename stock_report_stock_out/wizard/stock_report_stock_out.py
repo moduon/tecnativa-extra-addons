@@ -97,16 +97,14 @@ class StockReportStockOut(models.TransientModel):
         composer = (
             self.env["mail.compose.message"]
             .with_context(
-                {
-                    "lang": self.env.user.lang,
-                    "default_composition_mode": "mass_mail",
-                    "default_notify": True,
-                    "default_model": self._name,
-                    "default_template_id": template.id,
-                    "active_ids": self.ids,
-                    "default_partner_ids": recipients.ids,
-                    "doc_ids": moves.ids,
-                }
+                lang=self.env.user.lang,
+                default_composition_mode="mass_mail",
+                default_notify=True,
+                default_model=self._name,
+                default_template_id=template.id,
+                active_ids=self.ids,
+                default_partner_ids=recipients.ids,
+                doc_ids=moves.ids,
             )
             .create({})
         )
