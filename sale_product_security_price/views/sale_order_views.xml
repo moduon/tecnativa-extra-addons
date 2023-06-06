@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Tecnativa - Sergio Teruel
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="model">sale.order</field>
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='order_line']//tree/field[@name='sequence']"
+                position="after"
+            >
+                <field name="security_price_warning" invisible="1" />
+            </xpath>
+            <xpath expr="//field[@name='order_line']//tree" position="attributes">
+                <attribute
+                    name="decoration-danger"
+                >state in ['draft', 'sent'] and security_price_warning</attribute>
+            </xpath>
+            <!-- Apply decorator to kanban views TT31786 -->
+            <xpath
+                expr="//field[@name='order_line']//kanban/field[@name='company_id']"
+                position="after"
+            >
+                <field name="security_price_warning" invisible="1" />
+                <field
+                    name="sale_product_security_price_display_raise_button"
+                    invisible="1"
+                />
+            </xpath>
+            <xpath
+                expr="//field[@name='order_line']//kanban/templates//t[@t-out='record.product_uom_qty.value']/.."
+                position="after"
+            >
+                <t t-if="record.security_price_warning.raw_value == true">
+                    <t
+                        t-if="record.sale_product_security_price_display_raise_button.raw_value == true"
+                    >
+                        <button
+                            name="rise_up_to_security_price"
+                            type="object"
+                            title="Raise unit price to product security price"
+                            aria-label="Raise unit price to product security price"
+                            class="float-right text-right fa fa-long-arrow-up btn btn-success"
+                        >
+                            <field name="security_price" widget="monetary" />
+                        </button>
+                    </t>
+                    <t t-else="">
+                        <span
+                            class="float-right text-right fa fa-exclamation-triangle fa-2x text-danger o_calendar_warning pl-3"
+                        />
+                    </t>
+                </t>
+            </xpath>
+            <!-- End TT31786 -->
+            <xpath expr="//field[@name='order_line']" position="before">
+                <field name="security_price_warning" invisible="1" />
+                <field
+                    name="sale_product_security_price_display_raise_button"
+                    invisible="1"
+                />
+            </xpath>
+            <xpath
+                expr="//field[@name='order_line']//tree/field[@name='price_unit']"
+                position="after"
+            >
+                <field
+                    name="security_price"
+                    decoration-success="1"
+                    attrs="{'invisible': ['|', ('state', 'not in', ('draft', 'sent')), ('security_price_warning', '!=', True)]}"
+                    optional="show"
+                    widget="rise_up"
+                    options="{'rise_up_field': 'price_unit'}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

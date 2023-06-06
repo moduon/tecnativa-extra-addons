@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+
+    <t
+        t-name="sale_product_security_price.FloatRiseUp"
+        t-inherit="web.FloatField"
+        t-inherit-mode="primary"
+        owl="1"
+    >
+        <xpath expr="//input" position="after">
+            <button
+                style="margin-left: 2px"
+                class="fa fa-long-arrow-up btn-success rounded"
+                t-on-click="_raiseUpValue"
+            />
+        </xpath>
+    </t>
+
+</templates>

@@ -1,0 +1,309 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_product_security_price
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-27 11:39+0000\n"
+"PO-Revision-Date: 2022-07-27 13:45+0200\n"
+"Last-Translator: Sergio Teruel <sergio.teruel@tecnativa.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_product__security_price_margin
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_template__security_price_margin
+msgid "(%) Security price margin"
+msgstr "(%) Margen precio de seguridad"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.res_config_settings_security_price_view_form
+msgid "<span class=\"o_form_label\">Product security price</span>"
+msgstr ""
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.product_template_form_view
+msgid ""
+"<span style=\"padding-left: 1em;\" groups=\"product_cost_security."
+"group_product_cost\"><i class=\"fa fa-percent\" role=\"img\" title=\"Margin"
+"\"/> Margin </span>"
+msgstr ""
+"<span style=\"padding-left: 1em;\" groups=\"product_cost_security."
+"group_product_cost\"><i class=\"fa fa-percent\" role=\"img\" title=\"Margin"
+"\"/> Margen </span>"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_company__allow_custom_defaults_for_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_config_settings__allow_custom_defaults_for_security_price
+msgid "Allow Custom Defaults For Security Price"
+msgstr "Permitir predefinir valores para precio de seguridad"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.product_security_price_template_viw_tree
+msgid "Amount Security Price template"
+msgstr "Plantilla de precios de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__security_price
+msgid "Amount extra"
+msgstr "Importe extra"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__amount_from
+msgid "Amount from"
+msgstr "Importe desde"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__amount_to
+msgid "Amount to"
+msgstr "Importe hasta"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.res_config_settings_security_price_view_form
+msgid ""
+"By checking this option, you will be able to define some\n"
+"                                default values for the security price "
+"configuration."
+msgstr ""
+"Marcando esta opción, vas a poder definir algunos\n"
+"\t\t\tvalores por defecto para configurar el precio de seguridad."
+
+#. module: sale_product_security_price
+#: model:ir.model,name:sale_product_security_price.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: sale_product_security_price
+#: model:ir.model,name:sale_product_security_price.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.res_config_settings_security_price_view_form
+msgid "Default percentege for security price"
+msgstr "Porcentaje por defecto para el precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_company__security_price_control_default
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_config_settings__security_price_control_default
+msgid "Default value for security price control"
+msgstr "Valor por defecto para el control del precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_company__sale_product_security_price_display_raise_button
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_config_settings__sale_product_security_price_display_raise_button
+#: model:ir.model.fields,field_description:sale_product_security_price.field_sale_order__sale_product_security_price_display_raise_button
+#: model:ir.model.fields,field_description:sale_product_security_price.field_sale_order_line__sale_product_security_price_display_raise_button
+msgid "Display button on sale order lines to raise price to security price"
+msgstr ""
+"Mostrar botón en líneas de pedidos para establecer el precio de la línea al "
+"precio de seguridad del producto"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.res_config_settings_security_price_view_form
+msgid "Display the product security price raise button on sale order lines."
+msgstr ""
+"Mostrar botón en líneas de pedidos para establecer el precio de la línea al "
+"precio de seguridad del producto."
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.res_config_settings_security_price_view_form
+msgid ""
+"If the method is \"fixed\" the default value will be 0,\n"
+"                                because has no sense to set an increase when "
+"the cost\n"
+"                                has to change."
+msgstr ""
+"Si el método es \"Precio de seguridad fijado\" el valor por defecto va a ser "
+"0,\n"
+"\t\t\tporque no tiene sentido poner un incremento del coste\n"
+"\t\t\tcuando este va a cambiar."
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_product__security_price_method
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__security_price_method
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_template__security_price_method
+msgid "Method for Security Price Computation"
+msgstr "Método para el precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model,name:sale_product_security_price.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr "Agrupación de la compra abastecida"
+
+#. module: sale_product_security_price
+#: model:ir.model,name:sale_product_security_price.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: sale_product_security_price
+#: model:ir.model,name:sale_product_security_price.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: sale_product_security_price
+#: model:ir.model,name:sale_product_security_price.model_product_security_price_template
+msgid "Product security price from company"
+msgstr "Precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.actions.act_window,name:sale_product_security_price.action_product_security_price_template
+msgid "Product security price template"
+msgstr "Plantilla de precios de seguridad"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.view_order_form
+msgid "Raise unit price to product security price"
+msgstr "Subir el precio unitario hasta el precio de seguridad del producto"
+
+#. module: sale_product_security_price
+#: model:ir.model,name:sale_product_security_price.model_sale_order
+msgid "Sales Order"
+msgstr "Órdenes de venta"
+
+#. module: sale_product_security_price
+#: model:ir.model,name:sale_product_security_price.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea del pedido de venta"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_sale_order_line__security_price
+msgid "Security Price"
+msgstr "Precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_company__security_price_method_default
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_config_settings__security_price_method_default
+msgid "Security Price Method Default"
+msgstr "Método por defecto del precio de seguridad"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.res_config_settings_security_price_view_form
+msgid "Security Price Settings"
+msgstr "Opciones del precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_sale_order__security_price_warning
+#: model:ir.model.fields,field_description:sale_product_security_price.field_sale_order_line__security_price_warning
+msgid "Security Price Warning"
+msgstr "Aviso precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields.selection,name:sale_product_security_price.selection__product_security_price_template__security_price_method__fixed
+#: model:ir.model.fields.selection,name:sale_product_security_price.selection__product_template__security_price_method__fixed
+#: model:ir.model.fields.selection,name:sale_product_security_price.selection__res_company__security_price_method_default__fixed
+msgid "Security Price fixed"
+msgstr "Precio de seguridad fijado"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields.selection,name:sale_product_security_price.selection__product_security_price_template__security_price_method__percent
+#: model:ir.model.fields.selection,name:sale_product_security_price.selection__product_template__security_price_method__percent
+#: model:ir.model.fields.selection,name:sale_product_security_price.selection__res_company__security_price_method_default__percent
+msgid "Security Price from percent"
+msgstr "Precio de seguridad por porcentaje"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_product__security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_template__security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.res_config_settings_security_price_view_form
+msgid "Security price"
+msgstr "Precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_product__security_price_control
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_template__security_price_control
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_partner__security_price_control
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_users__security_price_control
+msgid "Security price control"
+msgstr "Control de precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_product__security_price_percent
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_security_price_template__security_price_percent
+#: model:ir.model.fields,field_description:sale_product_security_price.field_product_template__security_price_percent
+msgid "Security price percent"
+msgstr "Porcentaje de precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_company__security_price_rounding_factor
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_config_settings__security_price_rounding_factor
+msgid "Security price rounding factor"
+msgstr "Factor de redondeo para precio de seguridad"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.res_config_settings_security_price_view_form
+msgid ""
+"Set a security price por products adding an extra amount to standard price"
+msgstr ""
+"Establecer un precio de seguridad añadiendo un importe extra al precio de "
+"coste"
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.res_config_settings_security_price_view_form
+msgid "Set rounding factor used on security price computing method."
+msgstr "Definir factor de redondeo para el computo del precio de seguridad."
+
+#. module: sale_product_security_price
+#: model_terms:ir.ui.view,arch_db:sale_product_security_price.product_template_form_view
+msgid "Set security price"
+msgstr "Establecer precio de seguridad"
+
+#. module: sale_product_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_company__value_for_default_security_price
+#: model:ir.model.fields,field_description:sale_product_security_price.field_res_config_settings__value_for_default_security_price
+msgid "Value For Default Security Price"
+msgstr "Valor para precio de seguridad por defecto"
+
+#. module: sale_product_security_price
+#: code:addons/sale_product_security_price/models/sale.py:0
+#, python-format
+msgid "You can not update price below the safety price"
+msgstr ""
+"No puede modificar el precio de venta por debajo del precio de seguridad"
