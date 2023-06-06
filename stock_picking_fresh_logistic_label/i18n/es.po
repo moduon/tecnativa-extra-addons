@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_picking_fresh_logistic_label
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-12 15:06+0000\n"
+"PO-Revision-Date: 2022-07-12 17:08+0200\n"
+"Last-Translator: Sergio Teruel <sergio.teruel@tecnativa.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.actions.report,print_report_name:stock_picking_fresh_logistic_label.action_report_picking_logistic_label
+msgid "'Product Logistic Label'"
+msgstr "'Etiqueta logística de producto'"
+
+#. module: stock_picking_fresh_logistic_label
+#: model_terms:ir.ui.view,arch_db:stock_picking_fresh_logistic_label.report_picking_logistic_label
+msgid "<small>CE</small>"
+msgstr ""
+
+#. module: stock_picking_fresh_logistic_label
+#: model_terms:ir.ui.view,arch_db:stock_picking_fresh_logistic_label.report_picking_logistic_label
+msgid "<small>ES</small>"
+msgstr ""
+
+#. module: stock_picking_fresh_logistic_label
+#: model_terms:ir.ui.view,arch_db:stock_picking_fresh_logistic_label.report_picking_logistic_label
+msgid "<strong>Alérgenos:</strong>"
+msgstr ""
+
+#. module: stock_picking_fresh_logistic_label
+#: model_terms:ir.ui.view,arch_db:stock_picking_fresh_logistic_label.report_picking_logistic_label
+msgid "<strong>Cond. conservación:</strong>"
+msgstr ""
+
+#. module: stock_picking_fresh_logistic_label
+#: model_terms:ir.ui.view,arch_db:stock_picking_fresh_logistic_label.report_picking_logistic_label
+msgid "<strong>Den. científica:</strong>"
+msgstr ""
+
+#. module: stock_picking_fresh_logistic_label
+#: model_terms:ir.ui.view,arch_db:stock_picking_fresh_logistic_label.report_picking_logistic_label
+msgid "<strong>Lots:</strong>"
+msgstr "<strong>Lotes:</strong>"
+
+#. module: stock_picking_fresh_logistic_label
+#: model_terms:ir.ui.view,arch_db:stock_picking_fresh_logistic_label.report_picking_logistic_label
+msgid "<strong>Zona FAO:</strong>"
+msgstr ""
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.actions.server,name:stock_picking_fresh_logistic_label.print_batch_picking
+msgid "Batch Picking Product Logistic Labels"
+msgstr "Etiquetas logísticas de productos"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.model,name:stock_picking_fresh_logistic_label.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.model.fields,field_description:stock_picking_fresh_logistic_label.field_res_company__logistic_label_display_lot_barcode
+#: model:ir.model.fields,field_description:stock_picking_fresh_logistic_label.field_res_config_settings__logistic_label_display_lot_barcode
+msgid "Display lots with barcode format"
+msgstr "Mostrar lotes en formato de código de barras"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.model.fields,field_description:stock_picking_fresh_logistic_label.field_product_product__label_coefficient
+#: model:ir.model.fields,field_description:stock_picking_fresh_logistic_label.field_product_template__label_coefficient
+msgid "Division / Coefficient on logistic labels"
+msgstr "Coeficiente Ctad. etiqueta logística"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.model.fields,field_description:stock_picking_fresh_logistic_label.field_res_company__logistic_label_domain
+#: model:ir.model.fields,field_description:stock_picking_fresh_logistic_label.field_res_config_settings__logistic_label_domain
+msgid "Domain for logistic labels"
+msgstr "Dominio para etiquetas logísticas"
+
+#. module: stock_picking_fresh_logistic_label
+#: model_terms:ir.ui.view,arch_db:stock_picking_fresh_logistic_label.view_template_property_form
+msgid "Logistic Label"
+msgstr "Etiqueta logística"
+
+#. module: stock_picking_fresh_logistic_label
+#: model_terms:ir.ui.view,arch_db:stock_picking_fresh_logistic_label.res_config_settings_view_form
+msgid "Logistic labels"
+msgstr "Etiquetas logísticas"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.model,name:stock_picking_fresh_logistic_label.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr ""
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.model,name:stock_picking_fresh_logistic_label.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.actions.report,name:stock_picking_fresh_logistic_label.action_report_picking_logistic_label
+msgid "Product Logistic Labels"
+msgstr "Etiquetas logísticas de productos"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.model,name:stock_picking_fresh_logistic_label.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.model.fields,field_description:stock_picking_fresh_logistic_label.field_res_company__sanitary_registry_logistic_labels
+#: model:ir.model.fields,field_description:stock_picking_fresh_logistic_label.field_res_config_settings__sanitary_registry_logistic_labels
+msgid "Sanitary registry for logistic labels"
+msgstr "Registro sanitario para etiquetas logísticas"
+
+#. module: stock_picking_fresh_logistic_label
+#: model:ir.model,name:stock_picking_fresh_logistic_label.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"

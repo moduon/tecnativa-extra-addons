@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<odoo noupdate="1">
+
+    <record id="scientific_name" model="product.attribute">
+        <field name="name">Scientific Name</field>
+        <field name="create_variant">no_variant</field>
+        <field name="display_type">select</field>
+    </record>
+
+</odoo>

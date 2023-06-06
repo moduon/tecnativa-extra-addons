@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_fishing
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-12 21:00+0000\n"
+"PO-Revision-Date: 2023-01-12 21:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_fishing
+#: model:ir.model.fields,field_description:product_fishing.field_product_product__allergens_ids
+#: model:ir.model.fields,field_description:product_fishing.field_product_template__allergens_ids
+#: model:product.attribute,name:product_fishing.product_allergens_attribute
+msgid "Allergens"
+msgstr ""
+
+#. module: product_fishing
+#: model:ir.model.fields.selection,name:product_fishing.selection__product_template__weight_type__fixed
+msgid "Fixed"
+msgstr ""
+
+#. module: product_fishing
+#: model:product.attribute.value,name:product_fishing.product_gamma_f
+msgid "Fresh"
+msgstr ""
+
+#. module: product_fishing
+#: model:product.attribute.value,name:product_fishing.product_gamma_c
+msgid "Frozen"
+msgstr ""
+
+#. module: product_fishing
+#: model:ir.model.fields,field_description:product_fishing.field_product_product__gamma_ids
+#: model:ir.model.fields,field_description:product_fishing.field_product_template__gamma_ids
+#: model:product.attribute,name:product_fishing.product_gamma_attribute
+msgid "Gamma"
+msgstr ""
+
+#. module: product_fishing
+#: model:ir.model.fields,field_description:product_fishing.field_product_product__harvesting_method_ids
+#: model:ir.model.fields,field_description:product_fishing.field_product_template__harvesting_method_ids
+#: model:product.attribute,name:product_fishing.harvesting_method_attribute
+msgid "Harvesting Method"
+msgstr ""
+
+#. module: product_fishing
+#: model:product.attribute,name:product_fishing.product_origin_country_attribute
+msgid "Origin country"
+msgstr ""
+
+#. module: product_fishing
+#: model:ir.model.fields,field_description:product_fishing.field_product_product__presentation_ids
+#: model:ir.model.fields,field_description:product_fishing.field_product_template__presentation_ids
+msgid "Presentation"
+msgstr ""
+
+#. module: product_fishing
+#: model:ir.model.fields,field_description:product_fishing.field_product_product__preservation_condition_ids
+#: model:ir.model.fields,field_description:product_fishing.field_product_template__preservation_condition_ids
+#: model:product.attribute,name:product_fishing.product_preservation_condition_attribute
+msgid "Preservation Condition"
+msgstr ""
+
+#. module: product_fishing
+#: model:product.attribute,name:product_fishing.presentation_attribute
+msgid "Product Presentation"
+msgstr ""
+
+#. module: product_fishing
+#: model:ir.model,name:product_fishing.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: product_fishing
+#: model:ir.model.fields,field_description:product_fishing.field_product_product__production_method_ids
+#: model:ir.model.fields,field_description:product_fishing.field_product_template__production_method_ids
+#: model:product.attribute,name:product_fishing.product_production_method_attribute
+msgid "Production Method"
+msgstr ""
+
+#. module: product_fishing
+#: model:product.attribute,name:product_fishing.scientific_name
+msgid "Scientific Name"
+msgstr ""
+
+#. module: product_fishing
+#: model:ir.model.fields.selection,name:product_fishing.selection__product_template__weight_type__variable
+msgid "Variable"
+msgstr ""
+
+#. module: product_fishing
+#: model:ir.model.fields,field_description:product_fishing.field_product_product__weight_type
+#: model:ir.model.fields,field_description:product_fishing.field_product_template__weight_type
+msgid "Weight Type"
+msgstr ""

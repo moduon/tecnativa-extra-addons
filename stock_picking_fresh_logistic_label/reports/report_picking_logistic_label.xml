@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_picking_logistic_label">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <t
+                        t-foreach="doc.move_ids.filter_lines_for_logistic_labels()"
+                        t-as="line"
+                    >
+                        <t t-if="line.product_id.label_coefficient &gt; 1">
+                             <t
+                                t-set="labels_qty"
+                                t-value="int(line.product_uom_qty / line.product_id.label_coefficient) + (( line.product_uom_qty % line.product_id.label_coefficient) != 0)"
+                            />
+                        </t>
+                        <t t-else="">
+                            <t
+                                t-set="labels_qty"
+                                t-value="int(line.product_uom_qty) + 1 if line.product_uom_qty &gt; int(line.product_uom_qty) else int(line.product_uom_qty)"
+                            />
+                        </t>
+                        <t t-foreach="labels_qty" t-as="i">
+                            <div class="page" style="font-size:8pt">
+                                <div style="position:relative;">
+                                    <div
+                                        class="col-4 pr-2"
+                                        style="position: absolute;top:178px;right:0px;"
+                                    >
+                                        <div
+                                            class="col-12"
+                                            style="text-align:center;margin-top:12px;position:relative;left:15px;"
+                                        >
+                                            <span t-field="doc.name" />
+                                            <div class="small">
+                                                <t
+                                                    t-call="company_sanitary_registry.sanitary_registry_template"
+                                                >
+                                                    <t
+                                                        t-set="sanitary_registry"
+                                                        t-value="doc.company_id.sanitary_registry_logistic_labels or doc.company_id.sanitary_registry"
+                                                    />
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div
+                                    style="height:120px;"
+                                    t-att-style="'height:120px;' if line.company_id.logistic_label_display_lot_barcode else 'height:155px;'"
+                                >
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <t t-if="line.partner_id.comercial">
+                                                <p
+                                                    style="margin-bottom:0.3rem; font-size:18pt; font-weight:bold;"
+                                                    t-field="line.partner_id.comercial"
+                                                />
+                                            </t>
+                                            <t t-else="">
+                                                <p
+                                                    style="margin-bottom:0.3rem; font-size:18pt; font-weight:bold;"
+                                                    t-field="line.partner_id.name"
+                                                />
+                                            </t>
+                                            <p
+                                                style="margin-bottom:0.3rem; font-size:16pt;"
+                                                t-field="line.product_id"
+                                            />
+                                            <t
+                                                t-if="'is_elaboration' in doc.env['sale.order.line']"
+                                            >
+                                                <p
+                                                    t-field="line.sale_line_id.elaboration_note"
+                                                    style="font-size:16pt"
+                                                />
+                                            </t>
+                                        </div>
+                                        <div
+                                            class="col-5 text-right pl-0 pr-2"
+                                            style="font-size:12pt"
+                                        >
+                                            <img
+                                                t-att-src="image_data_uri(doc.company_id.logo)"
+                                                style="width:70%"
+                                            />
+                                            <p
+                                                t-field="doc.batch_id"
+                                                style="font-size:16pt"
+                                            />
+                                        </div>
+                                        <!--<div class="border-bottom:1px solid;"/>-->
+                                    </div>
+                                    <!--<t t-if="'is_elaboration' in doc.env['sale.order.line']">-->
+                                    <!--    <div class="row">-->
+                                    <!--        <div class="col-12">-->
+                                    <!--            <p t-field="line.sale_line_id.elaboration_note" style="font-size:14pt"/>-->
+                                    <!--        </div>-->
+                                    <!--    </div>-->
+                                    <!--</t>-->
+                                </div>
+                                <hr class="mt32 border-bottom" />
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <strong>Den. científica:</strong>
+                                            </div>
+                                            <div class="col-8">
+                                                <t
+                                                    t-foreach="line.product_id.scientific_name_ids"
+                                                    t-as="scientific_name"
+                                                >
+                                                    <span>
+                                                        <i
+                                                            t-field="scientific_name.name"
+                                                        />
+                                                    </span>
+                                                </t>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <strong>Zona FAO:</strong>
+                                            </div>
+                                            <div class="col-8">
+                                                <t
+                                                    t-foreach="line.product_id.fao_fishing_area_ids"
+                                                    t-as="fishing_area"
+                                                >
+                                                    <span t-field="fishing_area.name" />
+                                                </t>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <strong>Cond. conservación:</strong>
+                                            </div>
+                                            <div class="col-8">
+                                                <t
+                                                    t-foreach="line.product_id.preservation_condition_ids"
+                                                    t-as="preservation_condition"
+                                                >
+                                                    <span
+                                                        t-field="preservation_condition.name"
+                                                    />
+                                                </t>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4 pr-0">
+                                                <strong>Alérgenos:</strong>
+                                            </div>
+                                            <div class="col-8">
+                                                <t
+                                                    t-foreach="line.product_id.allergens_ids"
+                                                    t-as="allergen"
+                                                >
+                                                    <span t-field="allergen.name" />
+                                                    <t t-if="not allergen_last">
+                                                        <br />
+                                                    </t>
+                                                </t>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="row"
+                                    t-if="line.company_id.logistic_label_display_lot_barcode"
+                                >
+                                    <div class="col-10">
+                                        <div class="row">
+                                            <div class="col-4 pr-0"><strong
+                                                >Lots:</strong></div>
+                                            <div class="col-8">
+                                                <t
+                                                    t-set="lots"
+                                                    t-value="line.move_line_ids.mapped('lot_id')"
+                                                />
+                                                <div
+                                                    name="barcode"
+                                                    class="text-left mt8"
+                                                    t-if="lots"
+                                                >
+<!--                                                    <span t-esc="lots[:1].name"/>-->
+                                                    <div>
+                                                        <img
+                                                            t-att-src="'/report/barcode/?barcode_type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;quiet=0&amp;humanreadable=1' % ('Code128', lots[:1].name, 400, 100)"
+                                                            style="height:45px"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p style="page-break-before:always;" />
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
