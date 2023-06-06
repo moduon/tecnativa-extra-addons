@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record
+        id="purchase_stock_account_invoice_pending_wizard_view_form"
+        model="ir.ui.view"
+    >
+        <field name="name">purchase.stock.account.invoice.pending.wizard</field>
+        <field name="model">purchase.stock.account.invoice.pending.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+<!--                        <field name="date_from" />-->
+                        <field name="date_to" />
+                    </group>
+                </group>
+                <footer>
+                    <button
+                        string="Print"
+                        name="print_report"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record
+        id="purchase_stock_account_invoice_pending_wizard_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Purchase orders don't invoiced at date (XLSX)</field>
+        <field name="res_model">purchase.stock.account.invoice.pending.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem
+        id="purchase_stock_account_invoice_pending_wizard_menu"
+        action="purchase_stock_account_invoice_pending_wizard_action"
+        name="Purchase orders don't invoiced at date (XLSX)"
+        parent="purchase.purchase_report_main"
+        sequence="100"
+    />
+</odoo>

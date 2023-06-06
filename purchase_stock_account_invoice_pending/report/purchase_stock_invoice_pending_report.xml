@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="purchase_pending_report" model="ir.actions.report">
+        <field name="name">Purchase orders don't invoiced at date (XLSX)</field>
+        <field name="model">purchase.stock.account.invoice.pending.wizard</field>
+        <field name="report_type">xlsx</field>
+        <field
+            name="report_name"
+        >purchase_stock_account_invoice_pending.purchase_pending</field>
+        <field
+            name="report_file"
+        >purchase_stock_account_invoice_pending.purchase_pending</field>
+    </record>
+</odoo>

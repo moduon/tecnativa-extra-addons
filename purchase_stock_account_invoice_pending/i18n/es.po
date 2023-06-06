@@ -1,0 +1,126 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_stock_account_invoice_pending
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2022-07-06 11:00+0200\n"
+"Last-Translator: Carlos Dauden <carlos.dauden@tecnativa.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model,name:purchase_stock_account_invoice_pending.model_report_purchase_stock_account_invoice_pending_purchase_pending
+msgid "Abstract Report to print purchase stock account invoice pending"
+msgstr ""
+
+#. module: purchase_stock_account_invoice_pending
+#: code:addons/purchase_stock_account_invoice_pending/report/purchase_stock_invoice_pending.py:0
+#, python-format
+msgid "Base imponible total"
+msgstr ""
+
+#. module: purchase_stock_account_invoice_pending
+#: model_terms:ir.ui.view,arch_db:purchase_stock_account_invoice_pending.purchase_stock_account_invoice_pending_wizard_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model.fields,field_description:purchase_stock_account_invoice_pending.field_purchase_stock_account_invoice_pending_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model.fields,field_description:purchase_stock_account_invoice_pending.field_purchase_stock_account_invoice_pending_wizard__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model.fields,field_description:purchase_stock_account_invoice_pending.field_purchase_stock_account_invoice_pending_wizard__date_from
+msgid "Date From"
+msgstr "Desde fecha"
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model.fields,field_description:purchase_stock_account_invoice_pending.field_purchase_stock_account_invoice_pending_wizard__date_to
+msgid "Date To"
+msgstr "Hasta fecha"
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model.fields,field_description:purchase_stock_account_invoice_pending.field_purchase_stock_account_invoice_pending_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: purchase_stock_account_invoice_pending
+#: code:addons/purchase_stock_account_invoice_pending/report/purchase_stock_invoice_pending.py:0
+#, python-format
+msgid "Fecha pedido"
+msgstr ""
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model.fields,field_description:purchase_stock_account_invoice_pending.field_purchase_stock_account_invoice_pending_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model.fields,field_description:purchase_stock_account_invoice_pending.field_purchase_stock_account_invoice_pending_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model.fields,field_description:purchase_stock_account_invoice_pending.field_purchase_stock_account_invoice_pending_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model.fields,field_description:purchase_stock_account_invoice_pending.field_purchase_stock_account_invoice_pending_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última modificación el"
+
+#. module: purchase_stock_account_invoice_pending
+#: code:addons/purchase_stock_account_invoice_pending/report/purchase_stock_invoice_pending.py:0
+#, python-format
+msgid "Pendiente de facturar"
+msgstr ""
+
+#. module: purchase_stock_account_invoice_pending
+#: model_terms:ir.ui.view,arch_db:purchase_stock_account_invoice_pending.purchase_stock_account_invoice_pending_wizard_view_form
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: purchase_stock_account_invoice_pending
+#: code:addons/purchase_stock_account_invoice_pending/report/purchase_stock_invoice_pending.py:0
+#, python-format
+msgid "Proveedor"
+msgstr ""
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.actions.act_window,name:purchase_stock_account_invoice_pending.purchase_stock_account_invoice_pending_wizard_action
+#: model:ir.actions.report,name:purchase_stock_account_invoice_pending.purchase_pending_report
+#: model:ir.ui.menu,name:purchase_stock_account_invoice_pending.purchase_stock_account_invoice_pending_wizard_menu
+msgid "Purchase orders don't invoiced at date (XLSX)"
+msgstr "Pedidos de compra no facturados a fecha (XLSX)"
+
+#. module: purchase_stock_account_invoice_pending
+#: code:addons/purchase_stock_account_invoice_pending/report/purchase_stock_invoice_pending.py:0
+#, python-format
+msgid "Recepciones no facturadas"
+msgstr ""
+
+#. module: purchase_stock_account_invoice_pending
+#: code:addons/purchase_stock_account_invoice_pending/report/purchase_stock_invoice_pending.py:0
+#, python-format
+msgid "Referencia PO"
+msgstr ""
+
+#. module: purchase_stock_account_invoice_pending
+#: model:ir.model,name:purchase_stock_account_invoice_pending.model_purchase_stock_account_invoice_pending_wizard
+msgid "Wizard purchase stock account invoice pending"
+msgstr ""
