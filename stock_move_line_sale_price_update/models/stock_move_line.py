@@ -6,7 +6,11 @@ from odoo import api, fields, models
 class StockMoveLine(models.Model):
     _inherit = "stock.move.line"
 
-    sale_price_unit = fields.Float(readonly=False, inverse="_inverse_sale_price_unit")
+    sale_price_unit = fields.Float(
+        compute="_compute_sale_order_line_fields",
+        readonly=False,
+        inverse="_inverse_sale_price_unit",
+    )
     is_sale_price_editable = fields.Boolean(
         string="Is sale price editable",
         compute="_compute_is_sale_price_editable",
