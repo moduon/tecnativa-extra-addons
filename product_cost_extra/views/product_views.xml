@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2018 Tecnativa - Sergio Teruel
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="product_template_form_view" model="ir.ui.view">
+        <field name="name">Product template amount extra cost</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <div name="standard_price_uom" position="after">
+                <field
+                    name="amount_cost_extra"
+                    widget='monetary'
+                    options="{'currency_field': 'currency_id', 'field_digits': True}"
+                />
+                <field
+                    name="standard_price_extra"
+                    widget='monetary'
+                    options="{'currency_field': 'currency_id', 'field_digits': True}"
+                />
+            </div>
+        </field>
+    </record>
+
+    <record id="product_template_tree_view" model="ir.ui.view">
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view" />
+        <field name="arch" type="xml">
+            <field name="standard_price" position="after">
+                <field
+                    name="standard_price_extra"
+                    widget='monetary'
+                    options="{'currency_field': 'currency_id', 'field_digits': True}"
+                    optional="show"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="product_variant_easy_edit_view" model="ir.ui.view">
+        <field name="name">Product variant amount extra cost</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='standard_price']/.." position="after">
+                <label for="standard_price_extra" />
+                <div class="o_row">
+                    <field
+                        name="standard_price_extra"
+                        widget='monetary'
+                        class="oe_inline"
+                        options="{'currency_field': 'currency_id', 'field_digits': True}"
+                    />
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
