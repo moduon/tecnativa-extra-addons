@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="purchase_order_line_form2">
+        <field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="purchase.purchase_order_line_form2" />
+        <field name="arch" type="xml">
+            <field name="taxes_id" position="before">
+                <field name="list_price" />
+                <field name="list_price_margin" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="purchase_order_line_tree">
+        <field name="model">purchase.order.line</field>
+        <field name="inherit_id" ref="purchase.purchase_order_line_tree" />
+        <field name="arch" type="xml">
+            <field name="price_subtotal" position="before">
+                <field name="list_price" optional="show" />
+                <field name="list_price_margin" optional="show" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="purchase_order_form">
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='order_line']/tree/field[@name='taxes_id']"
+                position="before"
+            >
+                <field name="list_price" optional="show" />
+                <field name="list_price_margin" optional="show" />
+            </xpath>
+            <xpath
+                expr="//field[@name='order_line']/form//field[@name='taxes_id']"
+                position="before"
+            >
+                <field name="list_price" optional="show" />
+                <field name="list_price_margin" optional="show" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
