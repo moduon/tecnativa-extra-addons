@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_order_line_list_price_margin
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-26 23:22+0000\n"
+"PO-Revision-Date: 2021-10-27 01:29+0200\n"
+"Last-Translator: Carlos Dauden <carlos.dauden@tecnativa.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: purchase_order_line_list_price_margin
+#: model:ir.model.fields,help:purchase_order_line_list_price_margin.field_purchase_order_line__list_price_margin
+msgid "(list_price - (price_unit + amount_cost extra)) / list_price"
+msgstr "(precio tarifa - (precio unitario + coste extra)) / precio tarifa"
+
+#. module: purchase_order_line_list_price_margin
+#: model:ir.model.fields,field_description:purchase_order_line_list_price_margin.field_purchase_order_line__list_price
+msgid "List price"
+msgstr "Precio venta"
+
+#. module: purchase_order_line_list_price_margin
+#: model:ir.model.fields,field_description:purchase_order_line_list_price_margin.field_purchase_order_line__list_price_margin
+msgid "Margin (%)"
+msgstr "Margen (%)"
+
+#. module: purchase_order_line_list_price_margin
+#: model:ir.model.fields,help:purchase_order_line_list_price_margin.field_purchase_order_line__list_price
+msgid "Price at which the product is sold to customers."
+msgstr "Precio al que se vende el producto a los clientes."
+
+#. module: purchase_order_line_list_price_margin
+#: model:ir.model,name:purchase_order_line_list_price_margin.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Línea de pedido de compra"
