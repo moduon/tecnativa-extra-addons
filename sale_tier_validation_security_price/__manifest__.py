@@ -10,7 +10,7 @@
     "author": "Tecnativa",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "depends": [
         "base_tier_validation_formula",
         "sale_tier_validation",

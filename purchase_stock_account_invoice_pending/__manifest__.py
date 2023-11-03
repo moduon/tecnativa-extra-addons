@@ -18,5 +18,5 @@
         "wizards/purchase_stock_account_invoice_pending_wizard_views.xml",
         "report/purchase_stock_invoice_pending_report.xml",
     ],
-    "installable": False,
+    "installable": True,
 }
