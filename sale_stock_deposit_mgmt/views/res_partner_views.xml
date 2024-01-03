@@ -8,7 +8,7 @@
                 <button
                     class="oe_stat_button"
                     type="object"
-                    context="{'default_owner_id': active_id, 'force_restricted_owner_id': active_id}"
+                    context="{'default_owner_id': active_id}"
                     name="action_open_owner_quants"
                     icon="fa-cubes"
                 >

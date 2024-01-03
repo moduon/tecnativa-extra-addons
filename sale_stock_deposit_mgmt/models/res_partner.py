@@ -14,7 +14,7 @@ class ResPartner(models.Model):
             {
                 "no_at_date": True,
                 "search_default_on_hand": True,
-                "force_restricted_owner_id": self.id,
+                "force_restricted_owner_id": self,
             }
         )
         return self.env["stock.quant"].with_context(**ctx)._get_quants_action(domain)
