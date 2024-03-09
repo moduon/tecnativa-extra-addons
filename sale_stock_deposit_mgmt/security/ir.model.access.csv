@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_stock_scrap_salesman,stock_scrap salesman,stock.model_stock_scrap,sales_team.group_sale_salesman,1,0,0,0
+access_stock_package_level_salesman,stock_package_level salesman,stock.model_stock_package_level,sales_team.group_sale_salesman,1,1,1,0
