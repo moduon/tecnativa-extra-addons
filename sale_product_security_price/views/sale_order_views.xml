@@ -30,29 +30,45 @@
                 />
             </xpath>
             <xpath
-                expr="//field[@name='order_line']//kanban/templates//t[@t-out='record.product_uom_qty.value']/.."
+                expr="//field[@name='order_line']//kanban/templates//t[@t-out='record.price_unit.value']"
                 position="after"
             >
                 <t t-if="record.security_price_warning.raw_value == true">
-                    <t
-                        t-if="record.sale_product_security_price_display_raise_button.raw_value == true"
+                    <div
+                        class="d-inline-flex px-2 py-0"
+                        style="font-size: xx-small; font-weight: bold;"
                     >
-                        <button
-                            name="rise_up_to_security_price"
-                            type="object"
-                            title="Raise unit price to product security price"
-                            aria-label="Raise unit price to product security price"
-                            class="float-right text-right fa fa-long-arrow-up btn btn-success"
+                        <t
+                            t-if="record.sale_product_security_price_display_raise_button.raw_value == true"
                         >
-                            <field name="security_price" widget="monetary" />
-                        </button>
-                    </t>
-                    <t t-else="">
-                        <span
-                            class="float-right text-right fa fa-exclamation-triangle fa-2x text-danger o_calendar_warning pl-3"
-                        />
-                    </t>
+                            <i class="fa fa-chevron-right mr4 align-self-center" />
+                            <button
+                                name="rise_up_to_security_price"
+                                type="object"
+                                title="Raise unit price to product security price"
+                                aria-label="Raise unit price to product security price"
+                                class="btn-success rounded-2 py-0 px-2"
+                            >
+                                <i class="fa fa-long-arrow-up mr4" />
+                                <strong>
+                                    <field name="security_price" widget="monetary" />
+                                </strong>
+                            </button>
+                        </t>
+                        <t t-else="">
+                            <i
+                                class="fa fa-2x fa-exclamation-triangle text-danger mr4"
+                            />
+                        </t>
+                    </div>
                 </t>
+            </xpath>
+            <!-- Fix line price margin -->
+            <xpath
+                expr="//field[@name='order_line']//kanban/templates//strong[@t-out='line_price']"
+                position="attributes"
+            >
+                <attribute name="class" add="mx-2" remove="" separator=" " />
             </xpath>
             <!-- End TT31786 -->
             <xpath expr="//field[@name='order_line']" position="before">
