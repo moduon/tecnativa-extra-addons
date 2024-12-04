@@ -38,7 +38,7 @@ class SaleOder(models.Model):
             tier_reviews = tiers | self.review_ids
             if not tier_reviews.filtered(lambda r: r.status == "pending"):
                 self.filtered(lambda s: s.state not in ["done", "cancel"]).with_context(
-                    ctx
+                    **ctx
                 ).action_confirm()
 
     def _get_accepted_notification_subtype(self):
