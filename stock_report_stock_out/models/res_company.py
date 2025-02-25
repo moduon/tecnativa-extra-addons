@@ -12,3 +12,4 @@ class ResCompany(models.Model):
         string="Recipients for stock out summary email",
     )
     stock_report_stock_out_hour = fields.Float(string="Hour to get stock moves")
+    stock_out_tolerance_percentage = fields.Float(string="Stock Out Tolerance (%)")

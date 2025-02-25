@@ -13,3 +13,6 @@ class ResConfigSettings(models.TransientModel):
     stock_report_stock_out_hour = fields.Float(
         related="company_id.stock_report_stock_out_hour", readonly=False
     )
+    stock_out_tolerance_percentage = fields.Float(
+        related="company_id.stock_out_tolerance_percentage", readonly=False
+    )

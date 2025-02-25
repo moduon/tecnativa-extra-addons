@@ -8,7 +8,7 @@
         <field name="name">Stock out - Send by Email</field>
         <field
             name="email_from"
-        >${ (object.write_uid.email and '&quot;%s&quot; &lt;%s&gt;' % (object.write_uid.name, object.write_uid.email) or '') }</field>
+        >{{ (object.write_uid.email and '&quot;%s&quot; &lt;%s&gt;' % (object.write_uid.name, object.write_uid.email) or '') }}</field>
         <field name="subject">Products stock out</field>
         <field name="partner_to" />
         <field
