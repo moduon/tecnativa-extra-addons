@@ -29,6 +29,13 @@
                                 name="stock_report_stock_out_hour"
                                 widget="float_time"
                             />
+                            <div>
+                                <label for="stock_out_tolerance_percentage" />
+                            </div>
+                            <field
+                                name="stock_out_tolerance_percentage"
+                                widget="percentage"
+                            />
                         </div>
                     </div>
                 </div>

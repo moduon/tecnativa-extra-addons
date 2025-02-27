@@ -15,6 +15,8 @@
         "security/ir.model.access.csv",
         "report/stock_report_stock_out_report.xml",  # Keep order
         "data/mail_template_data.xml",
+        "views/product_category_views.xml",
+        "views/product_template_view.xml",
         "views/report_stock_out_view.xml",
         "views/res_config_settings_views.xml",
         "wizard/stock_report_stock_out_view.xml",
