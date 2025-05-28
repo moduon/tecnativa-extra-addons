@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_unilever_agreement_communication_form" model="ir.ui.view">
+        <field name="model">unilever.agreement.communication</field>
+        <field name="name">unilever.agreement.communication</field>
+        <field name="arch" type="xml">
+            <form string="Unilever agreement communication">
+                <sheet>
+                    <group>
+                        <field name="agreement_id" readonly="1" />
+                        <field name="partner_id" readonly="1" />
+                        <field name="move_type" />
+                        <field name="unilever_state" readonly="0" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="edi_unilever_agreement_communication_tree" model="ir.ui.view">
+        <field name="model">unilever.agreement.communication</field>
+        <field name="name">unilever.agreement.communication.tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="agreement_id" />
+                <field name="partner_id" />
+                <field name="move_type" />
+                <field name="create_date" />
+                <field name="write_date" />
+                <field name="unilever_state" />
+            </tree>
+        </field>
+    </record>
+    <record
+        id="edi_unilever_agreement_communication_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Unilever agreement communication</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">unilever.agreement.communication</field>
+    </record>
+</odoo>

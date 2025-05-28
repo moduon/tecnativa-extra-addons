@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_backend_form" model="ir.ui.view">
+        <field name="model">edi.backend</field>
+        <field name="inherit_id" ref="base_edi_backend.edi_backend_form" />
+        <field name="arch" type="xml">
+            <field name="sequence_id" position="before">
+                <field name="force_year_ulv" />
+                        <field name="dealer_code_ulv" />
+                        <field name="communication_code_ulv" />
+            </field>
+            <field name="extension" position="before">
+                <field name="filename" />
+            </field>
+        </field>
+    </record>
+</odoo>

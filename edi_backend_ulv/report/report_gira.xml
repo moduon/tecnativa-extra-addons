@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_gira_summary_report" model="ir.actions.report">
+        <field name="name">Informe resumen GIRA</field>
+        <field name="model">agreement</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">edi_backend_ulv.gira_summary_report</field>
+        <field name="report_file">edi_backend_ulv.gira_summary_report</field>
+        <field name="paperformat_id" ref="edi_backend_ulv.paperformat_gira_unilever" />
+    </record>
+    <record id="action_gira_detailed_report" model="ir.actions.report">
+        <field name="name">Informe detallado GIRA</field>
+        <field name="model">edi.unilever.agreement.condition</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">edi_backend_ulv.gira_detailed_report</field>
+        <field name="report_file">edi_backend_ulv.gira_detailed_report</field>
+        <field name="paperformat_id" ref="edi_backend_ulv.paperformat_gira_unilever" />
+    </record>
+</odoo>

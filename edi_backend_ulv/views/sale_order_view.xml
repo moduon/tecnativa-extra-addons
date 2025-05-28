@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='order_line']/form//field[@name='tax_id']"
+                position="before"
+            >
+                <field name="unilever_agreement_id" invisible="1" force_save="1" />
+            </xpath>
+            <xpath
+                expr="//field[@name='order_line']/tree//field[@name='discount']"
+                position="after"
+            >
+                <field name="commercial_partner_id" invisible="1" />
+                <field name="company_group_id" invisible="1" />
+                <field
+                    name="unilever_agreement_id"
+                    invisible="0"
+                    force_save="1"
+                    optional="hide"
+                    domain="[('agreement_type', '=', 'DTO'), '|', ('partner_id', '=', commercial_partner_id), ('partner_id', '=', company_group_id), '|', ('end_date', '&gt;', context_today().strftime('%Y-%m-%d')), ('end_date', '=', False)]"
+                    options="{'no_create': True}"
+                />
+            </xpath>
+        </field>
+    </record>
+    <!-- Add Agreement in tree input lines  -->
+    <record id="view_sales_order_line_input_tree" model="ir.ui.view">
+        <field name="model">sale.order.line</field>
+        <field
+            name="inherit_id"
+            ref="sale_order_line_input.view_sales_order_line_input_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="discount" position="after">
+                <field name="commercial_partner_id" invisible="1" />
+                <field name="company_group_id" invisible="1" />
+                <field
+                    name="unilever_agreement_id"
+                    invisible="0"
+                    force_save="1"
+                    optional="hide"
+                    domain="[('agreement_type', '=', 'DTO'), '|', ('partner_id', '=', commercial_partner_id), ('partner_id', '=', company_group_id), '|', ('end_date', '&gt;', context_today().strftime('%Y-%m-%d')), ('end_date', '=', False)]"
+                    options="{'no_create': True}"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

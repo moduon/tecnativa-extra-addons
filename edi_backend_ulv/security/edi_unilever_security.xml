@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ Security group and rules for unilever access by xml rpc.
+ For more info read: https://www.tecnativa.com/web#id=21028&model=project.task&view_type=form&menu_id=
+ -->
+<odoo>
+    <record id="group_uve" model="res.groups">
+        <field name="name">External EDI Unilever rpc</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+    </record>
+    <data noupdate="1">
+        <record model="ir.rule" id="sale_order_knorr">
+            <field name="name">Sales from knorr Unilever brand</field>
+            <field name="model_id" ref="sale.model_sale_order" />
+            <field name="groups" eval="[(4, ref('edi_backend_ulv.group_uve'))]" />
+            <field
+                name="domain_force"
+            >[('order_line.product_id.product_brand_id.unilever_ref', '=', 'FS_')]</field>
+            <field name="perm_read" eval="True" />
+            <field name="perm_unlink" eval="False" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+        </record>
+        <record model="ir.rule" id="sale_order_line_knorr">
+            <field name="name">Sale order lines from knorr Unilever brand</field>
+            <field name="model_id" ref="sale.model_sale_order_line" />
+            <field name="groups" eval="[(4, ref('edi_backend_ulv.group_uve'))]" />
+            <field
+                name="domain_force"
+            >[('product_id.product_brand_id.unilever_ref', '=', 'FS_')]</field>
+            <field name="perm_read" eval="True" />
+            <field name="perm_unlink" eval="False" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+        </record>
+        <record model="ir.rule" id="product_knorr">
+            <field name="name">Prducts from knorr Unilever brand</field>
+            <field name="model_id" ref="product.model_product_product" />
+            <field name="groups" eval="[(4, ref('edi_backend_ulv.group_uve'))]" />
+            <field
+                name="domain_force"
+            >[('product_brand_id.unilever_ref', '=', 'FS_')]</field>
+            <field name="perm_read" eval="True" />
+            <field name="perm_unlink" eval="False" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+        </record>
+        <record model="ir.rule" id="partner_knorr">
+            <field name="name">Partners from knorr Unilever brand</field>
+            <field name="model_id" ref="base.model_res_partner" />
+            <field name="groups" eval="[(4, ref('edi_backend_ulv.group_uve'))]" />
+            <field
+                name="domain_force"
+            >[('sale_order_ids.order_line.product_id.product_brand_id.unilever_ref', '=', 'FS_')]</field>
+            <field name="perm_read" eval="True" />
+            <field name="perm_unlink" eval="False" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+        </record>
+    </data>
+</odoo>

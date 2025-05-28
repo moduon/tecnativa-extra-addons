@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_edi_unilever_report_wiz" model="ir.ui.view">
+        <field name="name">unilever.report.wiz</field>
+        <field name="model">unilever.report.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Print report">
+                <group
+                    string="Dates filter"
+                    invisible="context.get('active_model') == 'agreement.rebate.settlement'"
+                >
+                    <group>
+                        <field name="start_date" />
+                    </group>
+                    <group>
+                        <field
+                            name="end_date"
+                            required="context.get('active_model') != 'agreement.rebate.settlement'"
+                        />
+                    </group>
+                </group>
+                <group
+                    string="Info"
+                    invisible="context.get('active_model') != 'agreement.rebate.settlement'"
+                >
+                    <p
+                    >Se van a imprimir las líneas de las liquidaciones seleccionadas</p>
+                </group>
+                <footer>
+                    <button
+                        string="Print"
+                        name="print_report"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record
+        id="edi_unilever_report_pol_settlement_wiz_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Unilever report POL settlements</field>
+        <field name="res_model">unilever.report.wiz</field>
+        <field name="view_mode">form</field>
+        <field
+            name="context"
+        >{'report_ref': 'edi_backend_ulv.report_unilever_agreement_pol_settlement'}</field>
+        <field name="target">new</field>
+    </record>
+    <record
+        id="edi_unilever_report_dto_settlement_wiz_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Unilever report DTO settlements</field>
+        <field name="res_model">unilever.report.wiz</field>
+        <field
+            name="binding_model_id"
+            ref="agreement_rebate.model_agreement_rebate_settlement"
+        />
+        <field name="binding_type">report</field>
+        <field name="view_mode">form</field>
+        <field
+            name="context"
+        >{'report_ref': 'edi_backend_ulv.action_invoice_discount_report'}</field>
+        <field name="target">new</field>
+    </record>
+    <record
+        id="edi_unilever_report_bonus_settlement_wiz_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Unilever report bonus settlements</field>
+        <field name="res_model">unilever.report.wiz</field>
+        <field
+            name="binding_model_id"
+            ref="agreement_rebate.model_agreement_rebate_settlement"
+        />
+        <field name="binding_type">report</field>
+        <field name="view_mode">form</field>
+        <field
+            name="context"
+        >{'report_ref': 'edi_backend_ulv.action_year_bonus_report'}</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

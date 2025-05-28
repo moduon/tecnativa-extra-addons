@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_unilever_export_config_ven_pick" model="edi.backend.config">
+        <field name="name">Unilever ventas albarán detalle</field>
+        <field name="model_number">2018</field>
+        <field name="model_id" ref="stock.model_stock_move_line" />
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_01" model="edi.backend.config.line">
+        <field name="sequence">10</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Tipo de registro</field>
+        <field name="fixed_value">9</field>
+        <field name="export_type">integer</field>
+        <field name="size">1</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_02" model="edi.backend.config.line">
+        <field name="sequence">20</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Código de concesionario</field>
+        <field name="expression">${object.env.user.company_id.unilever_dealer}</field>
+        <field name="export_type">integer</field>
+        <field name="size">3</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_03" model="edi.backend.config.line">
+        <field name="sequence">30</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Identificador de registro</field>
+        <field name="expression">${object.id or 0}</field>
+        <field name="export_type">string</field>
+        <field name="size">10</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_04" model="edi.backend.config.line">
+        <field name="sequence">40</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Num. documento alb/fra p1</field>
+        <field name="expression">${object.picking_id.picking_type_id.id}</field>
+        <field name="export_type">integer</field>
+        <field name="size">2</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_04b" model="edi.backend.config.line">
+        <field name="sequence">45</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Num. documento alb/fra p2</field>
+        <field name="expression">${int(object.picking_id.name.split('/')[-1])}</field>
+        <field name="export_type">integer</field>
+        <field name="size">10</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_05" model="edi.backend.config.line">
+        <field name="sequence">50</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Fecha de proceso</field>
+        <field name="expression">${format_date_sp(today)}</field>
+        <field name="export_type">integer</field>
+        <field name="size">8</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_06" model="edi.backend.config.line">
+        <field name="sequence">60</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Código de cliente</field>
+        <field name="expression">${object.picking_id.partner_id.unilever_ref}</field>
+        <field name="export_type">integer</field>
+        <field name="size">7</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_07" model="edi.backend.config.line">
+        <field name="sequence">70</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Código de producto</field>
+        <field name="expression">${object.product_id.unilever_ref}</field>
+        <field name="export_type">integer</field>
+        <field name="size">10</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_08" model="edi.backend.config.line">
+        <field name="sequence">80</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Unidades de venta</field>
+        <field
+            name="expression"
+        >${(object.picking_id.is_return and -1 or 1) * (object.quantity_done if object.product_id.product_brand_id.unilever_ref != 'FS_' and not object.picking_id.no_charge else 0.0)}</field>
+        <field name="export_type">integer</field>
+        <field name="size">10</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">True</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_09" model="edi.backend.config.line">
+        <field name="sequence">90</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Composición por unidad de venta Unilever</field>
+        <field
+            name="expression"
+        >${(object.picking_id.is_return and -1 or 1) * (object.quantity_done if object.product_id.product_brand_id.unilever_ref == 'FS_' and not object.picking_id.no_charge else 0.0)}</field>
+        <field name="export_type">integer</field>
+        <field name="size">4</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_10" model="edi.backend.config.line">
+        <field name="sequence">100</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Precio tarifa</field>
+        <field name="expression">${object.unilever_list_price}</field>
+        <field name="export_type">float</field>
+        <field name="size">9</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+        <field name="decimal_size">2</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_11" model="edi.backend.config.line">
+        <field name="sequence">110</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Precio aplicado</field>
+        <field
+            name="expression"
+        >${object.sale_line_id.unilever_agreement_id.agreement_type == 'POL' and object.sale_line_id.price_unit or object.sale_line_id.price_reduce}</field>
+        <!--        <field name="expression">${object.sale_line_id.price_reduce}</field>-->
+        <field name="export_type">float</field>
+        <field name="size">9</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+        <field name="decimal_size">2</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_12" model="edi.backend.config.line">
+        <field name="sequence">120</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Ventas brutas (GSV)</field>
+        <field
+            name="expression"
+        >${(object.picking_id.is_return and -1 or 1) * (round(object.unilever_list_price * object.quantity_done, 2))}</field>
+        <field name="export_type">float</field>
+        <field name="size">12</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">True</field>
+        <field name="decimal_size">2</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_13" model="edi.backend.config.line">
+        <field name="sequence">130</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Importe descuento temporal de producto (TPR) (GIRAS)</field>
+        <field
+            name="expression"
+        >${(object.picking_id.is_return and -1 or 1) * round(object.unilever_list_price * object.quantity_done - sum(object.move_line_ids.mapped('sale_price_subtotal')) if object.picking_id.no_charge or not object.unilever_agreement_id or object.sale_line_id.discount != object.unilever_agreement_id.invoice_discount or object.sale_line_id.price_subtotal == 0.0 else 0, 2)}</field>
+        <field name="export_type">float</field>
+        <field name="size">12</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">True</field>
+        <field name="decimal_size">2</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_14" model="edi.backend.config.line">
+        <field name="sequence">140</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Importe facturado sin iva</field>
+        <field
+            name="expression"
+        >${(object.picking_id.is_return and -1 or 1) * round(sum(object.move_line_ids.mapped('sale_price_subtotal')), 2)}</field>
+        <field name="export_type">float</field>
+        <field name="size">12</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">True</field>
+        <field name="decimal_size">2</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_15" model="edi.backend.config.line">
+        <field name="sequence">150</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Imp. Descuento turismo</field>
+        <field
+            name="expression"
+        >${(object.picking_id.is_return and -1 or 1) * round(object.amount_tourism_discount, 2)}</field>
+        <field name="export_type">float</field>
+        <field name="size">12</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">True</field>
+        <field name="decimal_size">2</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_16" model="edi.backend.config.line">
+        <field name="sequence">160</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Imp. Descuento Unilever</field>
+        <field
+            name="expression"
+        >${((object.picking_id.is_return and -1 or 1) * round(object.unilever_list_price * object.quantity_done - sum(object.move_line_ids.mapped('sale_price_subtotal')), 2)) if object.sale_line_id.price_subtotal != 0.0 and not object.amount_tourism_discount and object.sale_line_id.discount == object.unilever_agreement_id.invoice_discount else 0.0}</field>
+        <field name="export_type">float</field>
+        <field name="size">12</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">True</field>
+        <field name="decimal_size">2</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_17" model="edi.backend.config.line">
+        <field name="sequence">170</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Imp. Descuento Concesión</field>
+        <field name="expression">${0}</field>
+        <field name="export_type">float</field>
+        <field name="size">12</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">True</field>
+        <field name="decimal_size">2</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_18" model="edi.backend.config.line">
+        <field name="sequence">180</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Divisa</field>
+        <field name="expression">${'E'}</field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_19" model="edi.backend.config.line">
+        <field name="sequence">190</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Fecha documento</field>
+        <field name="expression">${format_date_sp(object.picking_id.date_done)}</field>
+        <field name="export_type">string</field>
+        <field name="size">8</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_20" model="edi.backend.config.line">
+        <field name="sequence">200</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Secuencia</field>
+        <field name="expression">${context['sequence_file']}</field>
+        <field name="export_type">integer</field>
+        <field name="size">4</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_21" model="edi.backend.config.line">
+        <field name="sequence">210</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">canal</field>
+        <field
+            name="expression"
+        >${object.product_id.product_brand_id.unilever_ref}</field>
+        <field name="export_type">string</field>
+        <field name="size">3</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_22" model="edi.backend.config.line">
+        <field name="sequence">220</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Tipo venta</field>
+        <field name="expression">${'PRE'}</field>
+        <field name="export_type">string</field>
+        <field name="size">3</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_23" model="edi.backend.config.line">
+        <field name="sequence">230</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Código vendedor</field>
+        <field
+            name="expression"
+        >${object.sale_line_id.order_id.user_id.partner_id.ref or ''}</field>
+        <field name="export_type">string</field>
+        <field name="size">10</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_24" model="edi.backend.config.line">
+        <field name="sequence">240</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Nombre vendedor</field>
+        <field
+            name="expression"
+        >${object.sale_line_id.order_id.user_id.partner_id.name or ''}</field>
+        <field name="export_type">string</field>
+        <field name="size">50</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_ven_pick_line_25" model="edi.backend.config.line">
+        <field name="sequence">250</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="name">Salto linea</field>
+        <field name="expression">${b'\r\n'}</field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <!-- Fichero ventas nivel 0 -->
+    <record id="edi_unilever_export_config_ven_pick_l0" model="edi.backend.config">
+        <field name="name">Unilever ventas albarán</field>
+        <field name="model_number">2018</field>
+        <field name="model_id" ref="model_edi_backend" />
+    </record>
+    <record
+        id="edi_unilever_export_ven_pick_l0_line_01"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">10</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_ven_pick_l0" />
+        <field name="name">Detalles ventas albarán</field>
+        <field name="repeat_expression">object.get_records()</field>
+        <field name="subconfig_id" ref="edi_unilever_export_config_ven_pick" />
+        <field name="export_type">subconfig</field>
+        <field name="apply_sign">False</field>
+    </record>
+</odoo>

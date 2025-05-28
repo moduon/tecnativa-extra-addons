@@ -1,0 +1,170 @@
+<odoo>
+    <template id="invoice_discounts_report">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <div class="page text-justify">
+                    <div class="header">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="text-center">
+                                    LISTADO LIQUIDACIÓN UL DCTO. EN FRA.
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p>Liquidadión del periodo: <span
+                                        t-esc="start_date"
+                                    /></p>
+                            </div>
+                            <div class="col-4">Hasta: <span t-esc="end_date" /></div>
+                            <div class="col-4">Fecha de liquidación: <span
+                                    t-esc="docs[:1].date"
+                                /></div>
+                        </div>
+                    </div>
+                    <table style="width:100%;">
+                        <thead class="border_header">
+                            <tr>
+                                <th class="text-center">Cliente</th>
+                                <th class="text-center">Nombre Comercial</th>
+                                <th class="text-center">Dirección</th>
+                                <th class="text-center">NIF</th>
+                                <th class="text-center">Dcto.</th>
+                                <th class="text-center">Consumo</th>
+                                <th class="text-center">Bonificación</th>
+                                <th class="text-center">% Cont</th>
+                                <th class="text-center">Contribución</th>
+                                <th class="text-center">IVA</th>
+                                <th class="text-center">Subgrupo</th>
+                                <th class="text-center">Gr</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="docs" t-as="doc">
+                                <td class="text-center">
+                                    <span
+                                        t-field="doc.settlement_id.partner_id.unilever_ref"
+                                    />
+                                </td>
+                                <td class="text-left">
+                                    <span
+                                        t-esc="doc.settlement_id.partner_id.comercial or doc.settlement_id.partner_id.name"
+                                    />
+                                </td>
+                                <td class="text-left">
+                                    <span
+                                        t-esc="doc.settlement_id.partner_id.street"
+                                    />,
+                                    <span t-esc="doc.settlement_id.partner_id.city" />
+                                </td>
+                                <td class="text-left">
+                                    <span t-esc="doc.settlement_id.partner_id.vat" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="doc.percent" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="doc.amount_gross" />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="doc.amount_rebate" />
+                                </td>
+                                <td class="text-right">
+                                    <span
+                                        t-field="doc.unilever_participation_percent"
+                                    />
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="doc.unilever_contribution_amount" />
+                                </td>
+                                <td class="text-right">
+                                    <span>10,00</span>
+                                </td>
+                                <td class="text-left">
+                                    <span t-field="doc.unilever_rappel_group_id.name" />
+                                </td>
+                                <td class="text-left">
+                                    <span
+                                        t-field="doc.unilever_rappel_group_id.parent_id.unilever_ref"
+                                    />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style="margin: 0 auto; margin-top: 20px;">
+                        <thead class="border_header">
+                            <tr>
+                                <th />
+                                <th class="text-center">Consumo</th>
+                                <th class="text-center">Bonificación</th>
+                                <th class="text-center">Contribución</th>
+                                <th class="text-center">IVA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="total" t-value="total_by_subgroup(docs)" />
+                            <tr
+                                t-foreach="total"
+                                t-as="totalization"
+                                t-if="totalization != 'Total General'"
+                            >
+                                <td class="text-left">
+                                    <span t-esc="totalization" />
+                                </td>
+                                <td class="text-right">
+                                    <span
+                                        t-esc="'{0:.2f}'.format(total[totalization]['amount_gross'])"
+                                    />
+                                </td>
+                                <td class="text-right">
+                                    <span
+                                        t-esc="'{0:.3f}'.format(total[totalization]['amount_rebate'])"
+                                    />
+                                </td>
+                                <td class="text-right">
+                                    <span
+                                        t-esc="'{0:.2f}'.format(total[totalization]['unilever_contribution_amount'])"
+                                    />
+                                </td>
+                                <td>10.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">
+                                    <b>Total General</b>
+                                </td>
+                                <td class="text-right">
+                                    <span
+                                        t-esc="'{0:.2f}'.format(total['Total General']['amount_gross'])"
+                                    />
+                                </td>
+                                <td class="text-right">
+                                    <span
+                                        t-esc="'{0:.3f}'.format(total['Total General']['amount_rebate'])"
+                                    />
+                                </td>
+                                <td class="text-right">
+                                    <span
+                                        t-esc="'{0:.2f}'.format(total['Total General']['unilever_contribution_amount'])"
+                                    />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col text-center">
+                                <small>
+                                    <span>Page</span>
+                                    <span class="page" />
+                                    of
+                                    <span class="topage" />
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

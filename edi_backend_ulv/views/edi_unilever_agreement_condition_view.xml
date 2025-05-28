@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_unilever_agreement_condition_tree" model="ir.ui.view">
+        <field name="name">edi.unilever.condition.tree</field>
+        <field name="model">edi.unilever.agreement.condition</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="code" />
+                <field name="tourism_group_id" />
+            </tree>
+        </field>
+    </record>
+    <record id="edi_unilever_agreement_condition_form" model="ir.ui.view">
+        <field name="name">edi.unilever.condition.form</field>
+        <field name="model">edi.unilever.agreement.condition</field>
+        <field name="arch" type="xml">
+            <form string="Agreement conditions">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="condition_type" />
+                            <field name="name" />
+                            <field name="tourism_group_id" />
+                            <field name="code" />
+                        </group>
+                        <group>
+                            <field
+                                name="start_date"
+                                attrs="{'invisible': [('condition_type','=', 'POL')]}"
+                            />
+                            <field
+                                name="end_date"
+                                attrs="{'invisible': [('condition_type','=', 'POL')]}"
+                            />
+                        </group>
+                        <field name="line_ids">
+                            <tree editable="top">
+                                <field name="product_id" />
+                                <field
+                                    name="condition_price"
+                                    attrs="{'column_invisible': [('parent.condition_type','=', 'POL')]}"
+                                />
+                                <field
+                                    name="condition_discount"
+                                    attrs="{'column_invisible': [('parent.condition_type','=', 'POL')]}"
+                                />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_edi_unilever_agreement_condition">
+        <field name="name">EDI Unilever agreement condition</field>
+        <field name="res_model">edi.unilever.agreement.condition</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="edi_unilever_tourism_group_tree" model="ir.ui.view">
+        <field name="name">edi.unilever.tourism.group.tree</field>
+        <field name="model">edi.unilever.tourism.group</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="unilever_ref" />
+                <field name="guaranteed_price" />
+                <field name="minimal_price" />
+            </tree>
+        </field>
+    </record>
+    <record id="edi_unilever_tourism_group_form" model="ir.ui.view">
+        <field name="name">edi.unilever.tourism.group.form</field>
+        <field name="model">edi.unilever.tourism.group</field>
+        <field name="arch" type="xml">
+            <form string="Agreement conditions">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="unilever_ref" />
+                        <field name="guaranteed_price" />
+                        <field name="minimal_price" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_edi_unilever_tourism_group">
+        <field name="name">Tourism groups</field>
+        <field name="res_model">edi.unilever.tourism.group</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

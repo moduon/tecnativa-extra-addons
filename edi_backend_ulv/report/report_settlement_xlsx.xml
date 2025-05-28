@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="settlement_xlsx" model="ir.actions.report">
+        <field name="name">Settlement XLSX report</field>
+        <field name="model">agreement.rebate.settlement.line</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">edi_backend_ulv.report_settlement_xlsx</field>
+        <field name="report_file">edi_backend_ulv.report_settlement_xlsx</field>
+    </record>
+    <!--            menu="False"-->
+    <!--    print_report_name="object.get_report_file_name()"-->
+</odoo>

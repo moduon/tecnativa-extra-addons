@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Price list -->
+    <record id="pricelist_gescon_1" model="product.pricelist">
+        <field name="name">Gescon 1</field>
+        <field name="sequence">1000</field>
+    </record>
+    <record id="pricelist_gescon_2" model="product.pricelist">
+        <field name="name">Gescon 2</field>
+        <field name="sequence">1000</field>
+    </record>
+    <record id="pricelist_gescon_3" model="product.pricelist">
+        <field name="name">Gescon 3</field>
+        <field name="sequence">1000</field>
+    </record>
+    <record id="pricelist_gescon_4" model="product.pricelist">
+        <field name="name">Gescon 4</field>
+        <field name="sequence">1000</field>
+    </record>
+    <record id="pricelist_gescon_5" model="product.pricelist">
+        <field name="name">Gescon 5</field>
+        <field name="sequence">1000</field>
+    </record>
+    <record id="pricelist_gescon_6" model="product.pricelist">
+        <field name="name">Gescon 6</field>
+        <field name="sequence">1000</field>
+    </record>
+</odoo>

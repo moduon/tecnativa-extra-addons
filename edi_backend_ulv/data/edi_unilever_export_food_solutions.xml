@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  ~ # Copyright 2023 Tecnativa - Carlos Roca
+  ~ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl
+  -->
+<odoo>
+    <record id="edi_unilever_export_config_fs" model="edi.backend.config">
+        <field name="name">Food Solutions</field>
+        <field name="model_number">2018</field>
+        <field name="model_id" ref="model_agreement" />
+        <field name="columns_definition">separator</field>
+        <field name="separator_char">;</field>
+    </record>
+    <record id="edi_unilever_export_config_fs_01" model="edi.backend.config.line">
+        <field name="sequence">1</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_fs" />
+        <field name="name">Line</field>
+        <field name="expression">${object["line"]}</field>
+        <field name="export_type">string</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+        <field name="apply_separator_char">False</field>
+    </record>
+    <record id="edi_unilever_export_config_fs_02" model="edi.backend.config.line">
+        <field name="sequence">2</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_fs" />
+        <field name="name">Participación</field>
+        <field name="expression">${b'\r\n'}</field>
+        <field name="export_type">string</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+        <field name="apply_separator_char">False</field>
+    </record>
+
+    <!-- Fichero Food Solutions nivel 0 -->
+    <record id="edi_unilever_export_config_fs_l0" model="edi.backend.config">
+        <field name="name">Unilever acuerdo Food Solutions</field>
+        <field name="model_number">2018</field>
+        <field name="model_id" ref="model_edi_backend" />
+    </record>
+    <record id="edi_unilever_export_config_fs_l0_lines" model="edi.backend.config.line">
+        <field name="sequence">3</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_fs_l0" />
+        <field name="name">Detalles acuerdo</field>
+        <field name="repeat_expression">object.get_data_ufs_to_print()</field>
+        <field name="subconfig_id" ref="edi_unilever_export_config_fs" />
+        <field name="export_type">subconfig</field>
+        <field name="apply_sign">False</field>
+    </record>
+
+</odoo>

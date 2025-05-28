@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="gira_summary_report">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <div
+                        class="page"
+                        t-if="doc.agreement_type_id == docs.env.ref('edi_backend_ulv.GIRA')"
+                    >
+                        <header>
+                            <div class="row">
+                                <div class="col-12 text-right">
+                                    Fecha: <span t-field="doc.signature_date" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5 class="font-weight-bold">
+                                        LISTADO RESUMEN DE LA GIRA: <span
+                                            t-esc="doc.agreement_condition_id.code"
+                                        />
+                                    </h5>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="font-weight-bold">
+                                        <span t-esc="doc.name" />
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <p class="font-weight-bold">
+                                        (Desde Fecha: <span t-field="doc.start_date" />
+                                        A <span t-field="doc.end_date" />)(Desde
+                                        Proveedor: 0 A 999)
+                                    </p>
+                                </div>
+                            </div>
+                        </header>
+                        <table style="width:100%;">
+                            <thead class="border_header">
+                                <tr>
+                                    <th class="text-center">PRODUCTO</th>
+                                    <th class="text-center">DESCRIPCIÓN</th>
+                                    <th class="text-center">UNID</th>
+                                    <th class="text-center">VALOR PVP</th>
+                                    <th class="text-center">VALOR GIRA</th>
+                                    <th class="text-center">% CONTR. FRIGO</th>
+                                    <th class="text-center">CONTR. FRIGO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="total_qty" t-value="0" />
+                                <t t-set="total_pvp" t-value="0" />
+                                <t t-set="total_gira" t-value="0" />
+                                <t t-set="total_contrib" t-value="0" />
+                                <tr
+                                    t-foreach="doc.agreement_condition_id.line_ids"
+                                    t-as="product"
+                                >
+                                    <t
+                                        t-set="line"
+                                        t-value="line_values(agreement=doc, condition_line=product)"
+                                    />
+                                    <td class="text-right">
+                                        <span
+                                            t-field="product.product_id.default_code"
+                                        />
+                                    </td>
+                                    <td>
+                                        <span
+                                            t-field="product.product_id.name"
+                                            style="margin-left: 3px;"
+                                        />
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="line['quantity']" />
+                                        <t
+                                            t-set="total_qty"
+                                            t-value="total_qty + line['quantity']"
+                                        />
+                                    </td>
+                                    <td class="text-right">
+                                        <span
+                                            t-esc="'{0:.2f}'.format(line['pvp_value'])"
+                                        />
+                                        <t
+                                            t-set="total_pvp"
+                                            t-value="total_pvp + line['pvp_value']"
+                                        />
+                                    </td>
+                                    <td class="text-right">
+                                        <span
+                                            t-esc="'{0:.2f}'.format(line['gira_value'])"
+                                        />
+                                        <t
+                                            t-set="total_gira"
+                                            t-value="total_gira + line['gira_value']"
+                                        />
+                                    </td>
+                                    <td class="text-right">
+                                        <span
+                                            t-esc="'{0:.2f}'.format(line['contrib_percent'])"
+                                        />
+                                    </td>
+                                    <td class="text-right">
+                                        <span
+                                            t-esc="'{0:.2f}'.format(line['unilever_contrib'])"
+                                        />
+                                        <t
+                                            t-set="total_contrib"
+                                            t-value="total_contrib + line['unilever_contrib']"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr class="border-top border-dark">
+                                    <td colspan="2" class="text-right font-weight-bold">
+                                        Totales:
+                                    </td>
+                                    <td class="text-right font-weight-bold">
+                                        <span t-esc="total_qty" />
+                                    </td>
+                                    <td class="text-right font-weight-bold">
+                                        <span t-esc="'{0:.2f}'.format(total_pvp)" />
+                                    </td>
+                                    <td class="text-right font-weight-bold">
+                                        <span t-esc="'{0:.2f}'.format(total_gira)" />
+                                    </td>
+                                    <td colspan="2" class="text-right font-weight-bold">
+                                        <span t-esc="'{0:.2f}'.format(total_contrib)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="page-break-before:always;" />
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

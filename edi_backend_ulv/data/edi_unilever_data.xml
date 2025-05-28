@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Tarifa para productos de Unilever para almacenar el precio recomendado por Unilever -->
+    <record id="edi_unilever_pricelist" model="product.pricelist">
+        <field name="name">Unilever Pricelist</field>
+        <field name="sequence">99999</field>
+    </record>
+    <record id="action_unilever_send_cli" model="ir.actions.server">
+        <field name="name">Send to unilever (CLI)</field>
+        <field name="model_id" ref="model_res_partner" />
+        <field name="binding_model_id" ref="base.model_res_partner" />
+        <field name="state">code</field>
+        <field name="code">action = records.send_unilever_cli()</field>
+    </record>
+    <record id="DTO" model="agreement.type">
+        <field name="name">Descuentos a clientes concesionario</field>
+        <field name="code">DTO</field>
+        <field name="is_rebate">True</field>
+        <field name="domain">sale</field>
+    </record>
+    <record id="COL" model="agreement.type">
+        <field name="name">Acuerdos preferentes</field>
+        <field name="code">COL</field>
+        <field name="domain">sale</field>
+    </record>
+    <record id="POL" model="agreement.type">
+        <field name="name">Política de turismo y liquidaciones</field>
+        <field name="code">POL</field>
+        <field name="domain">sale</field>
+    </record>
+    <record id="GIRA" model="agreement.type">
+        <field name="name">Descuento GIRA</field>
+        <field name="code">GIRA</field>
+        <field name="domain">sale</field>
+    </record>
+    <record
+        id="action_server_settelement_line_backend_state_ulv_not_sent"
+        model="ir.actions.server"
+    >
+        <field name="name">Set to UL not sent</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_agreement_rebate_settlement_line" />
+        <field name="binding_model_id" ref="model_agreement_rebate_settlement_line" />
+        <field name="state">code</field>
+        <field name="code">records.write({'unilever_state': 'not_sent'})</field>
+    </record>
+    <record
+        id="action_server_settelement_line_backend_state_ulv_cancelled"
+        model="ir.actions.server"
+    >
+        <field name="name">Set to UL cancelled</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_agreement_rebate_settlement_line" />
+        <field name="binding_model_id" ref="model_agreement_rebate_settlement_line" />
+        <field name="state">code</field>
+        <field name="code">records.write({'unilever_state': 'cancelled'})</field>
+    </record>
+    <record id="action_merge_agreements" model="ir.actions.server">
+        <field name="name">Fusionar acuerdos DTO</field>
+        <field name="model_id" ref="model_agreement" />
+        <field name="binding_model_id" ref="edi_backend_ulv.model_agreement" />
+        <field name="state">code</field>
+        <field
+            name="code"
+        >records.filtered(lambda r: r.agreement_type_id.id == 4).merge_agreements()</field>
+    </record>
+</odoo>

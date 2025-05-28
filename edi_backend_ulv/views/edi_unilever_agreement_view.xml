@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  ~ # Copyright 2019 Tecnativa - Sergio Teruel
+  ~ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl
+  -->
+<odoo>
+    <record id="unilever_agreement_tree" model="ir.ui.view">
+        <field name="name">edi.unilever.tree</field>
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement.agreement_tree" />
+        <field name="arch" type="xml">
+            <field name="signature_date" position="before">
+                <field name="agreement_type_id" />
+            </field>
+            <field name="end_date" position="after">
+                <field name="unilever_rappel_group_id" />
+                <field name="invoice_discount" />
+                <field name="agreement_price" />
+            </field>
+        </field>
+    </record>
+    <record id="unilever_agreement_search" model="ir.ui.view">
+        <field name="name">edi.unilever.search</field>
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement_rebate.agreement_search" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field
+                    name="company_group_id"
+                    string="Company Group"
+                    filter_domain="[('partner_id.company_group_id', '=', self)]"
+                />
+            </field>
+            <field name="partner_id" position="after">
+                <field name="agreement_type_id" />
+                <field name="unilever_rappel_group_id" />
+                <field name="product_group_id" />
+                <field name="product_subgroup_id" />
+            </field>
+            <group name="groupby" position="before">
+                <separator />
+                <filter
+                    name="dto"
+                    string="DTO"
+                    domain="[('agreement_type_id.code','=','DTO')]"
+                />
+                <filter
+                    name="col"
+                    string="COL"
+                    domain="[('agreement_type_id.code','=','COL')]"
+                />
+                <filter
+                    name="pol"
+                    string="POL"
+                    domain="[('agreement_type_id.code','=','POL')]"
+                />
+                <filter
+                    name="gira"
+                    string="GIRA"
+                    domain="[('agreement_type_id.code','=','GIRA')]"
+                />
+                <separator />
+                <filter
+                    name="filter_signature_date"
+                    string="Signature date"
+                    date="signature_date"
+                />
+                <filter
+                    name="filter_start_date"
+                    string="Start date"
+                    date="start_date"
+                />
+                <filter name="filter_end_date" string="End date" date="end_date" />
+                <separator />
+                <filter
+                    name="filter_child_partners"
+                    string="Contacts or partner without childs"
+                    domain='["&amp;" ,["partner_id.parent_id","!=", False],"|",["partner_id.is_company","=",True],["partner_id.child_ids","=", False]]'
+                />
+                <separator />
+                <filter
+                    name="filter_unilever_seasonality_yearly"
+                    string="Yearly agreements"
+                    domain='[("partner_id.unilever_seasonality","=", "yearly")]'
+                />
+                <filter
+                    name="filter_unilever_seasonality_season"
+                    string="Season agreements"
+                    domain='[("partner_id.unilever_seasonality","=", "season")]'
+                />
+            </group>
+            <group name="groupby" position="inside">
+                <filter
+                    name="company_group_groupby"
+                    string="Company Group"
+                    context="{'group_by': 'company_group_id'}"
+                />
+                <filter
+                    name="commercial_partner_groupby"
+                    string="Commercial entity"
+                    context="{'group_by': 'commercial_partner_id'}"
+                />
+                <filter
+                    name="partner_groupby"
+                    string="Partner"
+                    context="{'group_by': 'partner_id'}"
+                />
+                <filter
+                    name="agreement_type"
+                    string="Agreement type"
+                    context="{'group_by': 'agreement_type_id'}"
+                />
+                <filter
+                    name="rappel_group"
+                    string="Rappel group"
+                    context="{'group_by': 'unilever_rappel_group_id'}"
+                />
+            </group>
+        </field>
+    </record>
+    <record id="agreement_form" model="ir.ui.view">
+        <field name="name">agreement.unilever.form</field>
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement.agreement_form" />
+        <field name="arch" type="xml">
+            <!-- Add button to try display in which backend communication history was
+            send the picking -->
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    name="action_ulv_communication_history"
+                    class="oe_stat_button"
+                    icon="fa-retweet"
+                    string="ULV files"
+                    type="object"
+                />
+            </xpath>
+            <sheet position="before">
+                <header>
+                    <field name="domain" invisible="1" />
+                    <button
+                        name="action_compute_estimated_consumption"
+                        string="Get consumption"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button
+                        name="action_delivery_fresh_asset"
+                        string="Send fresh asset"
+                        type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible': [('domain', '!=', 'dealer')]}"
+                    />
+                    <button
+                        name="action_return_fresh_asset"
+                        string="Return fresh asset"
+                        type="object"
+                        attrs="{'invisible': [('domain', '!=', 'dealer')]}"
+                    />
+                </header>
+            </sheet>
+            <field name="partner_id" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'required': ['|', ('is_template', '=', False), ('agreement_type','!=', 'GIRA')], 'readonly': [('partner_id', '!=', False)]}</attribute>
+                <attribute name="force_save">1</attribute>
+            </field>
+            <field name="agreement_type_id" position="after">
+                <field name="agreement_type" />
+                <field
+                    name="col_type_id"
+                    attrs="{'invisible': [('agreement_type', '!=', 'COL')]}"
+                />
+                <field name="move_type" />
+            </field>
+            <field name="end_date" position="after">
+                <field
+                    name="date_low"
+                    attrs="{'invisible': [('agreement_type','!=', 'DTO')]}"
+                />
+                <field
+                    name="chain"
+                    attrs="{'invisible': [('agreement_type','!=', 'DTO')]}"
+                />
+                <field
+                    name="grouped_group"
+                    attrs="{'invisible': [('agreement_type','!=', 'DTO')]}"
+                />
+                <field
+                    name="grouped_subgroup"
+                    attrs="{'invisible': [('agreement_type','!=', 'DTO')]}"
+                />
+                <field
+                    name="agreement_condition_id"
+                    attrs="{'invisible': [('agreement_type','not in', ['POL', 'GIRA'])]}"
+                    context="{'default_condition_type': agreement_type, 'default_start_date': start_date, 'default_end_date': end_date}"
+                />
+                <field name="previous_agreement_id" />
+            </field>
+            <group name="main" position="after">
+                <group>
+                    <group>
+                        <field
+                            name="product_group_id"
+                            attrs="{'invisible': [('agreement_type','not in', ['DTO', 'COL', 'GIRA'])]}"
+                        />
+                        <field
+                            name="product_subgroup_id"
+                            attrs="{'invisible': [('agreement_type','not in', ['DTO', 'COL', 'GIRA'])]}"
+                        />
+                        <field
+                            name="unilever_rappel_group_id"
+                            attrs="{'invisible': [('agreement_type','not in', ['DTO', 'COL'])]}"
+                        />
+                        <field
+                            name="unilever_participation_percent"
+                            attrs="{'invisible': [('agreement_type','=', 'POL')]}"
+                        />
+                        <field
+                            name="product_id"
+                            attrs="{'invisible': [('agreement_type','in', ['POL', 'GIRA'])]}"
+                        />
+                        <field
+                            name="product_ids"
+                            widget="many2many_tags"
+                            attrs="{'invisible': [('product_id','!=', False)]}"
+                        />
+                        <field
+                            name="invoice_discount"
+                            attrs="{'invisible': [('agreement_type','not in', ['DTO', 'COL', 'GIRA'])]}"
+                        />
+                        <field
+                            name="estimated_consumption"
+                            attrs="{'invisible': [('agreement_type','not in', ['DTO', 'COL'])]}"
+                        />
+                        <button
+                            name="action_set_anual_percent_discount_default"
+                            type="object"
+                            string="Set default anual discount"
+                            attrs="{'invisible': [('agreement_type','!=', 'DTO')]}"
+                            class="oe_link"
+                        />
+                        <field
+                            name="anual_discount_percent"
+                            attrs="{'invisible': [('agreement_type','!=', 'DTO')]}"
+                        />
+                        <field
+                            name="rebate_section_ids"
+                            attrs="{'invisible': [('agreement_type','!=', 'DTO')]}"
+                        />
+                    </group>
+                    <group>
+                        <field
+                            name="agreement_amount"
+                            attrs="{'invisible': [('agreement_type','!=', 'COL')]}"
+                        />
+                        <field
+                            name="agreement_price"
+                            attrs="{'invisible': [('agreement_type','=', 'COL')]}"
+                        />
+                        <field
+                            name="guaranteed_price"
+                            attrs="{'invisible': [('agreement_type','!=', 'POL')]}"
+                        />
+                        <field
+                            name="pol_estimated_consumption"
+                            attrs="{'invisible': [('agreement_type','!=', 'POL')]}"
+                        />
+                        <field
+                            name="pol_group_estimated_consumption"
+                            attrs="{'invisible': [('agreement_type','!=', 'POL')]}"
+                        />
+                        <field
+                            name="date_low"
+                            attrs="{'invisible': [('agreement_type','!=', 'POL')]}"
+                        />
+                        <field name="channel" />
+                        <field name="note" />
+                        <field name="additional_consumption" />
+                    </group>
+                </group>
+                <group string="Partner Communication">
+                    <field name="partner_communication_ids" nolabel="1">
+                        <tree>
+                            <field name="partner_id" />
+                            <field name="move_type" />
+                            <field name="unilever_state" />
+                        </tree>
+                    </field>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

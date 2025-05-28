@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_production_lot_form" model="ir.ui.view">
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form" />
+        <field name="arch" type="xml">
+            <group name="main_group" position="after">
+                <group string="Unilever MEF" class="d-flex">
+                    <field name="change_dealer" />
+                    <field name="unilever_low_reason" />
+                    <label for="ul_date_last_verification" />
+                    <div class="o_row">
+                        <field name="ul_date_last_verification" class="oe_inline" />
+                        <span>
+                        <button
+                                name="button_unilever_date_register"
+                                string="Asset count"
+                                type="object"
+                                class="btn-primary oe_inline"
+                            />
+                        </span>
+                    </div>
+                </group>
+            </group>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="search_product_lot_filter">
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.search_product_lot_filter" />
+        <field name="arch" type="xml">
+            <field name="product_id" position="after">
+                <field name="unilever_low_reason" />
+            </field>
+        </field>
+    </record>
+</odoo>

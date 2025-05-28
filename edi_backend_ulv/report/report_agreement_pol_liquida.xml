@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="agreement_pol_settlement">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <div class="page">
+                    <table class="table table-sm">
+                        <thead class="border_header" style="align: center;">
+                            <tr>
+                                <th colspan="8">
+                                    <h4>Liquidación políticas de turismo entre <span
+                                            t-esc="start_date"
+                                            t-options="{'widget': 'date'}"
+                                        /> y <span
+                                            t-esc="end_date"
+                                            t-options="{'widget': 'date'}"
+                                        /></h4>
+                                    <br />
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Grupo</th>
+                                <th>Descripción</th>
+                                <th class="text-right">P. Aseg.</th>
+                                <th class="text-right">P. Acue.</th>
+                                <th class="text-right">Diferen.</th>
+                                <th class="text-right">Piezas</th>
+                                <th class="text-right">Contrib.</th>
+                                <th class="text-right" />
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="total_quantity" t-value="0" />
+                            <t t-set="total_contrib" t-value="0" />
+                            <t t-foreach="docs.mapped('partner_id')" t-as="partner">
+                                <t t-set="total_partner_quantity" t-value="0" />
+                                <t t-set="total_partner_contrib" t-value="0" />
+                                <t
+                                    t-foreach="docs.filtered(lambda d: d.partner_id == partner)"
+                                    t-as="doc"
+                                >
+                                    <t
+                                        t-set="quantity"
+                                        t-value="doc.with_context(start_date=start_date, end_date=end_date, from_report=True).get_agreement_quantity()"
+                                    />
+                                    <t
+                                        t-set="contrib"
+                                        t-value="doc.guaranteed_price - doc.agreement_price"
+                                    />
+                                    <t
+                                        t-set="total_partner_quantity"
+                                        t-value="total_partner_quantity + quantity"
+                                    />
+                                    <t
+                                        t-set="total_partner_contrib"
+                                        t-value="total_partner_contrib + contrib * quantity"
+                                    />
+                                    <t t-if="quantity != 0.0">
+                                        <tr>
+                                            <td colspan="8">
+                                                <span
+                                                    t-field="doc.partner_id.unilever_ref"
+                                                />
+                                                <span t-field="doc.partner_id" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                    <tr t-if="quantity != 0">
+                                        <td>
+                                            <span
+                                                t-field="doc.agreement_condition_id.tourism_group_id.unilever_ref"
+                                            />
+                                        </td>
+                                        <td>
+                                            <span
+                                                t-field="doc.agreement_condition_id"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="doc.guaranteed_price" />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="doc.agreement_price" />
+                                        </td>
+                                        <td class="text-right">
+                                            <span
+                                                t-esc="doc.guaranteed_price - doc.agreement_price"
+                                                t-options="{'widget': 'float', 'decimal_precision': 'Product Price'}"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span
+                                                t-esc="quantity"
+                                                t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span
+                                                t-esc="contrib * quantity"
+                                                t-options="{'widget': 'float', 'decimal_precision': 'Product Price'}"
+                                            />
+                                        </td>
+                                        <td class="text-right">0</td>
+                                    </tr>
+                                </t>
+                                <tr t-if="total_partner_quantity != 0">
+                                    <td colspan="2" />
+                                    <td colspan="3">
+                                        <strong>TOTAL CLIENTE:</strong>
+                                    </td>
+                                    <td class="text-right">
+                                        <span
+                                            t-esc="total_partner_quantity"
+                                            t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
+                                        />
+                                    </td>
+                                    <td class="text-right">
+                                        <span
+                                            t-esc="total_partner_contrib"
+                                            t-options="{'widget': 'float', 'decimal_precision': 'Product Price'}"
+                                        />
+                                    </td>
+                                    <td class="text-right">0</td>
+                                </tr>
+                                <t
+                                    t-set="total_quantity"
+                                    t-value="total_quantity + total_partner_quantity"
+                                />
+                                <t
+                                    t-set="total_contrib"
+                                    t-value="total_contrib + total_partner_contrib"
+                                />
+                            </t>
+                            <tr t-if="total_quantity != 0">
+                                <td colspan="2" />
+                                <td colspan="3">
+                                    <strong>TOTAL GENERAL:</strong>
+                                </td>
+                                <td class="text-right">
+                                    <span
+                                        t-esc="total_quantity"
+                                        t-options="{'widget': 'float', 'decimal_precision': 'Product Unit of Measure'}"
+                                    />
+                                </td>
+                                <td class="text-right">
+                                    <span
+                                        t-esc="total_contrib"
+                                        t-options="{'widget': 'float', 'decimal_precision': 'Product Price'}"
+                                    />
+                                </td>
+                                <td class="text-right">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+    <record id="report_unilever_agreement_pol_settlement" model="ir.actions.report">
+        <field name="name">Liquidaciones POL</field>
+        <field name="model">agreement</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">edi_backend_ulv.agreement_pol_settlement</field>
+        <field name="report_file">edi_backend_ulv.agreement_pol_settlement</field>
+        <field
+            name="paperformat_id"
+            ref="edi_backend_ulv.unilever_paperformat_euro_lowmargin"
+        />
+    </record>
+</odoo>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017 Carlos Dauden - Tecnativa <carlos.dauden@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="agreement_duplicate_wizard_view" model="ir.ui.view">
+        <field name="name">Agreement Duplicate / Renew</field>
+        <field name="model">agreement.duplicate.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Agreement duplicate / renew">
+                <div>
+                    <p
+                    >Se creará una copia de cada uno de los acuerdos seleccionados.</p>
+                    <p
+                    >En caso de dejar los valores vacíos se mantendrán los valores originales</p>
+                    <br />
+                    <br />
+                </div>
+                <group>
+                    <field name="action_type" />
+                    <field name="partner_id" />
+                    <field
+                        name="start_date"
+                        attrs="{'required': [('action_type', '=', 'renew')]}"
+                    />
+                    <field name="end_date" />
+                </group>
+                <footer>
+                    <button
+                        string="Apply"
+                        name="action_apply"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="agreement_duplicate_wizard_action" model="ir.actions.act_window">
+        <field name="name">Duplicate Agreement / Renew</field>
+        <field name="res_model">agreement.duplicate.wizard</field>
+        <field name="binding_model_id" ref="agreement.model_agreement" />
+        <field name="view_mode">form</field>
+        <field name="binding_view_types">list</field>
+        <field name="target">new</field>
+    </record>
+    <!-- TODO: Recovery this context -->
+    <!-- context="{'default_partner_id': context.get('default_partner_id', False)}" -->
+
+</odoo>

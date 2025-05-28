@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_unilever_export_config_cli" model="edi.backend.config">
+        <field name="name">Unilever cliente detalle</field>
+        <field name="model_number">2018</field>
+        <field name="filler_zero_with">blank</field>
+        <field name="model_id" ref="base.model_res_partner" />
+    </record>
+    <!-- TODO: Cuando se produce un alta - modificacion - baja en Unilever ??? -->
+    <record id="edi_unilever_export_cli_line_01" model="edi.backend.config.line">
+        <field name="sequence">1</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Tipo de movimiento</field>
+        <field name="expression">${object.unilever_move_type}</field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_02" model="edi.backend.config.line">
+        <field name="sequence">2</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Código de concesionario</field>
+        <field name="expression">${object.env.user.company_id.unilever_dealer}</field>
+        <field name="export_type">integer</field>
+        <field name="size">3</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_03" model="edi.backend.config.line">
+        <field name="sequence">3</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Código del cliente</field>
+        <field name="expression">${object.unilever_ref}</field>
+        <field name="export_type">integer</field>
+        <field name="size">7</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_04" model="edi.backend.config.line">
+        <field name="sequence">4</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Código cliente Unilever</field>
+        <field
+            name="expression"
+        >${object.unilever_ref_sam if object.unilever_partner_type == 'F' else 0}</field>
+        <field name="export_type">integer</field>
+        <field name="size">10</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_05" model="edi.backend.config.line">
+        <field name="sequence">5</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Nombre Comercial</field>
+        <field name="expression">${object.unilever_commercial_name}</field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_06" model="edi.backend.config.line">
+        <field name="sequence">6</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Dirección del cliente</field>
+        <field name="expression">${object.street and object.street[:30] or ''}</field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_07" model="edi.backend.config.line">
+        <field name="sequence">7</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Población</field>
+        <field name="expression">${object.city}</field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_08" model="edi.backend.config.line">
+        <field name="sequence">8</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Código postal</field>
+        <field name="expression">${object.zip}</field>
+        <field name="export_type">string</field>
+        <field name="size">10</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_09" model="edi.backend.config.line">
+        <field name="sequence">9</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Tipo de cliente</field>
+        <field name="expression">${object.unilever_partner_type}</field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_10" model="edi.backend.config.line">
+        <field name="sequence">10</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">NIF</field>
+        <field
+            name="expression"
+        >${object.vat and (object.self_employed and '00000000T' or object.vat.replace('ES', '')) or ''}</field>
+        <field name="export_type">string</field>
+        <field name="size">15</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_11" model="edi.backend.config.line">
+        <field name="sequence">11</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Nombre Fiscal</field>
+        <field
+            name="expression"
+        >${object.self_employed and object.unilever_commercial_name or object.name}</field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_12" model="edi.backend.config.line">
+        <field name="sequence">12</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Teléfono</field>
+        <field
+            name="expression"
+        >${object.phone and object.phone.replace(' ', '').replace('-', '').replace('.', '')}</field>
+        <field name="export_type">string</field>
+        <field name="size">15</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_13" model="edi.backend.config.line">
+        <field name="sequence">13</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Familia</field>
+        <field name="expression">${object.unilever_category_id.code}</field>
+        <field name="export_type">integer</field>
+        <field name="size">2</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_14" model="edi.backend.config.line">
+        <field name="sequence">14</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Competencia baja</field>
+        <field
+            name="expression"
+        >${object.unilever_disable_reason_id and object.unilever_competency_id.code or ''}</field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_15" model="edi.backend.config.line">
+        <field name="sequence">15</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Fecha de baja/alta/modif</field>
+        <field name="expression">${format_date_sp(object.write_date)}</field>
+        <field name="export_type">integer</field>
+        <field name="size">8</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+        <field name="filler_zero_with">zero</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_16" model="edi.backend.config.line">
+        <field name="sequence">16</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Motivo de baja</field>
+        <field name="expression">${object.unilever_disable_reason_id.code}</field>
+        <field name="export_type">integer</field>
+        <field name="size">1</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_17" model="edi.backend.config.line">
+        <field name="sequence">17</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Favorito</field>
+        <field name="expression">${'NO'}</field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_18" model="edi.backend.config.line">
+        <field name="sequence">18</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Competencia alta</field>
+        <field name="expression">${object.unilever_high_competency_id.code}</field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_19" model="edi.backend.config.line">
+        <field name="sequence">19</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">FAX</field>
+        <!-- El cliente dice que rellenan esto con el telefono -->
+        <field name="expression">${object.phone}</field>
+        <field name="export_type">string</field>
+        <field name="size">15</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_20" model="edi.backend.config.line">
+        <field name="sequence">20</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">e-mail</field>
+        <field
+            name="expression"
+        >${object.email and not object.self_employed and object.email[:50] or ''}</field>
+        <field name="export_type">string</field>
+        <field name="size">50</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_21" model="edi.backend.config.line">
+        <field name="sequence">21</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Dirección fiscal</field>
+        <field
+            name="expression"
+        >${object.commercial_partner_id.street and object.commercial_partner_id.street[:30] or ''}</field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_22" model="edi.backend.config.line">
+        <field name="sequence">22</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Población fiscal</field>
+        <field name="expression">${object.city and object.city[:30] or ''}</field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_23" model="edi.backend.config.line">
+        <field name="sequence">23</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Código postal fiscal</field>
+        <field name="expression">${object.zip and object.zip[:10] or ''}</field>
+        <field name="export_type">string</field>
+        <field name="size">10</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <!-- TODO: review -->
+    <record id="edi_unilever_export_cli_line_24" model="edi.backend.config.line">
+        <field name="sequence">24</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Días de cierre</field>
+        <field name="expression">${''}</field>
+        <field name="export_type">string</field>
+        <field name="size">7</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_25" model="edi.backend.config.line">
+        <field name="sequence">25</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Horario comercial</field>
+        <field name="expression">${''}</field>
+        <field name="export_type">string</field>
+        <field name="size">20</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_26" model="edi.backend.config.line">
+        <field name="sequence">26</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 1 Cargo/Descripción</field>
+        <field name="expression">${object.get_contact_by_position(1).function}</field>
+        <field name="export_type">string</field>
+        <field name="size">15</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_27" model="edi.backend.config.line">
+        <field name="sequence">27</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 1 Nombre</field>
+        <field name="expression">${object.get_contact_by_position(1).name}</field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_28" model="edi.backend.config.line">
+        <field name="sequence">28</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 1 e-mail</field>
+        <field name="expression">${object.get_contact_by_position(1).email}</field>
+        <field name="export_type">string</field>
+        <field name="size">50</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_29" model="edi.backend.config.line">
+        <field name="sequence">29</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 1 teléfono</field>
+        <field name="expression">${object.get_contact_by_position(1).phone}</field>
+        <field name="export_type">string</field>
+        <field name="size">15</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_30" model="edi.backend.config.line">
+        <field name="sequence">30</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 1 fecha alta</field>
+        <field name="expression" />
+        <field name="export_type">string</field>
+        <field name="size">8</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_31" model="edi.backend.config.line">
+        <field name="sequence">31</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 1 fecha baja</field>
+        <field name="expression" />
+        <field name="export_type">string</field>
+        <field name="size">8</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_32" model="edi.backend.config.line">
+        <field name="sequence">32</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 2 Cargo/Descripción</field>
+        <field name="expression">${object.get_contact_by_position(2).function}</field>
+        <field name="export_type">string</field>
+        <field name="size">15</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_33" model="edi.backend.config.line">
+        <field name="sequence">33</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 2 Nombre</field>
+        <field name="expression">${object.get_contact_by_position(2).name}</field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_34" model="edi.backend.config.line">
+        <field name="sequence">34</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 2 e-mail</field>
+        <field name="expression">${object.get_contact_by_position(2).email}</field>
+        <field name="export_type">string</field>
+        <field name="size">50</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_35" model="edi.backend.config.line">
+        <field name="sequence">35</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 2 teléfono</field>
+        <field name="expression">${object.get_contact_by_position(2).phone}</field>
+        <field name="export_type">string</field>
+        <field name="size">15</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_36" model="edi.backend.config.line">
+        <field name="sequence">36</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 2 fecha alta</field>
+        <field name="expression" />
+        <field name="export_type">string</field>
+        <field name="size">8</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_37" model="edi.backend.config.line">
+        <field name="sequence">37</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 2 fecha baja</field>
+        <field name="expression" />
+        <field name="export_type">string</field>
+        <field name="size">8</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_38" model="edi.backend.config.line">
+        <field name="sequence">38</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 3 Cargo/Descripción</field>
+        <field name="expression">${object.get_contact_by_position(3).function}</field>
+        <field name="export_type">string</field>
+        <field name="size">15</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_39" model="edi.backend.config.line">
+        <field name="sequence">39</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 3 Nombre</field>
+        <field name="expression">${object.get_contact_by_position(3).name}</field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_40" model="edi.backend.config.line">
+        <field name="sequence">40</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 3 e-mail</field>
+        <field name="expression">${object.get_contact_by_position(3).email}</field>
+        <field name="export_type">string</field>
+        <field name="size">50</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_41" model="edi.backend.config.line">
+        <field name="sequence">41</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 3 teléfono</field>
+        <field name="expression">${object.get_contact_by_position(3).phone}</field>
+        <field name="export_type">string</field>
+        <field name="size">15</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_42" model="edi.backend.config.line">
+        <field name="sequence">42</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 3 fecha alta</field>
+        <field name="expression" />
+        <field name="export_type">string</field>
+        <field name="size">8</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_43" model="edi.backend.config.line">
+        <field name="sequence">43</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Contacto 3 fecha baja</field>
+        <field name="expression" />
+        <field name="export_type">string</field>
+        <field name="size">8</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_44" model="edi.backend.config.line">
+        <field name="sequence">44</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Cadena concesionario</field>
+        <field
+            name="expression"
+        >${object.company_group_id.unilever_ref or object.commercial_partner_id.unilever_ref or 0 if object.unilever_partner_type == 'C' else 0}</field>
+        <field name="export_type">integer</field>
+        <field name="size">7</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+        <field name="filler_zero_with">zero</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_45" model="edi.backend.config.line">
+        <field name="sequence">45</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Codigo local</field>
+        <field name="expression">${object.unilever_local_code}</field>
+        <field name="export_type">integer</field>
+        <field name="size">7</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <!--  desconocido  -->
+    <record id="edi_unilever_export_cli_line_46" model="edi.backend.config.line">
+        <field name="sequence">46</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Centro</field>
+        <field name="expression">${object.unilever_center or '00'}</field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_47" model="edi.backend.config.line">
+        <field name="sequence">47</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">GPS Longitud</field>
+        <field name="expression">${'00.000000'}</field>
+        <field name="export_type">string</field>
+        <field name="size">9</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_48" model="edi.backend.config.line">
+        <field name="sequence">48</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">GPS Latitud</field>
+        <field name="expression">${'000.000000'}</field>
+        <field name="export_type">string</field>
+        <field name="size">10</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_49" model="edi.backend.config.line">
+        <field name="sequence">49</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Tipo de servicio COM</field>
+        <field name="expression">${'N'}</field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_50" model="edi.backend.config.line">
+        <field name="sequence">50</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Bloqueo cliente para servicio tecnico COM</field>
+        <field name="expression">${'N'}</field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_51" model="edi.backend.config.line">
+        <field name="sequence">51</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Bloqueo cliente para nueva entrega COM</field>
+        <field name="expression">${'N'}</field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_52" model="edi.backend.config.line">
+        <field name="sequence">52</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Código ZONA</field>
+        <field name="expression">${object.zip}</field>
+        <field name="export_type">integer</field>
+        <field name="size">5</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+        <field name="filler_zero_with">zero</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_53" model="edi.backend.config.line">
+        <field name="sequence">53</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Descripción ZONA</field>
+        <field name="expression">${object.city}</field>
+        <field name="export_type">string</field>
+        <field name="size">40</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_54" model="edi.backend.config.line">
+        <field name="sequence">54</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Código SUBZONA</field>
+        <field
+            name="expression"
+        >${object.user_id and object.user_id.id or object.child_ids.filtered(lambda c: c.type == 'delivery').mapped('user_id')[:1].id}</field>
+        <field name="export_type">integer</field>
+        <field name="size">5</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_55" model="edi.backend.config.line">
+        <field name="sequence">55</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Descripción SUBZONA</field>
+        <field
+            name="expression"
+        >${object.user_id and object.user_id.name[:40] or (object.child_ids.filtered(lambda c: c.type == 'delivery').mapped('user_id')[:1].name or '')[:40]}</field>
+        <field name="export_type">string</field>
+        <field name="size">40</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record id="edi_unilever_export_cli_line_56" model="edi.backend.config.line">
+        <field name="sequence">56</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli" />
+        <field name="name">Salto linea</field>
+        <field name="expression">${b'\r\n'}</field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <!-- Fichero clientes nivel 0 -->
+    <record id="edi_unilever_export_config_cli_l0" model="edi.backend.config">
+        <field name="name">Unilever clientes</field>
+        <field name="model_number">2018</field>
+        <field name="model_id" ref="model_edi_backend" />
+    </record>
+    <record id="edi_unilever_export_cli_l0_line_01" model="edi.backend.config.line">
+        <field name="sequence">1</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_cli_l0" />
+        <field name="name">Detalles Clientes</field>
+        <field name="repeat_expression">object.get_records()</field>
+        <field name="subconfig_id" ref="edi_unilever_export_config_cli" />
+        <field name="export_type">subconfig</field>
+        <field name="apply_sign">False</field>
+    </record>
+</odoo>

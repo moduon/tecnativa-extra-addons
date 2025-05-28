@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="gira_detailed_report">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <header>
+                            <div class="row">
+                                <div class="col-12 text-right">
+                                    Fecha: <span
+                                        t-esc="datetime_print"
+                                        t-options="{'widget': 'datetime'}"
+                                    />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5 class="font-weight-bold">
+                                        LISTADO DE GIRAS DETALLADO GIRA Nº: <span
+                                            t-esc="doc.code"
+                                        />
+                                    </h5>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="font-weight-bold">
+                                        <span t-esc="doc.name" />
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <p class="font-weight-bold">
+                                        (Desde Fecha: <span t-field="doc.start_date" />
+                                        A <span t-field="doc.end_date" />)(Desde
+                                        Proveedor: 0 A 999)
+                                    </p>
+                                </div>
+                            </div>
+                        </header>
+                        <table style="width:100%;">
+                            <thead class="border_header">
+                                <tr>
+                                    <!-- <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >SE</th> -->
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >FRA.</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >FECHA</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >CLIE.</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >NOMBRE</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >PROD.</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >DESCRIPCIÓN</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >UNID</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >VALOR<br />PVP</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >VALOR<br />GIRA</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >% CONTR.<br />FRIGO</th>
+                                    <th
+                                        class="text-center"
+                                        style="vertical-align: middle"
+                                    >CONTR.<br />FRIGO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="total_qty" t-value="0" />
+                                <t t-set="total_pvp" t-value="0" />
+                                <t t-set="total_gira" t-value="0" />
+                                <t t-set="total_contrib" t-value="0" />
+                                <t t-set="total_reg" t-value="0" />
+                                <t t-foreach="doc.line_ids" t-as="product">
+                                    <t
+                                        t-set="line_vals"
+                                        t-value="line_values(condition_line=product)"
+                                    />
+                                    <tr t-foreach="line_vals" t-as="val">
+                                        <!-- <td>
+                                            <span t-esc="val['se']" />
+                                        </td> -->
+                                        <td class="text-right">
+                                            <span t-esc="val['invoice']" />
+                                        </td>
+                                        <td class="text-center">
+                                            <span
+                                                t-esc="val['date']"
+                                                t-options="{'widget': 'date'}"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="val['client_ref']" />
+                                        </td>
+                                        <td>
+                                            <span
+                                                t-esc="val['client_name']"
+                                                style="margin-left: 3px;"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span
+                                                t-field="product.product_id.default_code"
+                                            />
+                                        </td>
+                                        <td>
+                                            <span
+                                                t-field="product.product_id.name"
+                                                style="margin-left: 3px;"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-esc="val['quantity']" />
+                                            <t
+                                                t-set="total_qty"
+                                                t-value="total_qty + val['quantity']"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span
+                                                t-esc="'{0:.2f}'.format(val['pvp_value'])"
+                                            />
+                                            <t
+                                                t-set="total_pvp"
+                                                t-value="total_pvp + val['pvp_value']"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span
+                                                t-esc="'{0:.2f}'.format(val['gira_value'])"
+                                            />
+                                            <t
+                                                t-set="total_gira"
+                                                t-value="total_gira + val['gira_value']"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span
+                                                t-esc="'{0:.2f}'.format(val['contrib_percent'])"
+                                            />
+                                        </td>
+                                        <td class="text-right">
+                                            <span
+                                                t-esc="'{0:.2f}'.format(val['unilever_contrib'])"
+                                            />
+                                            <t
+                                                t-set="total_contrib"
+                                                t-value="total_contrib + val['unilever_contrib']"
+                                            />
+                                        </td>
+                                        <t t-set="total_reg" t-value="total_reg + 1" />
+                                    </tr>
+                                </t>
+                                <tr class="border-top border-dark">
+                                    <td
+                                        colspan="4"
+                                        class="text-right"
+                                    >Total Registros:</td>
+                                    <td class="text-right"><span
+                                            t-esc="total_reg"
+                                        /></td>
+                                    <td class="text-right font-weight-bold">
+                                        Totales:
+                                    </td>
+                                    <td class="text-right font-weight-bold">
+                                        <span t-esc="total_qty" />
+                                    </td>
+                                    <td class="text-right font-weight-bold">
+                                        <span t-esc="'{0:.2f}'.format(total_pvp)" />
+                                    </td>
+                                    <td class="text-right font-weight-bold">
+                                        <span t-esc="'{0:.2f}'.format(total_gira)" />
+                                    </td>
+                                    <td colspan="2" class="text-right font-weight-bold">
+                                        <span t-esc="'{0:.2f}'.format(total_contrib)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="page-break-before:always;" />
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

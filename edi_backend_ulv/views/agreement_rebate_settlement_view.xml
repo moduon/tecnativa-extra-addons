@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="agreement_rebate_settlement_tree" model="ir.ui.view">
+        <field name="model">agreement.rebate.settlement</field>
+        <field
+            name="inherit_id"
+            ref="agreement_rebate.agreement_rebate_settlement_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="unilever_settlement_type" />
+            </field>
+        </field>
+    </record>
+    <record id="agreement_rebate_settlement_form" model="ir.ui.view">
+        <field name="model">agreement.rebate.settlement</field>
+        <field
+            name="inherit_id"
+            ref="agreement_rebate.agreement_rebate_settlement_form"
+        />
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="unilever_settlement_type" />
+            </field>
+            <field name="amount_from" position="before">
+                <field name="unilever_participation_percent" />
+                <field name="unilever_contribution_amount" />
+                <field name="unilever_rappel_group_id" />
+                <field name="unilever_percent_total" />
+                <field name="unilever_state" groups="base.group_no_one" />
+            </field>
+            <xpath expr="//field[@name='line_ids']/tree/field" position="before">
+                <field name="partner_id" readonly="1" />
+            </xpath>
+        </field>
+    </record>
+    <record id="agreement_rebate_settlement_line_tree" model="ir.ui.view">
+        <field name="model">agreement.rebate.settlement.line</field>
+        <field
+            name="inherit_id"
+            ref="agreement_rebate.agreement_rebate_settlement_line_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="amount_from" position="before">
+                <field name="unilever_participation_percent" />
+                <field name="unilever_contribution_amount" sum="Total" />
+                <field name="unilever_rappel_group_id" />
+                <field name="unilever_percent_total" />
+                <field name="unilever_state" />
+            </field>
+        </field>
+    </record>
+</odoo>

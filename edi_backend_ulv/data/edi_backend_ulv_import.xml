@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  ~ # Copyright 2022 Tecnativa - Carlos Roca
+  ~ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl
+  -->
+<odoo>
+    <!-- Fichero albaranes cliente nivel 0 -->
+    <record id="edi_backend_config_move" model="edi.backend.config">
+        <field name="name">Albaranes ULV</field>
+        <field name="model_number">2018</field>
+        <field name="columns_definition">positional</field>
+        <field name="model_id" ref="stock.model_stock_move" />
+    </record>
+    <record id="edi_backend_config_alb_line_01" model="edi.backend.config.line">
+        <field name="sequence">1</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Proveedor</field>
+        <field name="key">Proveedor</field>
+        <field name="size">4</field>
+    </record>
+    <record id="edi_backend_config_alb_line_02" model="edi.backend.config.line">
+        <field name="sequence">2</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Código registro</field>
+        <field name="key">Código registro</field>
+        <field name="size">3</field>
+    </record>
+    <record id="edi_backend_config_alb_line_03" model="edi.backend.config.line">
+        <field name="sequence">3</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Numero de documento</field>
+        <field name="key">Numero de documento</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_alb_line_04" model="edi.backend.config.line">
+        <field name="sequence">4</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Fecha movimiento</field>
+        <field name="key">Fecha movimiento</field>
+        <field name="size">8</field>
+    </record>
+    <record id="edi_backend_config_alb_line_05" model="edi.backend.config.line">
+        <field name="sequence">5</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Fecha prevista de entrega</field>
+        <field name="key">Fecha prevista de entrega</field>
+        <field name="size">8</field>
+    </record>
+    <record id="edi_backend_config_alb_line_06" model="edi.backend.config.line">
+        <field name="sequence">6</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Concesionario</field>
+        <field name="key">Concesionario</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_alb_line_07" model="edi.backend.config.line">
+        <field name="sequence">7</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Producto</field>
+        <field name="key">Producto</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_alb_line_08" model="edi.backend.config.line">
+        <field name="sequence">8</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Numero de pallet</field>
+        <field name="key">Numero de pallet</field>
+        <field name="size">18</field>
+    </record>
+    <record id="edi_backend_config_alb_line_09" model="edi.backend.config.line">
+        <field name="sequence">9</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Numero de Lote</field>
+        <field name="key">Numero de Lote</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_alb_line_10" model="edi.backend.config.line">
+        <field name="sequence">10</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Fecha de fabricación</field>
+        <field name="key">Fecha de fabricación</field>
+        <field name="size">8</field>
+    </record>
+    <record id="edi_backend_config_alb_line_11" model="edi.backend.config.line">
+        <field name="sequence">11</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Fecha de caducidad</field>
+        <field name="key">Fecha de caducidad</field>
+        <field name="size">8</field>
+    </record>
+    <record id="edi_backend_config_alb_line_12" model="edi.backend.config.line">
+        <field name="sequence">12</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Cantidad</field>
+        <field name="key">Cantidad</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_alb_line_13" model="edi.backend.config.line">
+        <field name="sequence">13</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Unidad de medida</field>
+        <field name="key">Unidad de medida</field>
+        <field name="size">3</field>
+    </record>
+    <record id="edi_backend_config_alb_line_14" model="edi.backend.config.line">
+        <field name="sequence">14</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Precio neto línea</field>
+        <field name="key">Precio neto línea</field>
+        <field name="size">7</field>
+    </record>
+    <record id="edi_backend_config_alb_line_15" model="edi.backend.config.line">
+        <field name="sequence">15</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Numero pedido concesionario</field>
+        <field name="key">Numero pedido concesionario</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_alb_line_16" model="edi.backend.config.line">
+        <field name="sequence">16</field>
+        <field name="export_config_id" ref="edi_backend_config_move" />
+        <field name="name">Código EAN</field>
+        <field name="key">Código EAN</field>
+        <field name="size">14</field>
+    </record>
+</odoo>

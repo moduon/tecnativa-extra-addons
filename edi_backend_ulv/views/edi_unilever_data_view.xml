@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_unilever_category_tree" model="ir.ui.view">
+        <field name="name">edi.unilever.category.tree</field>
+        <field name="model">edi.unilever.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="edi_unilever_competency_tree" model="ir.ui.view">
+        <field name="name">edi.unilever.competency.tree</field>
+        <field name="model">edi.unilever.competency</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="edi_unilever_disable_reason_tree" model="ir.ui.view">
+        <field name="name">edi.unilever.disable.reason.tree</field>
+        <field name="model">edi.unilever.disable.reason</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code" />
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_edi_unilever_category">
+        <field name="name">EDI Unilever Categories</field>
+        <field name="res_model">edi.unilever.category</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_edi_unilever_competency">
+        <field name="name">EDI Unilever Competencies</field>
+        <field name="res_model">edi.unilever.competency</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <record model="ir.actions.act_window" id="action_edi_unilever_disable_reason">
+        <field name="name">EDI Unilever Disable Reason</field>
+        <field name="res_model">edi.unilever.disable.reason</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>

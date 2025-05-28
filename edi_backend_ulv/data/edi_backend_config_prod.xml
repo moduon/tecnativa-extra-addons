@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  ~ # Copyright 2022 Tecnativa - Carlos Roca
+  ~ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl
+  -->
+<odoo>
+    <record id="edi_backend_config_prod" model="edi.backend.config">
+        <field name="name">Productos ULV</field>
+        <field name="model_number">2018</field>
+        <field name="columns_definition">positional</field>
+        <field name="model_id" ref="product.model_product_template" />
+    </record>
+    <record id="edi_backend_config_prod_line_01" model="edi.backend.config.line">
+        <field name="sequence">1</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Codigo de producto</field>
+        <field name="key">Codigo de producto</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_prod_line_02" model="edi.backend.config.line">
+        <field name="sequence">2</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Subgrupo de producto para rappel</field>
+        <field name="key">Subgrupo de producto</field>
+        <field name="size">2</field>
+    </record>
+    <record id="edi_backend_config_prod_line_03" model="edi.backend.config.line">
+        <field name="sequence">3</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Codigo estadistico</field>
+        <field name="key">Codigo estadistico</field>
+        <field name="size">6</field>
+    </record>
+    <record id="edi_backend_config_prod_line_04" model="edi.backend.config.line">
+        <field name="sequence">4</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Desc. Codigo estadistico</field>
+        <field name="key">Desc. Codigo estadistico</field>
+        <field name="size">30</field>
+    </record>
+    <record id="edi_backend_config_prod_line_05" model="edi.backend.config.line">
+        <field name="sequence">5</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Codigo de proveedor</field>
+        <field name="key">Codigo de proveedor</field>
+        <field name="size">1</field>
+    </record>
+    <record id="edi_backend_config_prod_line_06" model="edi.backend.config.line">
+        <field name="sequence">6</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Envio ventas a Unilever</field>
+        <field name="key">Envio ventas a Unilever</field>
+        <field name="size">1</field>
+    </record>
+    <record id="edi_backend_config_prod_line_07" model="edi.backend.config.line">
+        <field name="sequence">7</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Descripcion</field>
+        <field name="key">Descripcion</field>
+        <field name="size">30</field>
+    </record>
+    <record id="edi_backend_config_prod_line_08" model="edi.backend.config.line">
+        <field name="sequence">8</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Precio tarifa general</field>
+        <field name="key">Precio tarifa general</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_prod_line_09" model="edi.backend.config.line">
+        <field name="sequence">9</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Fecha modif. Tarifa</field>
+        <field name="key">Fecha modif. Tarifa</field>
+        <field name="size">8</field>
+    </record>
+    <record id="edi_backend_config_prod_line_10" model="edi.backend.config.line">
+        <field name="sequence">10</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Cantidad de composicion</field>
+        <field name="key">Cantidad de composicion</field>
+        <field name="size">8</field>
+    </record>
+    <record id="edi_backend_config_prod_line_11" model="edi.backend.config.line">
+        <field name="sequence">11</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Porcentaje de IVA</field>
+        <field name="key">Porcentaje de IVA</field>
+        <field name="size">2</field>
+    </record>
+    <record id="edi_backend_config_prod_line_12" model="edi.backend.config.line">
+        <field name="sequence">12</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Porcentaje de IGIC</field>
+        <field name="key">Porcentaje de IGIC</field>
+        <field name="size">2</field>
+    </record>
+    <record id="edi_backend_config_prod_line_13" model="edi.backend.config.line">
+        <field name="sequence">13</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Volumen o peso</field>
+        <field name="key">Volumen o peso</field>
+        <field name="size">1</field>
+    </record>
+    <record id="edi_backend_config_prod_line_14" model="edi.backend.config.line">
+        <field name="sequence">14</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Capacidad</field>
+        <field name="key">Capacidad</field>
+        <field name="size">8</field>
+    </record>
+    <record id="edi_backend_config_prod_line_15" model="edi.backend.config.line">
+        <field name="sequence">15</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Unidad venta por pallet</field>
+        <field name="key">Unidad venta por pallet</field>
+        <field name="size">4</field>
+    </record>
+    <record id="edi_backend_config_prod_line_16" model="edi.backend.config.line">
+        <field name="sequence">16</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Unidad venta por rellano</field>
+        <field name="key">Unidad venta por rellano</field>
+        <field name="size">4</field>
+    </record>
+    <record id="edi_backend_config_prod_line_17" model="edi.backend.config.line">
+        <field name="sequence">17</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Codigo EAN/DUN14 de la unidad de expedición (caja)</field>
+        <field name="key">Codigo EAN/DUN14 unidad exp</field>
+        <field name="size">14</field>
+    </record>
+    <record id="edi_backend_config_prod_line_18" model="edi.backend.config.line">
+        <field name="sequence">18</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Medida para la que se informa de la tarifa</field>
+        <field name="key">Medida para la que se informa de la tarifa</field>
+        <field name="size">1</field>
+    </record>
+    <record id="edi_backend_config_prod_line_19" model="edi.backend.config.line">
+        <field name="sequence">19</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">EAN/DUN14 Unidad de consumo</field>
+        <field name="key">EAN/DUN14 Unidad de consumo</field>
+        <field name="size">14</field>
+    </record>
+    <record id="edi_backend_config_prod_line_20" model="edi.backend.config.line">
+        <field name="sequence">20</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">EAN/DUN14 del Pallet</field>
+        <field name="key">EAN/DUN14 del Pallet</field>
+        <field name="size">14</field>
+    </record>
+    <record id="edi_backend_config_prod_line_21" model="edi.backend.config.line">
+        <field name="sequence">21</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Es_Main_DU</field>
+        <field name="key">Es_Main_DU</field>
+        <field name="size">1</field>
+    </record>
+    <record id="edi_backend_config_prod_line_22" model="edi.backend.config.line">
+        <field name="sequence">22</field>
+        <field name="export_config_id" ref="edi_backend_config_prod" />
+        <field name="name">Codigo 5 cifra</field>
+        <field name="key">Codigo 5 cifras</field>
+        <field name="size">10</field>
+    </record>
+</odoo>

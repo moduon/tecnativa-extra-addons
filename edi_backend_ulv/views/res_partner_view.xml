@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_partner_form">
+        <field name="model">res.partner</field>
+        <field name="type">form</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="EDI Unilever">
+                    <group>
+                        <group>
+                            <field
+                                name="unilever_partner_type"
+                                string="Type"
+                                attrs="{'required': ['|', ('unilever_ref', '!=', False), ('unilever_ref_sam', '!=', False)]}"
+                            />
+                            <field
+                                name="unilever_state"
+                                string="State"
+                                attrs="{'required': [('unilever_ref', '!=', False)]}"
+                            />
+                            <field
+                                name="unilever_move_type"
+                                string="Move type"
+                                attrs="{'required': [('unilever_ref', '!=', False)]}"
+                            />
+                        </group>
+                        <group>
+                            <field name="unilever_ref" string="Ref" />
+                            <field
+                                name="unilever_ref_sam"
+                                string="Ref. SAM"
+                                attrs="{'required': [('unilever_partner_type', '=', 'F')]}"
+                            />
+                            <field
+                                name="unilever_local_code"
+                                string="Local code"
+                                attrs="{'required': [('unilever_ref', '!=', False)]}"
+                            />
+                            <field name="unilever_center" string="Center" />
+                        </group>
+                        <group>
+                            <field
+                                name="unilever_category_id"
+                                string="Category / Family"
+                                attrs="{'required': [('unilever_ref', '!=', False)]}"
+                            />
+                            <field
+                                name="unilever_competency_id"
+                                string="Competency"
+                                attrs="{'required': [('unilever_ref', '!=', False), ('unilever_disable_reason_id', '!=', False)]}"
+                            />
+                            <field
+                                name="unilever_high_competency_id"
+                                string="High Competency"
+                                attrs="{'required': [('unilever_ref', '!=', False)]}"
+                            />
+                            <field name="unilever_seasonality" string="Seasonality" />
+                        </group>
+                        <group>
+                            <field
+                                name="unilever_disable_reason_id"
+                                string="Disable reason"
+                            />
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_stat_button"
+                    name="action_agreement_unilever_rebate"
+                    icon="fa-asterisk"
+                    type="object"
+                >
+                    <span class="o_stat_text">Rebate agreements</span>
+                </button>
+                <button
+                    class="oe_stat_button"
+                    name="action_agreement_unilever_GIRA"
+                    icon="fa-asterisk"
+                    type="object"
+                >
+                    <span class="o_stat_text">GIRA agreements</span>
+                </button>
+            </div>
+        </field>
+    </record>
+
+    <record id="view_partner_form_visible_company_group" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="partner_company_group.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="company_group_id" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_partner_tree" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree" />
+        <field name="arch" type="xml">
+            <field name="email" position="after">
+                <field name="unilever_local_code" optional="show" />
+            </field>
+        </field>
+    </record>
+</odoo>

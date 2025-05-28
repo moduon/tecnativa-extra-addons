@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017 Sergio Teruel - Tecnativa <sergio.teruel@tecnativa.com>
+     Copyright 2017 Carlos Dauden - Tecnativa <carlos.dauden@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="data_integrity_wiz_form" model="ir.ui.view">
+        <field name="name">data.integrity.wiz.form</field>
+        <field name="model">data.integrity.wiz</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="action_check"
+                        string="Check data"
+                        class="oe_highlight"
+                        type="object"
+                    />
+                </header>
+                <sheet>
+                    <group>
+                        <field name="check_type" />
+                    </group>
+                    <group string="Lines">
+                        <field name="line_ids" nolabel="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="data_integrity_wiz_tree" model="ir.ui.view">
+        <field name="name">data.integrity.line.wiz.tree</field>
+        <field name="model">data.integrity.line.wiz</field>
+        <field name="arch" type="xml">
+            <tree create="false">
+                <field name="name" />
+                <field name="description" />
+                <button
+                    name="action_open_records"
+                    type="object"
+                    icon="fa-external-link"
+                    string="Open records"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <record id="data_integrity_line_wiz_form" model="ir.ui.view">
+        <field name="name">data.integrity.line.wiz.form</field>
+        <field name="model">data.integrity.line.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Line" edit="false">
+                <group>
+                    <field name="name" />
+                </group>
+                <group>
+                    <field name="description" />
+                </group>
+                <button
+                    name="action_open_records"
+                    type="object"
+                    icon="fa-external-link"
+                    string="Open records"
+                />
+            </form>
+        </field>
+    </record>
+
+    <record id="action_data_integrity_check" model="ir.actions.act_window">
+        <field name="name">Data integrity</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">data.integrity.wiz</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <menuitem
+        id="menu_data_integrity_check"
+        action="action_data_integrity_check"
+        parent="base_edi_backend.edi_backend_setting_menu"
+        sequence="120"
+    />
+
+</odoo>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_unilever_export_config_pol_liq" model="edi.backend.config">
+        <field
+            name="name"
+        >Liquidación de condiciones de política de turismo (POL)</field>
+        <field name="model_number">2020</field>
+        <field name="model_id" ref="edi_backend_ulv.model_agreement" />
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_01"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">1</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Tipo de movimiento</field>
+        <field name="expression">${'A'}</field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_02"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">2</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Fecha</field>
+        <field name="expression">${format_date_sp(today)}</field>
+        <field name="export_type">string</field>
+        <field name="size">8</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_03"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">3</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Código de concesionario</field>
+        <field name="expression">${object.env.user.company_id.unilever_dealer}</field>
+        <field name="export_type">integer</field>
+        <field name="size">3</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_04"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">4</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Código cliente</field>
+        <field name="expression">${object.partner_id.unilever_ref}</field>
+        <field name="export_type">integer</field>
+        <field name="size">7</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_05"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">5</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Grupo producto</field>
+        <field
+            name="expression"
+        >${object.agreement_condition_id.tourism_group_id.unilever_ref}</field>
+        <field name="export_type">string</field>
+        <field name="size">6</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_06"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">6</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Precio acordado</field>
+        <field name="expression">${round(object.agreement_price, 2)}</field>
+        <field name="export_type">float</field>
+        <field name="size">8</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+        <field name="decimal_size">2</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_07"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">7</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Cantidad</field>
+        <field name="expression">${object.get_agreement_quantity()}</field>
+        <field name="export_type">integer</field>
+        <field name="size">6</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_08"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">8</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Grupo producto</field>
+        <field name="expression">${''}</field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_09"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">9</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Consumo Estimado</field>
+        <field name="expression">${'0'}</field>
+        <field name="export_type">string</field>
+        <field name="size">12</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_10"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">10</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Grupo Politica de Turismo</field>
+        <field name="expression">${''}</field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_11"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">11</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Consumo Estimado en Politica de Turismo</field>
+        <field name="expression">${'0'}</field>
+        <field name="export_type">string</field>
+        <field name="size">12</field>
+        <field name="alignment">right</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_line_12"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">12</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="name">Salto linea</field>
+        <field name="expression">${b'\r\n'}</field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+        <field name="apply_sign">False</field>
+    </record>
+    <!-- Fichero POL nivel 0 -->
+    <record id="edi_unilever_export_config_pol_liq_l0" model="edi.backend.config">
+        <field name="name">Unilever POL Liquidación</field>
+        <field name="model_number">2018</field>
+        <field name="model_id" ref="model_edi_backend" />
+    </record>
+    <record
+        id="edi_unilever_export_config_pol_liq_l0_line_01"
+        model="edi.backend.config.line"
+    >
+        <field name="sequence">1</field>
+        <field name="export_config_id" ref="edi_unilever_export_config_pol_liq_l0" />
+        <field name="name">Detalles unilever POL Liquidacion</field>
+        <field name="repeat_expression">object.get_records()</field>
+        <field name="subconfig_id" ref="edi_unilever_export_config_pol_liq" />
+        <field name="export_type">subconfig</field>
+        <field name="apply_sign">False</field>
+    </record>
+</odoo>

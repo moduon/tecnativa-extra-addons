@@ -1,0 +1,2823 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* edi_backend_ulv
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__anual_discount_percent
+msgid "% Anual Discount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "% CONTR. FRIGO"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "% CONTR.<br/>FRIGO"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "% Cont"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "% Contrib."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__invoice_discount
+msgid "% Invoice Discount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_rebate_settlement_line__unilever_percent_total
+msgid "% Total"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__unilever_participation_percent
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_rebate_settlement_line__unilever_participation_percent
+msgid "% Unilever Participation"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "(Desde Fecha:"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid ""
+")(Desde\n"
+"                                        Proveedor: 0 A 999)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,help:edi_backend_ulv.field_stock_move_line__state
+msgid ""
+"* New: When the stock move is created and not yet confirmed.\n"
+"* Waiting Another Move: This state can be seen when a move is waiting for another one, for example in a chained flow.\n"
+"* Waiting Availability: This state is reached when the procurement resolution is not straight forward. It may need the scheduler to run, a component to be manufactured...\n"
+"* Available: When products are reserved, it is set to 'Available'.\n"
+"* Done: When the shipment is processed, the state is 'Done'."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "10.00"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.report_delivery_document
+msgid "<b>** No Charge</b>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "<b>Total General</b>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid ""
+"<small>\n"
+"                                    <span>Page</span>\n"
+"                                    <span class=\"page\"/>\n"
+"                                    of\n"
+"                                    <span class=\"topage\"/>\n"
+"                                </small>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid ""
+"<small>\n"
+"                                <span>Page</span>\n"
+"                                <span class=\"page\"/>\n"
+"                                of\n"
+"                                <span class=\"topage\"/>\n"
+"                            </small>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.res_config_settings_view_form
+msgid "<span class=\"o_form_label\">Default Anual Discount</span>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.res_config_settings_view_form
+msgid ""
+"<span class=\"o_form_label\">No-recount days limit</span>\n"
+"                            <span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "<span class=\"o_stat_text\">GIRA agreements</span>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "<span class=\"o_stat_text\">Rebate agreements</span>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.report_picking
+msgid ""
+"<span class=\"text-uppercase\">\n"
+"                    <b>** No Charge</b>\n"
+"                </span>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid ""
+"<span>\n"
+"                                    <u>\n"
+"                                        <strong>Condiciones de Clientes de Rappel</strong>\n"
+"                                    </u>\n"
+"                                </span>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "<span>10,00</span>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+msgid "<strong>TOTAL CLIENTE:</strong>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+msgid "<strong>TOTAL GENERAL:</strong>"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move_line__edi_unilever_sequence_file
+msgid "ALC Sequence (UL)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_unilever_invoice_refund
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_unilever_invoice_refund
+msgid "Abonos Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__action_type
+msgid "Action type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__active
+msgid "Active"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__update_pol_price
+msgid "Actualizar POL prices"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__match_pro_file
+msgid "Actualizar campo MRDR del producto a partir de unilever_ref"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__unilever_partner_update
+msgid "Actualizar datos de partners"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__affected_records
+msgid "Affected Records"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_agreement
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__agreement_id
+msgid "Agreement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__agreement_amount
+msgid "Agreement Amount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__agreement_condition_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__agreement_condition_id
+msgid "Agreement Condition"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.ui.menu,name:edi_backend_ulv.edi_unilever_report_wiz_dto_settlement_menu
+msgid "Agreement DTO settlement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__signature_date
+msgid "Agreement Date"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.ui.menu,name:edi_backend_ulv.edi_unilever_report_wiz_pol_settlement_menu
+msgid "Agreement POL settlement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__agreement_price
+msgid "Agreement Price"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_agreement_rebate_settlement
+msgid "Agreement Rebate Settlement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_agreement_rebate_settlement_line
+msgid "Agreement Rebate Settlement Lines"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__agreement_type_id
+msgid "Agreement Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_agreement_type
+msgid "Agreement Types"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_edi_unilever_agreement_communication
+msgid "Agreement communications"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.edi_unilever_agreement_condition_form
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.edi_unilever_tourism_group_form
+msgid "Agreement conditions"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/edi_unilever_agreement.py:0
+#, python-format
+msgid "Agreement created more than 1 month ago"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__signature_date_for_unilever
+msgid "Agreement date for Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_duplicate_wizard_view
+msgid "Agreement duplicate / renew"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_agreement_gira_mixin
+msgid "Agreement gira mixin"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_agreement_settlement_create_wiz
+msgid "Agreement settlement create wizard"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Agreement type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.ui.menu,name:edi_backend_ulv.edi_unilever_report_wiz_bonus_settlement_menu
+msgid "Agreement year bonus settlement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__discounts
+msgid "Agreements - Pricelist - Items"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "Agrup. Cad."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__move_type__a
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_agreement_communication__move_type__a
+msgid "Alta"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_move_type__a
+msgid "Alta del medio"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_account_move_line__amount_dealer_participation
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__amount_dealer_participation
+msgid "Amount Dealer Participation"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__amount_distribution
+msgid "Amount Distribution"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__amount_line
+msgid "Amount Line"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__amount_to_invoice
+msgid "Amount To Invoice"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_account_move_line__amount_tourism_discount
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__amount_tourism_discount
+msgid "Amount Tourism Discount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_account_move_line__amount_unilever_participation
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__amount_unilever_participation
+msgid "Amount Unilever Participation"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend_communication_history__amount_total_ulv
+msgid "Amount total"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend_communication_history__amount_total_in_ulv
+msgid "Amount total IN"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend_communication_history__amount_total_out_ulv
+msgid "Amount total OUT"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_duplicate_wizard_view
+msgid "Apply"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__archive_virginia_partners
+msgid "Archive Virginia Partners"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_production_lot_form
+msgid "Asset count"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__backend_state_base
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_rebate_settlement_line__backend_state_base
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__backend_state_base
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__backend_state_base
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_picking__backend_state_base
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__backend_state_base
+msgid "Backend state"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__backend_state_mcg
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_rebate_settlement_line__backend_state_mcg
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__backend_state_mcg
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__backend_state_mcg
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_picking__backend_state_mcg
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__backend_state_mcg
+msgid "Backend state MCG"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__unilever_state
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_rebate_settlement_line__unilever_state
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend_mixin__unilever_state
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_state
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_state
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__unilever_state
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_picking__unilever_state
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__unilever_state
+msgid "Backend state ULV"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__move_type__b
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_agreement_communication__move_type__b
+msgid "Baja"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_move_type__b
+msgid "Baja del medio"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "Bonificación"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_rebate_settlement__unilever_settlement_type__bonus
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_settlement_create_wiz__unilever_settlement_type__bonus
+msgid "Bonus"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "CLIE."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "COL"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__col_type_id
+msgid "COL type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "CONTR. FRIGO"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "CONTR.<br/>FRIGO"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__change_uom
+msgid "Cambiar UOM productos"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_move_type__x
+msgid "Cambio de concesión"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_duplicate_wizard_view
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_edi_unilever_report_wiz
+msgid "Cancel"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__unilever_state__cancelled
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_rebate_settlement_line__unilever_state__cancelled
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__edi_backend_mixin__unilever_state__cancelled
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_state__cancelled
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_move__unilever_state__cancelled
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_picking__unilever_state__cancelled
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_agreement_communication__unilever_state__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Category / Family"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Center"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__chain
+msgid "Chain"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_production_lot__change_dealer
+msgid "Change Dealer"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__channel
+msgid "Channel"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_wiz__check_type
+msgid "Check Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.data_integrity_wiz_form
+msgid "Check data"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__child_id
+msgid "Child groups"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gescon_import_wiz_form
+msgid "Choose a file to import..."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.recount_pending_freezers
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "Cliente"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__code
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_type__code
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__code
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_category__code
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_competency__code
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_data_mixin__code
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_disable_reason__code
+msgid "Code"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__commercial_partner_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_sale_order__commercial_partner_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_sale_order_line__commercial_partner_id
+msgid "Commercial Entity"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Commercial entity"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend__communication_code_ulv
+msgid "Communication code"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__company_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__company_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__company_id
+msgid "Company"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Company Group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__company_group_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_sale_order_line__company_group_id
+msgid "Company group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Competency"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__unilever_partner_sync
+msgid "Comprobacion estado de partners con Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__data_integrity_wiz__check_type__unilever_agreement_dto_chain
+msgid ""
+"Comprobar acuerdos Unilever tipo DTO por año y grupo para todos los partners"
+" con cadena asignada"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__data_integrity_wiz__check_type__unilever_dealer_chain
+msgid "Comprobar cadena Unilever en partners"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__data_integrity_wiz__check_type__unilever_agreement_chain_sync
+msgid "Comprobar check cadena en acuerdos"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__condition_type
+msgid "Condition Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_invoice_refund__state__confirm
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_invoice_refund_form_view
+msgid "Confirm"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "Consumo"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Contacts or partner without childs"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__context
+msgid "Context"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+msgid "Contrib."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "Contribución"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__change_unilever_mef_moves_to_e
+msgid "Convertir medios de A a E"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_wiz__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_category__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_competency__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_disable_reason__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__create_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_report_wiz__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_wiz__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_category__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_competency__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_disable_reason__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__create_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_report_wiz__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__channel__cre
+msgid "Crestas la Galeta"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "DESCRIPCIÓN"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "DTO"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_data_integrity_check
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_data_integrity_check
+msgid "Data integrity"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_data_integrity_wiz
+msgid "Data integrity check wizard"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_data_integrity_line_wiz
+msgid "Data integrity check wizard lines"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend__date_range
+msgid "Date Field Range"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__date_low
+msgid "Date Low"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_edi_unilever_report_wiz
+msgid "Dates filter"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.res_config_settings_view_form
+msgid "Days limit"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "Dcto."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "Dcto. Fra."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend__dealer_code_ulv
+msgid "Dealer code"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_company__anual_percent_discount_default
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_config_settings__anual_percent_discount_default
+msgid "Default % Anual Discount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "Descripción"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__description
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__name
+msgid "Description"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__edi_unilever_agreement_condition__condition_type__gira
+msgid "Descuento GIRA"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__gira
+msgid "Descuentos GIRA"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__unilever_mef_sn_to_scrap
+msgid "Desechar medios de frío"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_low_reason__d
+msgid "Desguace"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__unilever_uncheck_dto_settlements_lines
+msgid "Desmarcar lineas de liquidacion como enviadas DTO"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__refund_unilever_mef
+msgid "Devolver medios unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+msgid "Diferen."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.recount_pending_freezers
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "Dirección"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_partner_type__c
+msgid "Direct Partner"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Disable reason"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_move_type__b
+msgid "Disabled partner"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_account_invoice_report__discount
+msgid "Discount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__condition_discount
+msgid "Discount (%)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_wiz__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_category__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_competency__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_disable_reason__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__display_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_report_wiz__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__domain
+msgid "Domain"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_low_reason__o
+msgid "Donación"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__dto_conces
+msgid "Dto Conces"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__dto_early_pay
+msgid "Dto Early Pay"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__dto_volume
+msgid "Dto Volume"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_rebate_settlement__unilever_settlement_type__dto_invoice
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_settlement_create_wiz__unilever_settlement_type__dto_invoice
+msgid "Dto invoice"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__dto_type
+msgid "Dto type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.agreement_duplicate_wizard_action
+msgid "Duplicate Agreement / Renew"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_duplicate_wizard__action_type__duplicate
+msgid "Duplicate agreement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_backend
+msgid "EDI Backend"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_backend_file_wiz
+msgid "EDI Backend File Wizard"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_backend_communication_history
+msgid "EDI Backend communication history"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_backend_mixin
+msgid "EDI Backend mixin for records"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "EDI Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_edi_unilever_agreement_condition
+msgid "EDI Unilever Agreement Conditions"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_edi_unilever_category
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_edi_unilever_category
+msgid "EDI Unilever Categories"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_edi_unilever_competency
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_edi_unilever_competency
+msgid "EDI Unilever Competencies"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_edi_unilever_disable_reason
+msgid "EDI Unilever Disable Reason"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_edi_unilever_fresh_asset
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_edi_unilever_fresh_asset
+msgid "EDI Unilever Fresh Asset"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_edi_unilever_agreement_condition
+msgid "EDI Unilever agreement condition"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_edi_unilever_disable_reason
+msgid "EDI Unilever disable reason"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_unilever_agreement_col_type
+msgid "Edi unilever agreement col type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_unilever_agreement_condition
+msgid "Edi unilever agreement condition"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_unilever_agreement_condition_line
+msgid "Edi unilever agreement condition line"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_unilever_data_mixin
+msgid "Edi unilever data mixin"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_unilever_tourism_group
+msgid "Edi unilever tourism groups"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_duplicate_wizard_view
+msgid ""
+"En caso de dejar los valores vacíos se mantendrán los valores originales"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__end_date
+msgid "End Date"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "End date"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_move_type__c
+msgid "Entrega al cliente"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/edi_unilever_rappel_group.py:0
+#, python-format
+msgid "Error ! You cannot create recursive groups."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/edi_unilever_agreement.py:0
+#, python-format
+msgid ""
+"Error In rebate section.\n"
+"Please, review the amount values"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_low_reason__e
+msgid "Error de gestion (No se enviará a Unilever)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__unilever_state__sent_error
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_rebate_settlement_line__unilever_state__sent_error
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__edi_backend_mixin__unilever_state__sent_error
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_state__sent_error
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_move__unilever_state__sent_error
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_picking__unilever_state__sent_error
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_agreement_communication__unilever_state__sent_error
+msgid "Errors"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__estimated_consumption
+msgid "Estimated Consumption"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:res.groups,name:edi_backend_ulv.group_uve
+msgid "External EDI Unilever rpc"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "FECHA"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "FRA."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_unilever_invoice_refund
+msgid "Facturas de abono unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__dto_type__s
+msgid "Familia (Categoría)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "Fecha Modificación"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+msgid "Fecha de liquidación:"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.recount_pending_freezers
+msgid "Fecha recuento"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "Fecha:"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__data_file
+msgid "File to import"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend__filename
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__filename
+msgid "Filename"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_agreement_food_solutions_report
+msgid "Food Solution Agreements Report"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend__force_year_ulv
+msgid "Force year"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_report_wiz__start_date
+msgid "From"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__start_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__start_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__start_date
+msgid "From Date"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.server,name:edi_backend_ulv.action_merge_agreements
+msgid "Fusionar acuerdos DTO"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__dto_type__gira
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "GIRA"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:product.pricelist,name:edi_backend_ulv.pricelist_gescon_1
+msgid "Gescon 1"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:product.pricelist,name:edi_backend_ulv.pricelist_gescon_2
+msgid "Gescon 2"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:product.pricelist,name:edi_backend_ulv.pricelist_gescon_3
+msgid "Gescon 3"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:product.pricelist,name:edi_backend_ulv.pricelist_gescon_4
+msgid "Gescon 4"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:product.pricelist,name:edi_backend_ulv.pricelist_gescon_5
+msgid "Gescon 5"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:product.pricelist,name:edi_backend_ulv.pricelist_gescon_6
+msgid "Gescon 6"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_gescon_import_xls
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_gescon_import_xls
+msgid "Gescon xls import"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_form
+msgid "Get consumption"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "Gr"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__channel__grr
+msgid "Granderroble"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_rappel_group_form_view
+msgid "Group name"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__grouped_group
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__grouped_group
+msgid "Grouped group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_rappel_group_form_view
+msgid "Grouped options for agreements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__grouped_subgroup
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__grouped_subgroup
+msgid "Grouped subgroup"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "Gru"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+msgid "Grupo"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__dto_type__g
+msgid "Grupo ventas (Categoría)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__grupos_turismo
+msgid "Grupos turismo"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__guaranteed_price
+msgid "Guaranteed Price"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__guaranteed_price
+msgid "Guaranteed price"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "Hasta"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+msgid "Hasta:"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "High Competency"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_wiz__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_category__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_competency__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_disable_reason__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_report_wiz__id
+msgid "ID"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "IVA"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,help:edi_backend_ulv.field_edi_backend__communication_code_ulv
+msgid "If not filled Odoo will use the communication code from company"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,help:edi_backend_ulv.field_edi_backend__dealer_code_ulv
+msgid "If not filled Odoo will use the dealer code from company"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__ignore_unknown_partner
+msgid "Ignore Unknown Partner"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gescon_import_wiz_form
+msgid "Import"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__import_type
+msgid "Import Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__dto_rappel
+msgid "Importar acuerdos DTO - Rappel"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__agreement_mef
+msgid "Importar acuerdos MEF"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__agreement_consumption
+msgid "Importar consumos anteriores para acuerdos"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,help:edi_backend_ulv.field_agreement__backend_state_base
+#: model:ir.model.fields,help:edi_backend_ulv.field_agreement__backend_state_mcg
+#: model:ir.model.fields,help:edi_backend_ulv.field_agreement__unilever_state
+#: model:ir.model.fields,help:edi_backend_ulv.field_agreement_rebate_settlement_line__backend_state_base
+#: model:ir.model.fields,help:edi_backend_ulv.field_agreement_rebate_settlement_line__backend_state_mcg
+#: model:ir.model.fields,help:edi_backend_ulv.field_agreement_rebate_settlement_line__unilever_state
+#: model:ir.model.fields,help:edi_backend_ulv.field_edi_backend_mixin__unilever_state
+#: model:ir.model.fields,help:edi_backend_ulv.field_res_partner__backend_state_base
+#: model:ir.model.fields,help:edi_backend_ulv.field_res_partner__backend_state_mcg
+#: model:ir.model.fields,help:edi_backend_ulv.field_res_partner__unilever_state
+#: model:ir.model.fields,help:edi_backend_ulv.field_res_users__unilever_state
+#: model:ir.model.fields,help:edi_backend_ulv.field_stock_move__backend_state_base
+#: model:ir.model.fields,help:edi_backend_ulv.field_stock_move__backend_state_mcg
+#: model:ir.model.fields,help:edi_backend_ulv.field_stock_move__unilever_state
+#: model:ir.model.fields,help:edi_backend_ulv.field_stock_picking__backend_state_base
+#: model:ir.model.fields,help:edi_backend_ulv.field_stock_picking__backend_state_mcg
+#: model:ir.model.fields,help:edi_backend_ulv.field_stock_picking__unilever_state
+#: model:ir.model.fields,help:edi_backend_ulv.field_unilever_agreement_communication__backend_state_base
+#: model:ir.model.fields,help:edi_backend_ulv.field_unilever_agreement_communication__backend_state_mcg
+#: model:ir.model.fields,help:edi_backend_ulv.field_unilever_agreement_communication__unilever_state
+msgid "Indicates the state of the Backend send state"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_edi_unilever_report_wiz
+msgid "Info"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.report,name:edi_backend_ulv.action_gira_detailed_report
+msgid "Informe detallado GIRA"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.report,name:edi_backend_ulv.action_gira_summary_report
+msgid "Informe resumen GIRA"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__inventory
+msgid "Inventario de productos"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__invoice_id
+msgid "Invoice"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__invoice_discount
+msgid "Invoice Discount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend_communication_history__invoice_line_ids_ulv
+msgid "Invoice Line Ids Ulv"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__invoice_number
+msgid "Invoice Number"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.report,name:edi_backend_ulv.action_invoice_discount_report
+msgid "Invoice discounts"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_account_invoice_report
+msgid "Invoices Statistics"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__is_return
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_picking__is_return
+msgid "Is Return"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "LISTADO DE GIRAS DETALLADO GIRA Nº:"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "LISTADO LIQUIDACIÓN DE BONIFICACIONES A FINAL DE AÑO"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+msgid "LISTADO LIQUIDACIÓN UL DCTO. EN FRA."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "LISTADO RESUMEN DE LA GIRA:"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_production_lot__last_inventory_move_id
+msgid "Last Inventory Move"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_wiz____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_category____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_competency____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_disable_reason____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group____last_update
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_report_wiz____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_production_lot__last_move_line_id
+msgid "Last Move Line"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_wiz__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_category__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_competency__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_disable_reason__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__write_uid
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_report_wiz__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_wiz__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_category__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_competency__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_disable_reason__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_gescon_import_wiz__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__write_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_report_wiz__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_production_lot__ul_date_last_verification
+msgid "Last verification"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__line_ids
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund__line_ids
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.data_integrity_line_wiz_form
+msgid "Line"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__line_type
+msgid "Line Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_unilever_invoice_refund_line
+msgid "Lineas de abonos Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_unilever_invoice_refund_line
+msgid "Lineas de factura de abono unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_wiz__line_ids
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.data_integrity_wiz_form
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_invoice_refund_form_view
+msgid "Lines"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.report,name:edi_backend_ulv.report_unilever_agreement_pol_settlement
+msgid "Liquidaciones POL"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+msgid "Liquidación políticas de turismo entre"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+msgid "Liquidadión del periodo:"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Local code"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move_line__lot_id
+msgid "Lot/Serial Number"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.recount_pending_freezers
+msgid "Lote"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_unilever_invoice_refund_line
+msgid "Líneas Abonos Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__medios
+msgid "Medios de frío"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.recount_pending_freezers
+msgid "Medios de frío pendiente de recuento"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_settlement_create_wiz__minimal_total_percent
+msgid "Minimal % to send to Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__minimal_price
+msgid "Minimal price"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__model_name
+msgid "Model Name"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__move_type__m
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_agreement_communication__move_type__m
+msgid "Modificación"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__move_type
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__move_type
+msgid "Move Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Move type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "NIF"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "NOMBRE"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_category__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_competency__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_data_mixin__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_disable_reason__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund__name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__name
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_invoice_refund_form_view
+msgid "Name"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_move_type__a
+msgid "New partner"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/edi_backend.py:0
+#, python-format
+msgid "Next products has the same MRDR ref %s:\n"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "No"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_picking__no_charge
+msgid "No charge"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_company__no_recount_days_limit
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_config_settings__no_recount_days_limit
+msgid "No-recount days limit"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "Nombre"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "Nombre Comercial"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_settlement_create_wiz__unilever_settlement_type__not_unilever
+msgid "Not Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__unilever_state__not_sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_rebate_settlement_line__unilever_state__not_sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__edi_backend_mixin__unilever_state__not_sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_state__not_sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_move__unilever_state__not_sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_picking__unilever_state__not_sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_agreement_communication__unilever_state__not_sent
+msgid "Not sent"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__note
+msgid "Notes"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,help:edi_backend_ulv.field_edi_backend__force_year_ulv
+msgid "Only used for send DTO agreements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.data_integrity_line_wiz_form
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.data_integrity_wiz_tree
+msgid "Open records"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+msgid "P. Acue."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+msgid "P. Aseg."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "POL"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__pol_estimated_consumption
+msgid "POL Estimated Consumption"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__pol_group_estimated_consumption
+msgid "POL Group Estimated Consumption"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "PROD."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "PRODUCTO"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__parent_id
+msgid "Parent group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__partner_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__partner_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__partner_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_agreement_communication__partner_id
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Partner"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__partner_communication_ids
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_form
+msgid "Partner Communication"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_partner_delivery_zone
+msgid "Partner delivery zone"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_invoice_refund__state__pending
+msgid "Pending"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__picking_id
+msgid "Picking"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_stock_picking_type
+msgid "Picking Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_pol_settlement
+msgid "Piezas"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__edi_unilever_agreement_condition__condition_type__pol
+msgid "Política de turismo y liquidaciones"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__previous_agreement_id
+msgid "Previous agreement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__condition_price
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__price
+msgid "Price"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_account_invoice_report__price_unit_signed
+msgid "Price unit signed"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__pricelist
+msgid "Pricelist from products"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_edi_unilever_report_wiz
+msgid "Print"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_edi_unilever_report_wiz
+msgid "Print report"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__product_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__product_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition_line__product_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move_line__product_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__product_id
+msgid "Product"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_product_brand
+msgid "Product Brand"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__product_group_id
+msgid "Product Group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__product_subgroup_id
+msgid "Product Subgroup"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__dto_type__p
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.recount_pending_freezers
+msgid "Producto"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__product_ids
+msgid "Products"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend__provider
+msgid "Provider"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_low_reason__p
+msgid "Pérdida"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend_communication_history__product_qty_in_ulv
+msgid "Qty IN"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_backend_communication_history__product_qty_out_ulv
+msgid "Qty OUT"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__agreement_quantity
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.report,name:edi_backend_ulv.action_rappel_conditions_report
+msgid "Rappel Conditions"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_edi_unilever_rappel_group
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Rappel group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__code
+msgid "Rappel group code"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__dto_type__r
+msgid "Rappels"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_move_type__e
+msgid "Recogida del cliente"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_report_edi_backend_ulv_recount_pending_freezers
+msgid "Recount-pending Freezers Report"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.report,name:edi_backend_ulv.report_unilever_recount_pending_freezers
+#: model:ir.ui.menu,name:edi_backend_ulv.edi_unilever_report_wiz_recount_pending_freezers_menu
+msgid "Recount-pending freezers"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.report,name:edi_backend_ulv.report_unilever_recount_pending_freezers_xlsx
+#: model:ir.ui.menu,name:edi_backend_ulv.edi_unilever_report_wiz_recount_pending_freezers_xlsx_menu
+msgid "Recount-pending freezers (XLSX)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.server,name:edi_backend_ulv.recount_pending_freezers_server_action
+msgid "Recount-pending freezers report"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.server,name:edi_backend_ulv.recount_pending_freezers_xlsx_server_action
+msgid "Recount-pending freezers report (XLSX)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_move_type__r
+msgid "Recuperada"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Ref"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Ref. SAM"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_duplicate_wizard__action_type__renew
+msgid "Renew agreement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_form
+msgid "Return fresh asset"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_low_reason__r
+msgid "Robo"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_partner_type__f
+msgid "SAM Indirect Partner"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_sale_order_line
+msgid "Sales Order Line"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_stock_scrap
+msgid "Scrap"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_duplicate_wizard_view
+msgid "Se creará una copia de cada uno de los acuerdos seleccionados."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_edi_unilever_report_wiz
+msgid "Se van a imprimir las líneas de las liquidaciones seleccionadas"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_seasonality__season
+msgid "Season"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Season agreements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_seasonality
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_seasonality
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Seasonality"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__self_employed
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__self_employed
+msgid "Self employed"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_form
+msgid "Send fresh asset"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.server,name:edi_backend_ulv.action_unilever_send_cli
+msgid "Send to unilever (CLI)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__unilever_state__sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement_rebate_settlement_line__unilever_state__sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__edi_backend_mixin__unilever_state__sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_state__sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_move__unilever_state__sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_picking__unilever_state__sent
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_agreement_communication__unilever_state__sent
+msgid "Sent"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_form
+msgid "Set default anual discount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.res_config_settings_view_form
+msgid "Set the no-recount days limit for freezers"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.server,name:edi_backend_ulv.action_server_settelement_line_backend_state_ulv_cancelled
+msgid "Set to UL cancelled"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.server,name:edi_backend_ulv.action_server_settelement_line_backend_state_ulv_not_sent
+msgid "Set to UL not sent"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.report,name:edi_backend_ulv.settlement_xlsx
+msgid "Settlement XLSX report"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_settlement_mixin
+msgid "Settlement mixin"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__signature_date
+msgid "Signature Date"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Signature date"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__move_type__
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__unilever_agreement_communication__move_type__
+msgid "Sin informar"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,help:edi_backend_ulv.field_agreement__previous_agreement_id
+msgid "Source agreement when an agreement is renewed"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__start_date
+msgid "Start Date"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Start date"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund__state
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "State"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move_line__state
+msgid "Status"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.invoice_discounts_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.year_bonus_report
+msgid "Subgrupo"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "Sí"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,help:edi_backend_ulv.field_stock_picking_type__unilever_refund
+msgid ""
+"Take into account this operation type to appears in Unilever refunds pending"
+" filter"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,help:edi_backend_ulv.field_product_brand__unilever_refund
+msgid ""
+"Take into account this product brand to appears in Unilever refunds pending "
+"filter"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.recount_pending_freezers
+msgid "Teléf."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/res_partner.py:0
+#, python-format
+msgid "There are partners without Unilever reference %s\n"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/edi_unilever_agreement.py:0
+#, python-format
+msgid "There is no file sent to Unilever containing this agreement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/stock_picking.py:0
+#, python-format
+msgid "There is no file sent to Unilever containing this delivery slip"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/res_partner.py:0
+#, python-format
+msgid "There is not backend (CLI) to process data!"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/wizard/edi_unilever_report.py:0
+#, python-format
+msgid "There is not data to print!"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.constraint,message:edi_backend_ulv.constraint_agreement_code_partner_company_unique
+msgid "This agreement code already exists for this partner!"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/edi_unilever_agreement.py:0
+#, python-format
+msgid "This agreement is not DTO type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__edi_backend__date_range__current_year
+msgid "This year"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.rappel_conditions_report
+msgid "Tipo"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_report_wiz__end_date
+msgid "To"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__end_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_duplicate_wizard__end_date
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__end_date
+msgid "To Date"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_rebate_settlement_line_tree
+msgid "Total"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "Total Registros:"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "Totales:"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_condition__tourism_group_id
+msgid "Tourism group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.action_edi_unilever_tourism_group
+#: model:ir.ui.menu,name:edi_backend_ulv.menu_edi_unilever_tourism_group
+msgid "Tourism groups"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__tpr
+msgid "Tpr"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__dto_type__t
+msgid "Turismo"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_partner_form
+msgid "Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_sale_order_line__unilever_agreement_id
+msgid "UL Agreement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__agreement_type
+msgid "UL Agreement Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_rappel_group__unilever_ref
+msgid "UL Rappel group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_production_lot__unilever_low_reason
+msgid "UL low reason"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_account_invoice_report__unilever_rappel_group_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__unilever_rappel_group_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_rebate_settlement_line__unilever_rappel_group_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type__unilever_rappel_group_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_product__unilever_rappel_group_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_template__unilever_rappel_group_id
+msgid "UL rappel group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__unilever_rappel_group
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_product__unilever_rappel_group
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_template__unilever_rappel_group
+msgid "UL rappel group(Not use)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__unilever_rappel_subgroup
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_product__unilever_rappel_subgroup
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_template__unilever_rappel_subgroup
+msgid "UL rappel subgroup(Not use)"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_picking_form
+msgid "ULV backend"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_form
+msgid "ULV files"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "UNID"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_production_lot__ul_date_recount
+msgid "Ul Date Recount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__edi_backend__provider__ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.product_category_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_company_form
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_settlement_create_wiz
+msgid "Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_account_move_line__unilever_agreement_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__unilever_agreement_id
+msgid "Unilever Agreement"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_unilever_agreement_communication
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_agreement_communication_ids
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_agreement_communication_ids
+msgid "Unilever Agreement Communication"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_unilever_category
+msgid "Unilever Category"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_child_partner_ids
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_child_partner_ids
+msgid "Unilever Child Partner"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_company__unilever_comunication_code
+msgid "Unilever Communication Code"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_account_move_line__unilever_communication_history_ids
+msgid "Unilever Communication History"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_company__unilever_dealer
+msgid "Unilever Dealer"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_report_edi_backend_ulv_gira_detailed_report
+msgid "Unilever GIRA detailed report"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_report_edi_backend_ulv_gira_summary_report
+msgid "Unilever GIRA summary"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_production_lot_form
+msgid "Unilever MEF"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_product__unilever_mrdr_ref
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_template__unilever_mrdr_ref
+msgid "Unilever MRDR Ref"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_production_lot__unilever_move_type
+msgid "Unilever Move Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__unilever_participation_percent
+msgid "Unilever Participation Percent"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_partner_type
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_partner_type
+msgid "Unilever Partner Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:product.pricelist,name:edi_backend_ulv.edi_unilever_pricelist
+msgid "Unilever Pricelist"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__unilever_quantity_done
+msgid "Unilever Qty done"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_food_solutions_report__unilever_rappel_group_id
+msgid "Unilever Rappel Group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__unilever_ref
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_brand__unilever_ref
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_category__unilever_ref
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_product__unilever_ref
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_template__unilever_ref
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_ref
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_ref
+msgid "Unilever Ref"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__unilever_ref_sam
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_ref_sam
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_ref_sam
+msgid "Unilever Ref SAM"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_agreement_col_type__unilever_ref
+msgid "Unilever Ref."
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_product_brand__unilever_refund
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_picking_type__unilever_refund
+msgid "Unilever Refund"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_move__unilever_list_price
+msgid "Unilever Sales Price"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_rebate_settlement__unilever_settlement_type
+msgid "Unilever Settlement Type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_report_edi_backend_ulv_invoice_discounts_report
+msgid "Unilever agreement DTO settlements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_report_edi_backend_ulv_agreement_pol_settlement
+msgid "Unilever agreement POL settlements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_report_edi_backend_ulv_year_bonus_report
+msgid "Unilever agreement bonus settlements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.edi_unilever_agreement_communication_action
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.edi_unilever_agreement_communication_form
+msgid "Unilever agreement communication"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_category_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_category_id
+msgid "Unilever category"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_center
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_center
+msgid "Unilever center"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_partner_delivery_zone__unilever_code
+msgid "Unilever code"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_commercial_name
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_commercial_name
+msgid "Unilever commercial name"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_unilever_competency
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_competency_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_competency_id
+msgid "Unilever competency"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_rebate_settlement_line__unilever_contribution_amount
+msgid "Unilever contribution amount"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_edi_unilever_disable_reason
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_disable_reason_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_disable_reason_id
+msgid "Unilever disable reason"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_high_competency_id
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_high_competency_id
+msgid "Unilever high competency"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.product_template_form_view
+msgid "Unilever info"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_stock_picking__unilever_invoice_refund_line_ids
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_picking_form
+msgid "Unilever invoice refund lines"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_local_code
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_local_code
+msgid "Unilever local code"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/res_partner.py:0
+#, python-format
+msgid "Unilever local code can't have more than 7 digits"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_partner__unilever_move_type
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_res_users__unilever_move_type
+msgid "Unilever move type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_unilever_rappel_group
+msgid "Unilever rappel group"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.unilever_rappel_group_action_form
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_rappel_group_search_view
+msgid "Unilever rappel groups"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_report_edi_backend_ulv_recount_pending_freezers_xlsx
+msgid "Unilever recount pending freezers xlsx"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_edi_unilever_tourism_group__unilever_ref
+msgid "Unilever ref"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/res_partner.py:0
+#, python-format
+msgid "Unilever reference length > 7"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/res_partner.py:0
+#, python-format
+msgid "Unilever references SAM length > 10"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_picking_internal_search
+msgid "Unilever refund pending"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.edi_unilever_report_dto_settlement_wiz_action
+msgid "Unilever report DTO settlements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.edi_unilever_report_pol_settlement_wiz_action
+msgid "Unilever report POL settlements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.act_window,name:edi_backend_ulv.edi_unilever_report_bonus_settlement_wiz_action
+msgid "Unilever report bonus settlements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_report_edi_backend_ulv_report_settlement_xlsx
+msgid "Unilever report settlement xlsx"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.view_picking_type_form
+msgid "Unilever settings"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement_settlement_create_wiz__unilever_settlement_type
+msgid "Unilever settlement type"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__update_supplierinfo
+msgid "Update supplierinfo product codes"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__gescon_import_wiz__import_type__update_unilever_participation
+msgid "Update unilever participation"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_move_type__m
+msgid "Updated partner"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "VALOR GIRA"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_summary_report
+msgid "VALOR PVP"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "VALOR<br/>GIRA"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.gira_detailed_report
+msgid "VALOR<br/>PVP"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__stock_production_lot__unilever_low_reason__v
+msgid "Venta"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__week
+msgid "Week"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_data_integrity_line_wiz__wizard_id
+msgid "Wizard"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_agreement_duplicate_wizard
+msgid "Wizard Agreement Duplicate"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_unilever_report_wiz
+msgid "Wizard to print data requested by Unilever"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_agreement__year
+#: model:ir.model.fields,field_description:edi_backend_ulv.field_unilever_invoice_refund_line__year
+msgid "Year"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.actions.report,name:edi_backend_ulv.action_year_bonus_report
+msgid "Year bonus"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__res_partner__unilever_seasonality__yearly
+msgid "Yearly"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_agreement_search
+msgid "Yearly agreements"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/edi_unilever_agreement.py:0
+#, python-format
+msgid "You must be renew the contract instead of modify it"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.unilever_rappel_group_form_view
+msgid "e.g. Lamps"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model,name:edi_backend_ulv.model_gescon_import_wiz
+msgid "gescon.import.wiz"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model:ir.model.fields.selection,name:edi_backend_ulv.selection__agreement__channel__fri
+msgid "helado UL"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: model_terms:ir.ui.view,arch_db:edi_backend_ulv.agreement_duplicate_wizard_view
+msgid "or"
+msgstr ""
+
+#. module: edi_backend_ulv
+#: code:addons/edi_backend_ulv/models/agreement_rebate_settlement.py:0
+#, python-format
+msgid ""
+"{}\n"
+"{}% de rappel sobre consumo de {} €\n"
+"Periodo: {} - {}"
+msgstr ""

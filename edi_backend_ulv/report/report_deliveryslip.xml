@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="report_delivery_document"
+        inherit_id="stock.report_delivery_document"
+        priority="8"
+    >
+        <xpath expr="//span[@t-field='o.name']/.." position="after">
+            <span class="text-uppercase" t-if="o.no_charge">
+                <b>** No Charge</b>
+            </span>
+        </xpath>
+    </template>
+</odoo>

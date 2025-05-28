@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_picking" inherit_id="stock.report_picking" priority="8">
+        <xpath expr="//h1[@t-field='o.name']" position="before">
+            <t t-if="o.no_charge">
+                <span class="text-uppercase">
+                    <b>** No Charge</b>
+                </span>
+                <div class="clearfix" />
+            </t>
+        </xpath>
+    </template>
+</odoo>

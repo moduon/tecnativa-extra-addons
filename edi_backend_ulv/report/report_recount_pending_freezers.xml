@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="recount_pending_freezers">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <table class="table table-sm w-100">
+                        <thead class="border_header">
+                            <tr style="text-align: center;">
+                                <th colspan="7">
+                                    <h4>Medios de frío pendiente de recuento</h4>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>Lote</th>
+                                <th>Producto</th>
+                                <th>Cliente</th>
+                                <th>Dirección</th>
+                                <th>Teléf.</th>
+                                <th>Fecha recuento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="lot">
+                                <tr>
+                                    <td><span t-field="lot.name" /></td>
+                                    <td><span t-field="lot.product_id.name" /></td>
+                                    <t
+                                        t-set="partner"
+                                        t-value="lot.last_move_line_id.move_id.partner_id"
+                                    />
+                                    <td><span t-field="partner.name" /></td>
+                                    <td><span t-field="partner.street" /> | <span
+                                            t-field="partner.city"
+                                        /></td>
+                                    <td> <span t-field="partner.phone" /></td>
+                                    <td><span t-field="lot.ul_date_recount" /></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+    <record id="recount_pending_freezers_server_action" model="ir.actions.server">
+        <field name="name">Recount-pending freezers report</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_stock_production_lot" />
+        <field name="state">code</field>
+        <field name="code">
+            action = model.print_recount_pending_freezers_report()
+        </field>
+    </record>
+    <record id="report_unilever_recount_pending_freezers" model="ir.actions.report">
+        <field name="name">Recount-pending freezers</field>
+        <field name="model">stock.production.lot</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">edi_backend_ulv.recount_pending_freezers</field>
+        <field name="report_file">edi_backend_ulv.recount_pending_freezers</field>
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- TT50174 -->
+    <record id="view_picking_type_form" model="ir.ui.view">
+        <field name="inherit_id" ref="stock.view_picking_type_form" />
+        <field name="model">stock.picking.type</field>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group[2]" position="inside">
+                <group name="unilever" string="Unilever settings">
+                    <field name="unilever_refund" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

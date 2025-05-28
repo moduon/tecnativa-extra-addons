@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_rappel_conditions_report" model="ir.actions.report">
+        <field name="name">Rappel Conditions</field>
+        <field name="model">agreement</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">edi_backend_ulv.rappel_conditions_report</field>
+        <field name="report_file">edi_backend_ulv.rappel_conditions_report</field>
+        <field
+            name="paperformat_id"
+            ref="edi_backend_ulv.paperformat_settlements_unilever"
+        />
+    </record>
+</odoo>

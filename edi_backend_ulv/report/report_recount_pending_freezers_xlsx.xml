@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="recount_pending_freezers_xlsx_server_action" model="ir.actions.server">
+        <field name="name">Recount-pending freezers report (XLSX)</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_stock_production_lot" />
+        <field name="state">code</field>
+        <field name="code">
+            action = model.print_recount_pending_freezers_xlsx_report()
+        </field>
+    </record>
+    <record
+        id="report_unilever_recount_pending_freezers_xlsx"
+        model="ir.actions.report"
+    >
+        <field name="name">Recount-pending freezers (XLSX)</field>
+        <field name="model">stock.production.lot</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">edi_backend_ulv.recount_pending_freezers_xlsx</field>
+        <field name="report_file">edi_backend_ulv.recount_pending_freezers_xlsx</field>
+    </record>
+</odoo>

@@ -1,0 +1,8 @@
+.border_header th {
+    border: 1px solid black;
+}
+
+.spaced {
+    border-collapse: separate;
+    border-spacing: 5px 3px;
+}

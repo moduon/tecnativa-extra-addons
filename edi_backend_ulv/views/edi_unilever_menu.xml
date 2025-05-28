@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Agreements setting -->
+    <menuitem
+        id="menu_edi_unilever_agreement_condition"
+        parent="agreement.agreement_setting_menu"
+        action="action_edi_unilever_agreement_condition"
+        name="EDI Unilever Agreement Conditions"
+        sequence="20"
+    />
+    <menuitem
+        id="menu_edi_unilever_rappel_group"
+        parent="agreement.agreement_setting_menu"
+        action="unilever_rappel_group_action_form"
+        name="Rappel group"
+        sequence="30"
+    />
+    <menuitem
+        id="menu_edi_unilever_agreement_communication"
+        parent="agreement.agreement_setting_menu"
+        action="edi_backend_ulv.edi_unilever_agreement_communication_action"
+        name="Agreement communications"
+        sequence="40"
+    />
+    <!-- Agreements reporting -->
+    <menuitem
+        id="edi_unilever_report_wiz_pol_settlement_menu"
+        action="edi_unilever_report_pol_settlement_wiz_action"
+        name="Agreement POL settlement"
+        parent="agreement.agreement_reporting_menu"
+        sequence="60"
+    />
+    <menuitem
+        id="edi_unilever_report_wiz_dto_settlement_menu"
+        action="edi_unilever_report_dto_settlement_wiz_action"
+        name="Agreement DTO settlement"
+        parent="agreement.agreement_reporting_menu"
+        sequence="60"
+    />
+    <menuitem
+        id="edi_unilever_report_wiz_bonus_settlement_menu"
+        action="edi_unilever_report_bonus_settlement_wiz_action"
+        name="Agreement year bonus settlement"
+        parent="agreement.agreement_reporting_menu"
+        sequence="60"
+    />
+    <!-- EDI backend reporting -->
+    <menuitem
+        id="edi_unilever_report_wiz_recount_pending_freezers_menu"
+        action="recount_pending_freezers_server_action"
+        name="Recount-pending freezers"
+        parent="base_edi_backend.menu_edi_backend_reporting"
+        sequence="60"
+    />
+    <menuitem
+        id="edi_unilever_report_wiz_recount_pending_freezers_xlsx_menu"
+        action="recount_pending_freezers_xlsx_server_action"
+        name="Recount-pending freezers (XLSX)"
+        parent="base_edi_backend.menu_edi_backend_reporting"
+        sequence="60"
+    />
+    <!-- EDI backend setting -->
+    <menuitem
+        id="menu_edi_unilever_fresh_asset"
+        parent="base_edi_backend.edi_backend_setting_menu"
+        action="action_edi_unilever_fresh_asset"
+        name="EDI Unilever Fresh Asset"
+        sequence="15"
+    />
+    <menuitem
+        id="menu_edi_unilever_category"
+        parent="base_edi_backend.edi_backend_setting_menu"
+        action="action_edi_unilever_category"
+        name="EDI Unilever Categories"
+        sequence="20"
+    />
+    <menuitem
+        id="menu_edi_unilever_competency"
+        parent="base_edi_backend.edi_backend_setting_menu"
+        action="action_edi_unilever_competency"
+        name="EDI Unilever Competencies"
+        sequence="30"
+    />
+    <menuitem
+        id="menu_edi_unilever_disable_reason"
+        parent="base_edi_backend.edi_backend_setting_menu"
+        action="action_edi_unilever_disable_reason"
+        name="EDI Unilever disable reason"
+        sequence="40"
+    />
+    <menuitem
+        id="menu_edi_unilever_tourism_group"
+        parent="base_edi_backend.edi_backend_setting_menu"
+        action="action_edi_unilever_tourism_group"
+        name="Tourism groups"
+        sequence="50"
+    />
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_move_tree" model="ir.ui.view">
+        <field name="inherit_id" ref="stock.view_move_tree" />
+        <field name="model">stock.move</field>
+        <field name="arch" type="xml">
+            <!-- Mostrar el campo estado unilever (Enviado / No enviado) en el
+            form de stock_move y en el tree de operaciones-->
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="unilever_state" readonly="1" optional="hide" />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="inherit_id" ref="stock.view_move_form" />
+        <field name="model">stock.move</field>
+        <field name="arch" type="xml">
+            <!-- Mostrar el campo estado unilever (Enviado / No enviado) en el
+            form de stock_move y en el tree de operaciones-->
+            <xpath expr="//field[@name='date']" position="after">
+                <field name="unilever_state" readonly="1" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

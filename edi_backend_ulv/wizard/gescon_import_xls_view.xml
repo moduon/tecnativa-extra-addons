@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017 Sergio Teruel - Tecnativa <sergio.teruel@tecnativa.com>
+     Copyright 2017 Carlos Dauden - Tecnativa <carlos.dauden@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="gescon_import_wiz_form" model="ir.ui.view">
+        <field name="name">gescon.import.wiz.form</field>
+        <field name="model">gescon.import.wiz</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="action_import"
+                        string="Import"
+                        class="oe_highlight"
+                        type="object"
+                    />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="company_id" />
+                            <field name="ignore_unknown_partner" />
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="import_type" />
+                            <field
+                                name="data_file"
+                                filename="filename"
+                                placeholder="Choose a file to import..."
+                            />
+                            <field name="filename" invisible="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_gescon_import_xls" model="ir.actions.act_window">
+        <field name="name">Gescon xls import</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gescon.import.wiz</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        id="menu_gescon_import_xls"
+        action="action_gescon_import_xls"
+        parent="sale.menu_sale_config"
+        sequence="120"
+        groups="base.group_no_one"
+    />
+</odoo>

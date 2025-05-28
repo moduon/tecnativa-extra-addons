@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_invoice_discount_report" model="ir.actions.report">
+        <field name="name">Invoice discounts</field>
+        <field name="model">agreement.rebate.settlement.line</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">edi_backend_ulv.invoice_discounts_report</field>
+        <field name="report_file">edi_backend_ulv.invoice_discounts_report</field>
+        <field
+            name="paperformat_id"
+            ref="edi_backend_ulv.paperformat_settlements_unilever"
+        />
+    </record>
+    <record id="action_year_bonus_report" model="ir.actions.report">
+        <field name="name">Year bonus</field>
+        <field name="model">agreement.rebate.settlement.line</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">edi_backend_ulv.year_bonus_report</field>
+        <field name="report_file">edi_backend_ulv.year_bonus_report</field>
+        <field
+            name="paperformat_id"
+            ref="edi_backend_ulv.paperformat_settlements_unilever"
+        />
+    </record>
+</odoo>

@@ -1,0 +1,176 @@
+<odoo>
+    <template id="rappel_conditions_report">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <div class="page text-justify">
+                    <div class="header">
+                        <div class="row">
+                            <div class="col-4">
+                                <t t-set="company" t-value="res_company" />
+                                <span
+                                    t-esc="'{} - {}'.format(company.unilever_dealer, company.name)"
+                                />
+                            </div>
+                            <div class="border border-dark col-4 text-center">
+                                <span>
+                                    <u>
+                                        <strong
+                                        >Condiciones de Clientes de Rappel</strong>
+                                    </u>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="spaced">
+                        <thead class="border_header">
+                            <tr>
+                                <th class="text-center">
+                                Cliente
+                            </th>
+                                <th colspan="4" class="text-center" width="250">
+                                Nombre
+                            </th>
+                                <th class="text-center">
+                                Gru
+                            </th>
+                                <th colspan="3" class="text-center" width="150">
+                                Descripción
+                            </th>
+                                <th colspan="4" class="text-center">
+                                Subgrupo
+                            </th>
+                                <th class="text-center">
+                                Tipo
+                            </th>
+                                <th class="text-center">
+                                Agrup. Cad.
+                            </th>
+                                <th class="text-center">
+                                Dcto. Fra.
+                            </th>
+                                <th class="text-center">
+                                % Contrib.
+                            </th>
+                                <th class="text-center">
+                                Fecha Modificación
+                            </th>
+                            </tr>
+                            <tr>
+                                <th class="text-center">Hasta</th>
+                                <th class="text-center">%</th>
+                                <th class="text-center">Hasta</th>
+                                <th class="text-center">%</th>
+                                <th class="text-center">Hasta</th>
+                                <th class="text-center">%</th>
+                                <th class="text-center">Hasta</th>
+                                <th class="text-center">%</th>
+                                <th class="text-center">Hasta</th>
+                                <th class="text-center">%</th>
+                                <th class="text-center">Hasta</th>
+                                <th class="text-center">%</th>
+                                <th class="text-center">Hasta</th>
+                                <th class="text-center">%</th>
+                                <th class="text-center">Hasta</th>
+                                <th class="text-center">%</th>
+                                <th class="text-center">Hasta</th>
+                                <th class="text-center">%</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="doc">
+                                <tr>
+                                    <td class="text-right">
+                                        <span t-field="doc.partner_id.unilever_ref" />
+                                    </td>
+                                    <td colspan="4" class="text-left" width="250">
+                                        <span t-field="doc.partner_id.name" />
+                                    </td>
+                                    <td class="text-right">
+                                        <t
+                                            t-if="doc.unilever_rappel_group_id.parent_id"
+                                        >
+                                            <span
+                                                t-field="doc.unilever_rappel_group_id.parent_id.code"
+                                            />
+                                        </t>
+                                        <t t-else="">
+                                            <span
+                                                t-field="doc.unilever_rappel_group_id.code"
+                                            />
+                                        </t>
+                                    </td>
+                                    <td colspan="3" class="text-left" width="150">
+                                        <t
+                                            t-if="doc.unilever_rappel_group_id.parent_id"
+                                        >
+                                            <span
+                                                t-field="doc.unilever_rappel_group_id.parent_id.name"
+                                            />
+                                        </t>
+                                        <t t-else="">
+                                            <span
+                                                t-field="doc.unilever_rappel_group_id.name"
+                                            />
+                                        </t>
+                                    </td>
+                                    <td colspan="4" class="text-left">
+                                        <t
+                                            t-if="doc.unilever_rappel_group_id.parent_id"
+                                        >
+                                            <span
+                                                t-field="doc.unilever_rappel_group_id"
+                                            />
+                                        </t>
+                                    </td>
+                                    <td class="text-left">
+                                        <span t-field="doc.move_type" />
+                                    </td>
+                                    <td class="text-left">
+                                        <span t-if="doc.chain">Sí</span>
+                                        <span t-if="not(doc.chain)">No</span>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="doc.invoice_discount" />
+                                    </td>
+                                    <td class="text-right">
+                                        <span
+                                            t-field="doc.unilever_participation_percent"
+                                        />
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="doc.signature_date" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <t
+                                        t-foreach="doc.rebate_section_ids"
+                                        t-as="section"
+                                    >
+                                        <td class="text-right">
+                                            <span t-field="section.amount_to" />
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="section.rebate_discount" />
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                    <div class="footer">
+                        <div class="row">
+                            <div class="col text-center">
+                                <small>
+                                <span>Page</span>
+                                <span class="page" />
+                                of
+                                <span class="topage" />
+                            </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

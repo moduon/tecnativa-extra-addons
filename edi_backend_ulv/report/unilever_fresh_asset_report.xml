@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="fresh_asset_report_tree_view" model="ir.ui.view">
+        <field name="name">unilever.fresh.asset.report.tree.view</field>
+        <field name="model">unilever.fresh.asset.report</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="partner_id" />
+                <field name="product_id" />
+                <field name="name" />
+                <field name="date" />
+                <field name="categ_id" />
+            </tree>
+        </field>
+    </record>
+    <record id="fresh_asset_report_search" model="ir.ui.view">
+        <field name="name">unilever.fresh.asset.report.search</field>
+        <field name="model">unilever.fresh.asset.report</field>
+        <field name="arch" type="xml">
+            <search string="Fresh assets">
+                <field name="partner_id" />
+                <field name="product_id" />
+                <field name="categ_id" />
+                <field name="date" />
+                <group expand="1" string="Group By">
+                    <filter
+                        string="Product"
+                        name="product"
+                        context="{'group_by':'product_id'}"
+                    />
+                    <filter
+                        string="Customer"
+                        name="customer"
+                        context="{'group_by':'partner_id'}"
+                    />
+                    <filter
+                        string="Product Category"
+                        name="category"
+                        context="{'group_by':'categ_id'}"
+                    />
+                    <separator />
+                    <filter
+                        string="Order Month"
+                        context="{'group_by':'date:month'}"
+                        help="Ordered date of the stock moves"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="action_fresh_asset_report" model="ir.actions.act_window">
+        <field name="name">Fresh asset report</field>
+        <field name="res_model">unilever.fresh.asset.report</field>
+        <field name="view_mode">tree</field>
+        <field name="search_view_id" ref="fresh_asset_report_search" />
+    </record>
+</odoo>

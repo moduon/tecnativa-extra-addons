@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="unliver_agreement_col_type_A" model="edi.unilever.agreement.col.type">
+        <field name="name">Acuerdo Preferente (Colaboración Publicitaria)</field>
+        <field name="unilever_rappel_group_id" search="[('unilever_ref', '=', 'IM')]" />
+        <field name="unilever_ref">A</field>
+    </record>
+    <record id="unliver_agreement_col_type_E" model="edi.unilever.agreement.col.type">
+        <field name="name">Eventos y Patrocinios</field>
+        <field name="unilever_rappel_group_id" search="[('unilever_ref', '=', 'IM')]" />
+        <field name="unilever_ref">E</field>
+    </record>
+    <record id="unliver_agreement_col_type_M" model="edi.unilever.agreement.col.type">
+        <field name="name">Servicios Medios de Frío</field>
+        <field name="unilever_rappel_group_id" search="[('unilever_ref', '=', 'IM')]" />
+        <field name="unilever_ref">M</field>
+    </record>
+    <record id="unliver_agreement_col_type_P" model="edi.unilever.agreement.col.type">
+        <field name="name">Actividad Promocional</field>
+        <field name="unilever_rappel_group_id" search="[('unilever_ref', '=', 'IM')]" />
+        <field name="unilever_ref">P</field>
+    </record>
+    <record id="unliver_agreement_col_type_C" model="edi.unilever.agreement.col.type">
+        <field name="name">My Cornetto</field>
+        <field name="unilever_rappel_group_id" search="[('unilever_ref', '=', 'MC')]" />
+        <field name="unilever_ref">C</field>
+    </record>
+    <record id="unliver_agreement_col_type_O" model="edi.unilever.agreement.col.type">
+        <field name="name">Objetivo</field>
+        <field name="unilever_rappel_group_id" search="[('unilever_ref', '=', 'IM')]" />
+        <field name="unilever_ref">O</field>
+    </record>
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_partner_delivery_zone_form">
+        <field name="model">partner.delivery.zone</field>
+        <field
+            name="inherit_id"
+            ref="partner_delivery_zone.view_partner_delivery_zone_form"
+        />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="unilever_code" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_partner_delivery_zone_tree">
+        <field name="model">partner.delivery.zone</field>
+        <field
+            name="inherit_id"
+            ref="partner_delivery_zone.view_partner_delivery_zone_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="unilever_code" />
+            </field>
+        </field>
+    </record>
+</odoo>

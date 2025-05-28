@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="product_template_only_form_view" model="ir.ui.view">
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <field name="barcode" position="after">
+                <field name="unilever_ref" />
+                <field name="unilever_rappel_group_id" />
+                <field name="unilever_rappel_group" readonly="1" invisible="1" />
+                <field name="unilever_rappel_subgroup" readonly="1" invisible="1" />
+            </field>
+        </field>
+    </record>
+    <record id="product_category_form_view_inherit" model="ir.ui.view">
+        <field name="inherit_id" ref="stock.product_category_form_view_inherit" />
+        <field name="model">product.category</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='route_ids']/.." position="after">
+                <group name="unilever" string="Unilever">
+                    <field name="unilever_ref" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="product_category_list_view" model="ir.ui.view">
+        <field name="inherit_id" ref="product.product_category_list_view" />
+        <field name="model">product.category</field>
+        <field name="arch" type="xml">
+            <field name="display_name" position="after">
+                <field name="unilever_ref" />
+            </field>
+        </field>
+    </record>
+    <!-- Action to display fresh assets. We only can filter by tracking -->
+    <record model="ir.actions.act_window" id="action_edi_unilever_fresh_asset">
+        <field name="name">EDI Unilever Fresh Asset</field>
+        <field name="res_model">product.template</field>
+        <field name="domain">[('categ_id.is_unilever_mef', '=', True)]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

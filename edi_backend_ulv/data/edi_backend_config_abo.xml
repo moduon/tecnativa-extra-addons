@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  ~ # Copyright 2022 Tecnativa - Carlos Roca
+  ~ # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl
+  -->
+<odoo>
+    <record id="edi_backend_config_abo" model="edi.backend.config">
+        <field name="name">Lineas de abono ULV</field>
+        <field name="model_number">2018</field>
+        <field name="columns_definition">positional</field>
+        <field name="model_id" ref="model_unilever_invoice_refund_line" />
+    </record>
+    <record id="edi_backend_config_abo_line_01" model="edi.backend.config.line">
+        <field name="sequence">1</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Tipo</field>
+        <field name="key">Tipo</field>
+        <field name="size">1</field>
+    </record>
+    <record id="edi_backend_config_abo_line_02" model="edi.backend.config.line">
+        <field name="sequence">2</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Semana</field>
+        <field name="key">Semana</field>
+        <field name="size">6</field>
+    </record>
+    <record id="edi_backend_config_abo_line_03" model="edi.backend.config.line">
+        <field name="sequence">3</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Factura</field>
+        <field name="key">Factura</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_abo_line_04" model="edi.backend.config.line">
+        <field name="sequence">4</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Referencia</field>
+        <field name="key">Referencia</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_abo_line_05" model="edi.backend.config.line">
+        <field name="sequence">5</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Cantidad</field>
+        <field name="key">Cantidad</field>
+        <field name="size">6</field>
+    </record>
+    <record id="edi_backend_config_abo_line_06" model="edi.backend.config.line">
+        <field name="sequence">6</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Tarifa</field>
+        <field name="key">Tarifa</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_abo_line_07" model="edi.backend.config.line">
+        <field name="sequence">7</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">TPR</field>
+        <field name="key">TPR</field>
+        <field name="size">6</field>
+    </record>
+    <record id="edi_backend_config_abo_line_08" model="edi.backend.config.line">
+        <field name="sequence">8</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Dto. Conces.</field>
+        <field name="key">Dto. Conces.</field>
+        <field name="size">6</field>
+    </record>
+    <record id="edi_backend_config_abo_line_09" model="edi.backend.config.line">
+        <field name="sequence">9</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Dto. pronto pago</field>
+        <field name="key">Dto. pronto pago</field>
+        <field name="size">6</field>
+    </record>
+    <record id="edi_backend_config_abo_line_10" model="edi.backend.config.line">
+        <field name="sequence">10</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Dto. Volumen</field>
+        <field name="key">Dto. Volumen</field>
+        <field name="size">6</field>
+    </record>
+    <record id="edi_backend_config_abo_line_11" model="edi.backend.config.line">
+        <field name="sequence">11</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Importe abono producto</field>
+        <field name="key">Importe abono producto</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_abo_line_12" model="edi.backend.config.line">
+        <field name="sequence">12</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Importe Gastos distribucion</field>
+        <field name="key">Importe Gastos distribucion</field>
+        <field name="size">10</field>
+    </record>
+    <record id="edi_backend_config_abo_line_13" model="edi.backend.config.line">
+        <field name="sequence">13</field>
+        <field name="export_config_id" ref="edi_backend_config_abo" />
+        <field name="name">Albaran</field>
+        <field name="key">Albaran</field>
+        <field name="size">10</field>
+    </record>
+</odoo>

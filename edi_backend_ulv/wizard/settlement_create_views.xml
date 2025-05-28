@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="view_settlement_create_wiz" model="ir.ui.view">
+        <field name="model">agreement.settlement.create.wiz</field>
+        <field name="inherit_id" ref="agreement_rebate.view_settlement_create_wiz" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_from']/../.." position="before">
+                <group string="Unilever">
+                    <group>
+                        <field name="unilever_settlement_type" />
+                    </group>
+                    <group>
+                        <field name="minimal_total_percent" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

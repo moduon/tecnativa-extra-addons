@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="mef_report_recession_agreement"
+        inherit_id="agreement_unilever_mef.mef_report_recession_agreement"
+    >
+        <t t-call="web.html_container" position="before">
+            <t t-set="partner_ref_field" t-value="'unilever_ref'" />
+        </t>
+    </template>
+</odoo>
