@@ -4,14 +4,14 @@
 {
     "name": "Agreement Unilever MEF",
     "summary": "Manage Unilever MEF agreements",
-    "version": "15.0.1.0.0",
+    "version": "16.0.1.0.0",
     "development_status": "Beta",
     "category": "Contract",
-    "website": "https://github.com/OCA/contract",
+    "website": "https://github.com/Tecnativa/extra-addons",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    "installable": False,
     "depends": ["agreement", "stock"],
     "data": [
         "security/ir.model.access.csv",
