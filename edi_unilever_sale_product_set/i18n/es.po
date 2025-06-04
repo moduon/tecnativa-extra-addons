@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* edi_unilever_sale_product_set
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-12 22:23+0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Sergio Teruel <sergio.teruel@tecnativa.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: edi_unilever_sale_product_set
+#: model:ir.model.fields,field_description:edi_unilever_sale_product_set.field_product_set__is_ul_fill
+msgid "Fill operation"
+msgstr "Operación de llenado"
+
+#. module: edi_unilever_sale_product_set
+#: code:addons/edi_unilever_sale_product_set/wizard/product_set_add.py:0
+#, python-format
+msgid ""
+"In order %s the filling operation has already been carried out for the "
+"delivery address selected this year."
+msgstr ""
+"En el pedido %s la operación de llenado ya ha sido confirmada para la "
+"dirección de entrega seleccionada este año."
+
+#. module: edi_unilever_sale_product_set
+#: model:ir.model,name:edi_unilever_sale_product_set.model_product_set
+msgid "Product set"
+msgstr "Conjunto de productos"
+
+#. module: edi_unilever_sale_product_set
+#: model:ir.model.fields,field_description:edi_unilever_sale_product_set.field_sale_order__ul_set_id
+msgid "Product set applied"
+msgstr "Conjunto de productos aplicado"
+
+#. module: edi_unilever_sale_product_set
+#: model:ir.model,name:edi_unilever_sale_product_set.model_product_set_line
+msgid "Product set line"
+msgstr "Línea de conjunto de productos"
+
+#. module: edi_unilever_sale_product_set
+#: model:ir.model,name:edi_unilever_sale_product_set.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: edi_unilever_sale_product_set
+#: model:ir.model.fields,field_description:edi_unilever_sale_product_set.field_product_set_line__price_unit
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: edi_unilever_sale_product_set
+#: model:ir.model,name:edi_unilever_sale_product_set.model_product_set_add
+msgid "Wizard model to add product set into a quotation"
+msgstr "Modelo wizard para añadir un conjunto de productos a un presupuesto"
