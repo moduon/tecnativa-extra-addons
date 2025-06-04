@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- Crear secuencia y tipo de operacion para movimientos de los medios de frío -->
+    <record id="fresh_asset_sequence" model="ir.sequence">
+        <field name="name">Medios de frio MEF</field>
+        <field name="prefix">UL/MEF/</field>
+        <field name="padding">4</field>
+    </record>
+    <record id="fresh_asset_picking_type" model="stock.picking.type">
+        <field name="name">Movimientos de medios de frío (UL)</field>
+        <field name="sequence_id" ref="agreement_unilever_mef.fresh_asset_sequence" />
+        <field name="code">internal</field>
+        <field name="sequence_code">MEF</field>
+        <field name="use_create_lots">True</field>
+        <field name="use_existing_lots">True</field>
+        <field name="show_operations">True</field>
+        <field name="default_location_src_id" ref="stock.stock_location_stock" />
+        <field name="default_location_dest_id" ref="stock.stock_location_stock" />
+    </record>
+</odoo>

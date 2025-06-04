@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="action_mef_concession_report" model="ir.actions.report">
+        <field name="name">MEF concession</field>
+        <field name="model">agreement</field>
+        <field name="report_type">qweb-pdf</field>
+        <field
+            name="report_name"
+        >agreement_unilever_mef.mef_report_concession_agreement</field>
+        <field
+            name="report_file"
+        >agreement_unilever_mef.mef_report_concession_agreement</field>
+        <field
+            name="paperformat_id"
+            ref="agreement_unilever_mef.paperformat_unilever_agreement_mef"
+        />
+    </record>
+    <record id="action_mef_recession_report" model="ir.actions.report">
+        <field name="name">MEF recession</field>
+        <field name="model">agreement</field>
+        <field name="report_type">qweb-pdf</field>
+        <field
+            name="report_name"
+        >agreement_unilever_mef.mef_report_recession_agreement</field>
+        <field
+            name="report_file"
+        >agreement_unilever_mef.mef_report_recession_agreement</field>
+        <field
+            name="paperformat_id"
+            ref="agreement_unilever_mef.paperformat_unilever_agreement_mef"
+        />
+    </record>
+</odoo>

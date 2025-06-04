@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_production_lot_form" model="ir.ui.view">
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    class="oe_stat_button"
+                    name="action_agreement_unilever_mef"
+                    icon="fa-asterisk"
+                    type="object"
+                >
+                    <span class="o_stat_text">Fresh asset agreements</span>
+                </button>
+            </div>
+        </field>
+    </record>
+</odoo>

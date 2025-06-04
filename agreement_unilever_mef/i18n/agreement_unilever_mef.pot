@@ -1,0 +1,919 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* agreement_unilever_mef
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+",\n"
+"                            (en lo sucesivo denominado el “Cliente”)."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+",\n"
+"                            CIF"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+",\n"
+"                            Concesionario de Unilever  España S.A.,\n"
+"                            para la zona de Tarragona, con domicilio\n"
+"                            en"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+", con\n"
+"                            domicilio en"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid ""
+", cuya\n"
+"                    matrícula se halla arriba referenciada. Con la firma\n"
+"                    del presente documento queda extinguido el Acuerdo\n"
+"                    nº"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid ""
+". de cesión de medios de frío en depósito\n"
+"                    al punto de venta de fecha …………………. únicamente en\n"
+"                    cuanto al medio de frio relacionado en este\n"
+"                    documento."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            CUARTA. Precio de la\n"
+"                            Cesión.\n"
+"                        </span>\n"
+"                        El medio de frío se cede al Cliente\n"
+"                        a título oneroso, entendiéndose incluida la\n"
+"                        contraprestación por su uso en el precio de los\n"
+"                        productos marca Frigo, Magnum, Ben&amp;Jerry´s, Café Zero,\n"
+"                        Calippo® Slush o My Cornetto y cualesquiera otras,\n"
+"                        propiedad de Unilever que se venderán al Cliente para\n"
+"                        su reventa a los consumidores."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            DUODÉCIMA.- Fuero:\n"
+"                        </span>\n"
+"                        Las partes, con renuncia expresa al fuero que\n"
+"                        pudiera corresponderles, se someten, para cualesquiera\n"
+"                        controversias que pudieran surgir en la interpretación\n"
+"                        y ejecución de ese documento, a los Juzgados y\n"
+"                        Tribunales de Barcelona."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            DUODÉCIMA.- Protección de Datos:\n"
+"                        </span>\n"
+"                        UNILEVER informa a los intervinientes que sus\n"
+"                        datos personales serán tratados por UNILEVER y el Grupo\n"
+"                        Unilever con el fin de mantener las relaciones\n"
+"                        mercantiles existentes, dirigirles la oportuna\n"
+"                        información empresarial y gestionar la entrega,\n"
+"                        conservación y mantenimiento de las Conservadoras."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            DÉCIMA.- Subrogación:\n"
+"                        </span>\n"
+"                        El cambio de Concesionario Frigo en la zona del\n"
+"                        Cliente supondrá la subrogación automática del nuevo\n"
+"                        concesionario a la posición del concesionario saliente,\n"
+"                        por lo que no se producirá la resolución de este\n"
+"                        Contrato en este supuesto y el Cliente deberá seguir\n"
+"                        únicamente las indicaciones de Unilever."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            NOVENA.- Consecuencias de la resolución:\n"
+"                        </span>\n"
+"                        Resuelto este Acuerdo será exigible la\n"
+"                        devolución del medio o medios de frío en un plazo\n"
+"                        máximo de siete (7) días naturales, siendo el Cliente\n"
+"                        responsable tanto de su devolución como de los daños o\n"
+"                        averías debidas a negligencia o incorrecto uso, por lo\n"
+"                        que Unilever queda facultada para utilizar todas las\n"
+"                        acciones necesarias para hacer efectiva esta\n"
+"                        restitución de los medios, así como exigir los\n"
+"                        daños y perjuicios irrogados o que se irroguen desde\n"
+"                        ese momento. En este sentido, el Cliente permitirá que\n"
+"                        el personal de Unilever, lo desmonte y lo transporte.\n"
+"                        Unilever se reserva el derecho de reclamar al Cliente\n"
+"                        las cantidades que procedan si, desmontado el medio de\n"
+"                        frío, se aprecian en él daños ajenos a su uso. En caso\n"
+"                        contrario las partes acuerdan expresamente que será de\n"
+"                        aplicación una penalización equivalente a diez euros\n"
+"                        (€ 10) por cada día de retraso que transcurra desde la\n"
+"                        finalización, por la causa que fuere, del Contrato\n"
+"                        hasta la efectiva entrega del medio/s a Unilever o a\n"
+"                        quien ésta designe."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            OCTAVA. Responsabilidades.\n"
+"                        </span>\n"
+"                        El Cliente pagará al\n"
+"                        propietario del medio de frio los daños y perjuicios\n"
+"                        que sufran, y será responsable por los daños y\n"
+"                        perjuicios o lesiones que pudiera causar, como\n"
+"                        consecuencia de no seguir las instrucciones sobre la\n"
+"                        correcta instalación, mantenimiento y/o utilización del\n"
+"                        medio de frío. Salvo caso fortuito o de fuerza mayor,\n"
+"                        el Cliente responderá de la pérdida del medio de frío y\n"
+"                        de los desperfectos que puedan sufrir los productos por\n"
+"                        cualquier causa dentro del medio de frío."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            PRIMERA. Operación\n"
+"                            accesoria.\n"
+"                        </span>\n"
+"                        La cesión del medio de frío se\n"
+"                        realiza como operación accesoria a las operaciones de\n"
+"                        suministro de los productos marca Frigo, Ben&amp;Jerry´s,\n"
+"                        Café Zero, Calippo® Slush o My Cornetto, según proceda,\n"
+"                        que el Concesionario efectuará al Cliente para que\n"
+"                        pueda desarrollar su actividad de venta al público de\n"
+"                        los mismos, manteniéndolos en condiciones óptimas para\n"
+"                        su consumo, para lo cual resulta esencial la compra por\n"
+"                        parte del Cliente de los productos directamente al\n"
+"                        Concesionario o, en su caso, a Unilever."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            QUINTA. Identificación\n"
+"                            y mantenimiento.\n"
+"                        </span>\n"
+"                        Los medios de frío de\n"
+"                        Unilever llevan impresa la marca Frigo, Ben&amp;Jerry´s,\n"
+"                        Café Zero, Calippo® Slush o My Cornetto y cualesquiera\n"
+"                        otras, propiedad de Unilever que junto con la matrícula\n"
+"                        no podrán ser alterados de ningún modo por parte del\n"
+"                        Cliente."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            SEXTA.- Comunicación de\n"
+"                            la propiedad del medio:\n"
+"                        </span>\n"
+"                        En caso de tener\n"
+"                        arrendado el Cliente el establecimiento donde se sitúe\n"
+"                        el medio de frío, en calidad de arrendatario, se obliga\n"
+"                        a comunicar a su arrendador que el mismo es propiedad\n"
+"                        de Unilever. En caso de cierre, traspaso o venta del\n"
+"                        local o de cualquier otra incidencia, el cliente se\n"
+"                        obliga a notificarlo por escrito con una antelación\n"
+"                        mínima de (7) días laborales."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            SÉPTIMA. Verificaciones.\n"
+"                        </span>\n"
+"                        El Cliente, en cualquier momento, permitirá al\n"
+"                        personal del Concesionario o, en su caso, de Unilever,\n"
+"                        la inspección del medio o medios de frío. Asimismo, el\n"
+"                        Cliente se obliga a informar inmediatamente al\n"
+"                        Concesionario o, en su caso, a Unilever sobre cualquier\n"
+"                        cambio de ubicación del medio o medios propiedad de\n"
+"                        Unilever."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">\n"
+"                            UNDÉCIMA.- Seguro:\n"
+"                        </span>\n"
+"                        los medios de frio están asegurados por\n"
+"                        Unilever como titular del bien. En caso de siniestro el\n"
+"                        Cliente está obligado a comunicar el siniestro dentro\n"
+"                        de las 48 horas siguientes al siniestro. En caso\n"
+"                        contrario, Unilever no será responsable de los daños\n"
+"                        que hubiere podido causar dicho medio en el Cliente o\n"
+"                        en cualquier tercero."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "<span class=\"font-weight-bold\">CONDICIONES</span>"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">SEGUNDA. Uso y destino.</span>\n"
+"                        El uso del medio de frío será exclusivamente el\n"
+"                        almacenamiento, para su venta, de productos helados\n"
+"                        para su reventa a los consumidores. En caso de existir\n"
+"                        solo un medio en el cliente este será usado para el\n"
+"                        almacenamiento de cuantos productos helados disponga el\n"
+"                        cliente. En caso de existir más de un medio de frío en\n"
+"                        el cliente uno de los medios será exclusivamente para\n"
+"                        el almacenamiento de los productos marca Frigo,\n"
+"                        Ben&amp;Jerry´s, Café Zero, Calippo® Slush o My\n"
+"                        Cornetto que le suministrará al Cliente. Cualquier otro\n"
+"                        uso o cesión a terceros, así como cualquier cambio de\n"
+"                        ubicación del medio sin la previa autorización expresa\n"
+"                        del Concesionario o, en su caso, Unilever, queda\n"
+"                        totalmente prohibido, por lo que el Cliente será el\n"
+"                        único responsable de cualquier daño que dicho cambio de\n"
+"                        ubicación no autorizado cause sobre bienes y personas.\n"
+"                        Asimismo, Unilever queda autorizada, adicionalmente a\n"
+"                        cualquier otra acción, a exigir al Cliente una\n"
+"                        indemnización por el valor de reposición del medio."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"<span class=\"font-weight-bold\">TERCERA. Vigencia.</span>\n"
+"                        Este Contrato tendrá una duración de un mes, si bien se\n"
+"                        entenderá renovado tácitamente por periodos iguales,\n"
+"                        siempre que no sea denunciado por ninguna de las partes\n"
+"                        con una antelación de quince (15) días. No obstante, la\n"
+"                        vigencia del presente contrato está plenamente\n"
+"                        condicionada a la vigencia del acuerdo comercial con el\n"
+"                        Cliente, por lo que la resolución de dicho acuerdo\n"
+"                        supondrá, en los mismos términos, la resolución\n"
+"                        automática de este Contrato."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.view_production_lot_form
+msgid "<span class=\"o_stat_text\">Fresh asset agreements</span>"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.view_partner_form
+msgid "<span class=\"o_stat_text\">Fresh assets agreements</span>"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.view_partner_form
+msgid "<span class=\"o_stat_text\">Fresh assets</span>"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "<span>Nº Documento:</span>"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "<span>Nº Matrícula:</span>"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.agreement_form
+msgid "<span>Pickings</span>"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "ACUERDO DE CESIÓN DE MEDIOS DE FRÍO EN DEPÓSITO AL PUNTO DE VENTA"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model,name:agreement_unilever_mef.model_agreement
+msgid "Agreement"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: code:addons/agreement_unilever_mef/models/product.py:0
+#: code:addons/agreement_unilever_mef/models/product.py:0
+#, python-format
+msgid "Agreements not found!"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Asimismo, el Cliente se obliga a utilizar el medio\n"
+"                        de frío con la diligencia de un buen comerciante,\n"
+"                        atendiendo los gastos de su reparación y\n"
+"                        conservación, cuando sufra averías motivadas por\n"
+"                        negligencia, mal uso o abandono."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__code
+msgid "Code"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model,name:agreement_unilever_mef.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "DOCUMENTO DE RETIRADA DE MEDIOS DE FRIO EN DEPÓSITO DEL PUNTO DE VENTA"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "De otra,"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"De una parte,\n"
+"                            <span class=\"font-weight-bold\">UNILEVER ESPAÑA</span>\n"
+"                            ,\n"
+"                            S.A., con domicilio en la calle Tecnologia, 19 de\n"
+"                            08840-Viladecans, titular del NIF número A-28660520, y\n"
+"                            en su nombre y representación D. Albert Godayol Gilabert."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Dicha cesión queda sujeta a las condiciones\n"
+"                                    descritas a continuación en el presente Acuerdo."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Dichos datos podrán ser cedidos a aseguradoras,\n"
+"                        empresas de mantenimiento de neveras y otras\n"
+"                        prestadoras de servicios, siempre que dicha cesión\n"
+"                        sea necesaria para la prestación de los servicios de\n"
+"                        conservación y mantenimiento de las Conservadoras y\n"
+"                        para otros servicios relacionados con el negocio."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "Dirección cliente:"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement_unilever_mef_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.actions.act_window,name:agreement_unilever_mef.action_edi_unilever_fresh_asset
+msgid "EDI Unilever Fresh Asset"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "EL CONCESIONARIO"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "EL PROPIETARIO"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "EXPONEN"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"El Cliente se responsabiliza de la correcta instalación\n"
+"                        y mantenimiento del medio de frío. En todos los casos,\n"
+"                        el Cliente debe cumplir estrictamente con las\n"
+"                        siguientes normas de seguridad:"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "El Concesionario"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "El concesionario"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"El tratamiento de los citados datos personales se\n"
+"                        fundamenta en la ejecución del presente Contrato y\n"
+"                        se realizará durante todo el período de vigencia del\n"
+"                        mismo. Una vez finalizado el Contrato, los datos serán\n"
+"                        conservados por los plazos de prescripción de las\n"
+"                        obligaciones que puedan derivar de la relación\n"
+"                        mercantil."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "En"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "En Viladecans,"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"En caso de avería no causada por negligencia, mal\n"
+"                        uso o abandono, el Cliente deberá notificarlo a\n"
+"                        Unilever o a quién ésta designe en cada momento,\n"
+"                        el cual tomará las acciones oportunas para llevar\n"
+"                        a cabo la reparación del mismo."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"En caso de cualquier actuación judicial o embargo que\n"
+"                        pueda afectar a los bienes del Cliente, este vendrá\n"
+"                        obligado a avisar inmediatamente a Unilever de tales\n"
+"                        eventos y pondrá en conocimiento de los adquirentes,\n"
+"                        demandantes, acreedores y personal judicial, que el\n"
+"                        medio de frío es propiedad de Unilever."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"En el caso de cualquier siniestro en que el medio\n"
+"                        de frío se vea involucrado,\n"
+"                        <span class=\"font-weight-bold\">\n"
+"                            el Cliente deberá\n"
+"                            comunicarlo de inmediato a Unilever\n"
+"                            (900 81 25 10)\n"
+"                        </span>\n"
+"                        para que esta pueda tomar\n"
+"                        las medidas adecuadas.   En caso de que Unilever no\n"
+"                        sea notificada inmediatamente desde que hubiese\n"
+"                        ocurrido el evento antes citado y ello causara que\n"
+"                        no pueda intervenir activamente en el estudio de sus\n"
+"                        causas y su solución, Unilever quedará completamente\n"
+"                        exonerada de cualquier responsabilidad, renunciando\n"
+"                        el Cliente a cualquier cantidad o indemnización o\n"
+"                        compensación que le pudiera corresponder reclamar."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Enchufar el medio de frío a una toma de\n"
+"                            alimentación eléctrica reservada sólo para éste y\n"
+"                            sin adaptadores intermedios. La instalación donde\n"
+"                            se enchufe el medio de frío debe estar debidamente\n"
+"                            protegida de acuerdo con el actual Reglamento de\n"
+"                            Baja Tensión (magneto-térmico, diferencial de alta,\n"
+"                            etc.)."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Euros, en adelante\n"
+"                                referido como “medios de frio”. Para cada nuevo\n"
+"                                medio de frio cedido o para cualquier modificación\n"
+"                                o cambio se firmará el correspondiente documento de\n"
+"                                cesión entre Unilever, el Concesionario y el\n"
+"                                Cliente."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.product_form_view_procurement_button
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.product_template_form_view_procurement_button
+msgid "Fresh asset agreements"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.ui.menu,name:agreement_unilever_mef.agreement_unilever_mef_menu_root
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.agreement_form
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.agreement_search
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_wo_agreement_report_search
+msgid "Fresh assets"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.ui.menu,name:agreement_unilever_mef.agreement_unilever_mef_fresh_asset_wo_agreement_menu
+msgid "Fresh assets without agreement"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.actions.act_window,name:agreement_unilever_mef.action_mef_wo_agreement_report
+msgid "Fresh assets without agreement report"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_wo_agreement_report_search
+msgid "Group By"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement_unilever_mef_report__id
+msgid "ID"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Las partes, conformes, firman el presente Acuerdo en\n"
+"                        tres versiones originales, en el lugar y fecha\n"
+"                        indicados en el encabezamiento."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement_unilever_mef_report____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Los intervinientes podrán obtener más información sobre\n"
+"                        las empresas que integran el Grupo Unilever\n"
+"                        en www.unilever.com y podrán obtener más detalles sobre\n"
+"                        el tratamiento de sus datos en\n"
+"                        www.unileverprivacypolicy.com."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Los intervinientes quedan informados de que, para\n"
+"                        ejercitar sus derechos de acceso, rectificación,\n"
+"                        supresión, oposición o limitación del tratamiento,\n"
+"                        así como solicitar la portabilidad de sus datos, pueden\n"
+"                        dirigirse por escrito, adjuntando una copia de su\n"
+"                        documento de identidad, a la siguiente dirección\n"
+"                        electrónica: info.spain@unilever.com, con el asunto\n"
+"                        \"Protección de Datos\"."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement_unilever_mef_report__name
+msgid "Lot"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model,name:agreement_unilever_mef.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.actions.report,name:agreement_unilever_mef.action_mef_concession_report
+msgid "MEF concession"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.actions.report,name:agreement_unilever_mef.action_mef_recession_report
+msgid "MEF recession"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_picking_id
+msgid "Mef Picking"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_returned_picking_id
+msgid "Mef Returned Picking"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:stock.picking.type,name:agreement_unilever_mef.fresh_asset_picking_type
+msgid "Movimientos de medios de frío (UL)"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: code:addons/agreement_unilever_mef/models/res_partner.py:0
+#: code:addons/agreement_unilever_mef/models/stock_production_lot.py:0
+#, python-format
+msgid "No agreements found!"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"No enchufar el medio de frío a tomas de corrientes\n"
+"                            cercanas a fuentes de calor y/o elementos\n"
+"                            fácilmente inflamables."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"No obstaculizar las rejillas de ventilación del\n"
+"                            medio, debiendo dejar siempre un espacio libre de\n"
+"                            cómo mínimo 15 centímetros para que el equipo\n"
+"                            ventile bien. Las rejillas deberán mantenerse\n"
+"                            asimismo limpias y libres de obstrucciones debidas\n"
+"                            a polvo acumulado."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "Nombre del cliente:"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "Nombre del concesionario:"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "Nº Cliente"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "Nº Cliente:"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "Nº Contrato"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "Nº Matrícula"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "Observaciones:"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_owner_id
+msgid "Owner"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "POR EL CLIENTE"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "Por Unilever España, S.A."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "Por el Cliente"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid ""
+"Por medio del presente documento se hace constar que\n"
+"                    con esta fecha se retira el medio de frío\n"
+"                    tipo"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model,name:agreement_unilever_mef.model_product_product
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_product_id
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement_unilever_mef_report__product_id
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_wo_agreement_report_search
+msgid "Product"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model,name:agreement_unilever_mef.model_product_category
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement_unilever_mef_report__categ_id
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_wo_agreement_report_search
+msgid "Product Category"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model,name:agreement_unilever_mef.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_product_categ_id
+msgid "Product category"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_product_standard_price
+msgid "Product cost"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model,name:agreement_unilever_mef.model_stock_quant
+msgid "Quants"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Que Unilever es propietaria en pleno dominio del\n"
+"                                medio de frío, cuyo número de matrícula se\n"
+"                                identifica en el encabezamiento de este Contrato,\n"
+"                                con un valor de"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Que el indicado medio de frío se encuentra puesto\n"
+"                                a disposición del Concesionario por parte de\n"
+"                                Unilever, en los términos regulados en el Contrato\n"
+"                                de Concesión suscrito entre ambas partes, para su\n"
+"                                posterior distribución a los puntos de venta de los\n"
+"                                helados con marca registrada por Unilever, Frigo,\n"
+"                                Ben&amp;Jerry´s, Café Zero, Calippo® Slush o My\n"
+"                                Cornetto."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Que estando interesado el Cliente en realizar\n"
+"                                    la venta al público de los helados que Unilever\n"
+"                                    comercializa, en sus establecimientos, y\n"
+"                                    resultándole necesario los medios de frío para\n"
+"                                    su correcto almacenamiento, UNILEVER hace\n"
+"                                    entrega al Cliente, a través de su\n"
+"                                    Concesionario, de dichos medios de frío para su\n"
+"                                    ubicación permanente en el establecimiento"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "REUNIDOS"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.agreement_form
+msgid "Return fresh asset"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_returned_code
+msgid "Returned code"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_returned_date
+msgid "Returned date"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,help:agreement_unilever_mef.field_agreement__mef_product_categ_id
+msgid "Select category for the current product"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.agreement_form
+msgid "Send fresh asset"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_lot_id
+msgid "Serial number"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model,name:agreement_unilever_mef.model_stock_move
+msgid "Stock Move"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_supplier_id
+msgid "Supplier"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_agreement__mef_supplier_contact_id
+msgid "Supplier contact"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Todos los medios de frío deben conectarse siempre\n"
+"                            con un enchufe con toma de tierra."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.product_category_form_view_inherit
+msgid "Unilever"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: code:addons/agreement_unilever_mef/models/agreement.py:0
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_product_category__is_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_product_product__is_unilever_mef
+#: model:ir.model.fields,field_description:agreement_unilever_mef.field_product_template__is_unilever_mef
+#, python-format
+msgid "Unilever MEF"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model:ir.model,name:agreement_unilever_mef.model_agreement_unilever_mef_report
+msgid "Unilever fresh assets without agreement report"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Unilever informa a los intervinientes de su derecho a\n"
+"                        presentar una reclamación ante la Autoridad de\n"
+"                        Control   en   materia   de   Protección   de\n"
+"                        Datos competente cuando consideren que el tratamiento\n"
+"                        de sus datos personales infringe la normativa de\n"
+"                        protección de datos aplicable."
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"Y de la otra,\n"
+"                            D. ......................................., con DNI\n"
+"                            nº........................., en nombre y representación\n"
+"                            de"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: code:addons/agreement_unilever_mef/models/agreement.py:0
+#, python-format
+msgid "You cannot return an asset until you have delivered one first"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_recession_document
+msgid "de"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid "sito en"
+msgstr ""
+
+#. module: agreement_unilever_mef
+#: model_terms:ir.ui.view,arch_db:agreement_unilever_mef.mef_report_concession_document
+msgid ""
+"y en su nombre y\n"
+"                            representación\n"
+"                            D. Victor Medina Cervera, en\n"
+"                            adelante denominado, el “Concesionario”."
+msgstr ""

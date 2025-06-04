@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="paperformat_unilever_agreement_mef" model="report.paperformat">
+        <field name="name">A4 Unilever agreement MEF</field>
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">15.00</field>
+        <field name="margin_bottom">5</field>
+        <field name="margin_left">17.50</field>
+        <field name="margin_right">17.50</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">15</field>
+        <field name="dpi">125</field>
+    </record>
+</odoo>

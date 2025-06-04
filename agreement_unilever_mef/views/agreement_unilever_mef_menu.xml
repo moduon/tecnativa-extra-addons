@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        id="agreement_unilever_mef_menu_root"
+        name="Fresh assets"
+        parent="agreement.agreement_menu_root"
+        sequence="80"
+    />
+    <menuitem
+        id="agreement_unilever_mef_fresh_asset_wo_agreement_menu"
+        action="agreement_unilever_mef.action_mef_wo_agreement_report"
+        name="Fresh assets without agreement"
+        parent="agreement_unilever_mef_menu_root"
+        sequence="30"
+    />
+</odoo>

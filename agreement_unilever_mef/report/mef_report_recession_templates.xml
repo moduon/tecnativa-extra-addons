@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mef_report_recession_document">
+        <t t-call="web.basic_layout">
+            <div class="page text-justify">
+                <div>
+                    <div class="row">
+                        <div class="col-2">
+                            <img
+                                class="float-left"
+                                src="/agreement_unilever_mef/static/src/img/frigo.png"
+                                width="133"
+                                height="66"
+                            />
+                        </div>
+                        <div class="col-10 text-center">
+                            <h6 class="text-center font-weight-bold font-italic">
+                            DOCUMENTO DE RETIRADA DE MEDIOS DE FRIO EN DEPÓSITO DEL PUNTO DE VENTA
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-5">
+                    En  <span t-field="doc.partner_id.city" />, a
+                    <span t-field="doc.end_date" t-options="{'format': 'dd'}" /> de
+                    <span t-field="doc.end_date" t-options="{'format': 'MMMM'}" /> de
+                    <span t-field="doc.end_date" t-options="{'format': 'YYYY'}" />
+                </p>
+                <div class="row">
+                    <div class="col-6">
+                        <p class="mt-5">
+                            Nº Cliente:
+                            <span t-out="doc.partner_id[partner_ref_field]" />
+                        </p>
+                        <p>
+                            Nombre del concesionario: <span t-out="res_company.name" />.
+                        </p>
+                        <p>
+                            Nombre del cliente: <span
+                                t-field="doc.partner_id.commercial_partner_id.name"
+                            />.
+                        </p>
+                        <p>
+                            Dirección cliente: <span
+                                t-field="doc.partner_id.street"
+                            />,  <span t-field="doc.partner_id.city" />.
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-6 text-right">
+                                <span>Nº Documento:</span>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p class="border" style="font-size: 1.5em;">
+                                    <span t-field="doc.mef_returned_code" />
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row mt16">
+                            <div class="col-6 text-right">
+                                <span>Nº Matrícula:</span>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p class="border" style="font-size: 1.5em;">
+                                    <span t-field="doc.mef_lot_id" />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    Por medio del presente documento se hace constar que
+                    con esta fecha se retira el medio de frío
+                    tipo <span t-field="doc.mef_product_id.name" />, cuya
+                    matrícula se halla arriba referenciada. Con la firma
+                    del presente documento queda extinguido el Acuerdo
+                    nº <span
+                        t-field="doc.code"
+                    />. de cesión de medios de frío en depósito
+                    al punto de venta de fecha …………………. únicamente en
+                    cuanto al medio de frio relacionado en este
+                    documento.
+                </p>
+                <div class="row text-center mt32 pb256">
+                    <div class="col-3">
+                        <p>EL PROPIETARIO</p>
+                    </div>
+                    <div class="col-4">
+                        <p>EL CONCESIONARIO</p>
+                    </div>
+                    <div class="col-3">
+                        <p>POR EL CLIENTE</p>
+                    </div>
+                </div>
+                <div class="border border-dark mt128" style="height: 180px;">
+                    <p class="font-weight-bold">Observaciones:</p>
+                </div>
+            </div>
+        </t>
+    </template>
+    <template id="mef_report_recession_agreement">
+        <t t-call="web.html_container">
+            <t t-set="partner_ref_field" t-value="partner_ref_field or 'ref'" />
+            <t t-foreach="docs" t-as="doc">
+                <t
+                    t-call="agreement_unilever_mef.mef_report_recession_document"
+                    t-lang="doc.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+</odoo>

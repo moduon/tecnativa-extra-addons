@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="agreement_form" model="ir.ui.view">
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement.agreement_form" />
+        <field name="arch" type="xml">
+            <field name="code" position="after">
+                <field
+                    name="mef_returned_code"
+                    attrs="{'invisible': [('domain', '!=', 'unilever_mef')]}"
+                />
+            </field>
+            <div name="button_box" position="inside">
+                <field name="mef_picking_id" invisible="1" />
+                <field name="mef_returned_picking_id" invisible="1" />
+                <button
+                    type="object"
+                    name="action_view_delivery"
+                    class="oe_stat_button"
+                    icon="fa-truck"
+                    attrs="{'invisible': ['|', ('domain', '!=', 'unilever_mef'), '&amp;', ('mef_picking_id', '=', False), ('mef_returned_picking_id', '=', False)]}"
+                    groups="base.group_user"
+                >
+                    <span>Pickings</span>
+                </button>
+            </div>
+            <sheet position="before">
+                <header>
+                    <button
+                        name="action_delivery_fresh_asset"
+                        string="Send fresh asset"
+                        type="object"
+                        class="oe_highlight"
+                        attrs="{'invisible': [('domain', '!=', 'unilever_mef')]}"
+                    />
+                    <button
+                        name="action_return_fresh_asset"
+                        string="Return fresh asset"
+                        type="object"
+                        attrs="{'invisible': [('domain', '!=', 'unilever_mef')]}"
+                    />
+                </header>
+            </sheet>
+            <notebook position="inside">
+                <page
+                    name="fresh_asset"
+                    string="Fresh assets"
+                    attrs="{'invisible': [('domain', '!=', 'unilever_mef')]}"
+                >
+                    <group>
+                        <group>
+                            <field
+                                name="mef_lot_id"
+                                attrs="{
+                                        'required': [('domain', '=', 'unilever_mef')],
+                                        'readonly': [('mef_picking_id', '!=', False)],
+                                   }"
+                                context="{'default_company_id': company_id}"
+                            />
+                            <field name="mef_product_id" />
+                            <field name="mef_product_categ_id" />
+                            <field name="mef_product_standard_price" />
+                        </group>
+                        <group>
+                            <field name="mef_supplier_contact_id" />
+                            <field name="mef_owner_id" />
+                            <field name="mef_picking_id" groups="base.group_no_one" />
+                            <field
+                                name="mef_returned_picking_id"
+                                groups="base.group_no_one"
+                            />
+                        </group>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+    <record id="agreement_tree" model="ir.ui.view">
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement.agreement_tree" />
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="mef_lot_id" />
+                <field name="mef_product_id" />
+            </field>
+        </field>
+    </record>
+    <record id="agreement_search" model="ir.ui.view">
+        <field name="model">agreement</field>
+        <field name="inherit_id" ref="agreement.agreement_search" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <separator />
+                <field name="mef_lot_id" />
+                <field name="mef_product_id" />
+            </field>
+            <filter name="purchase" position="after">
+                <separator />
+                <filter
+                    name="unilever_fresh_asset"
+                    string="Fresh assets"
+                    domain="[('domain', '=', 'unilever_mef')]"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="mef_report_concession_document">
+        <t t-call="web.basic_layout">
+            <div class="page text-justify">
+                <div>
+                    <div class="row">
+                        <div class="col">
+                            <img
+                                class="float-left"
+                                src="/agreement_unilever_mef/static/src/img/unilever.png"
+                                width="133"
+                                height="66"
+                            />
+                            <img
+                                class="float-right"
+                                src="/agreement_unilever_mef/static/src/img/frigo.png"
+                                width="133"
+                                height="66"
+                            />
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col">
+                            <h6 class="text-center font-weight-bold font-italic">
+                            ACUERDO DE CESIÓN DE MEDIOS DE FRÍO EN DEPÓSITO AL PUNTO DE VENTA
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <hr color="black" />
+                <div style="font-size: 1.2em;">
+                    <div class="row mt-5">
+                        <div class="col-6">
+                            <p>
+                                En Viladecans,
+                                <span
+                                    t-field="doc.create_date"
+                                    t-options="{'format': 'dd'}"
+                                />
+                                de
+                                <span
+                                    t-field="doc.create_date"
+                                    t-options="{'format': 'MMMM'}"
+                                />
+                                de
+                                <span
+                                    t-field="doc.create_date"
+                                    t-options="{'format': 'YYYY'}"
+                                />
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6 text-right">Nº Cliente</div>
+                                <div class="col-6">
+                                    <p class="text-right" style="font-size:1.2em">
+                                        <span
+                                            t-out="doc.partner_id[partner_ref_field]"
+                                        />
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 text-right">Nº Contrato</div>
+                                <div class="col-6">
+                                    <p class="text-right" style="font-size:1.5em">
+                                        <span t-field="doc.code" />
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 text-right">Nº Matrícula</div>
+                                <div class="col-6">
+                                    <p class="text-right" style="font-size:1.5em">
+                                        <span t-field="doc.mef_lot_id" />
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <p class="text-center font-weight-bold">REUNIDOS</p>
+                        <p>
+                            De una parte,
+                            <span class="font-weight-bold">UNILEVER ESPAÑA</span>
+                            ,
+                            S.A., con domicilio en la calle Tecnologia, 19 de
+                            08840-Viladecans, titular del NIF número A-28660520, y
+                            en su nombre y representación D. Albert Godayol Gilabert.
+                        </p>
+                        <p>
+                            De otra, <span t-field="res_company.name" />,
+                            Concesionario de Unilever  España S.A.,
+                            para la zona de Tarragona, con domicilio
+                            en <span t-field="res_company.street" />,
+                            CIF <span t-field="res_company.vat" /> y en su nombre y
+                            representación
+                            D. Victor Medina Cervera, en
+                            adelante denominado, el “Concesionario”.
+                        </p>
+                        <p>
+                            Y de la otra,
+                            D. ......................................., con DNI
+                            nº........................., en nombre y representación
+                            de <span
+                                t-field="doc.partner_id.commercial_partner_id.name"
+                            />, con
+                            domicilio en <span t-field="doc.partner_id.city" />
+                            C/ <span t-field="doc.partner_id.street" />,
+                            (en lo sucesivo denominado el “Cliente”).
+                        </p>
+                        <p class="text-center font-weight-bold mt-5">EXPONEN</p>
+                        <ol class="ml-5">
+                            <li>
+                                Que Unilever es propietaria en pleno dominio del
+                                medio de frío, cuyo número de matrícula se
+                                identifica en el encabezamiento de este Contrato,
+                                con un valor de
+                                <span t-field="doc.mef_product_standard_price" />
+                                Euros, en adelante
+                                referido como “medios de frio”. Para cada nuevo
+                                medio de frio cedido o para cualquier modificación
+                                o cambio se firmará el correspondiente documento de
+                                cesión entre Unilever, el Concesionario y el
+                                Cliente.
+                            </li>
+                            <li class="mt-3">
+                                Que el indicado medio de frío se encuentra puesto
+                                a disposición del Concesionario por parte de
+                                Unilever, en los términos regulados en el Contrato
+                                de Concesión suscrito entre ambas partes, para su
+                                posterior distribución a los puntos de venta de los
+                                helados con marca registrada por Unilever, Frigo,
+                                Ben&amp;Jerry´s, Café Zero, Calippo® Slush o My
+                                Cornetto.
+                            </li>
+                            <li class="mt-3">
+                                <p>
+                                    Que estando interesado el Cliente en realizar
+                                    la venta al público de los helados que Unilever
+                                    comercializa, en sus establecimientos, y
+                                    resultándole necesario los medios de frío para
+                                    su correcto almacenamiento, UNILEVER hace
+                                    entrega al Cliente, a través de su
+                                    Concesionario, de dichos medios de frío para su
+                                    ubicación permanente en el establecimiento
+                                    <span t-field="doc.partner_id.name" />
+                                    sito en
+                                    <span t-field="doc.partner_id.street" />,
+                                    <span t-field="doc.partner_id.city" />.
+                                </p>
+                                <p class="mt-5">
+                                    Dicha cesión queda sujeta a las condiciones
+                                    descritas a continuación en el presente Acuerdo.
+                                </p>
+                            </li>
+                        </ol>
+                        <div class="row mt-5 text-center">
+                            <div class="col-5">
+                                <p>Por Unilever España, S.A.</p>
+                                <img
+                                    src="/agreement_unilever_mef/static/src/img/Albert_Godayol.JPG"
+                                    width="50%"
+                                />
+                            </div>
+                            <div class="col-4">
+                                <p>El concesionario</p>
+                            </div>
+                            <div class="col-4">
+                                <p>Por el Cliente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p style="page-break-after:always;" />
+                <div>
+                    <span class="font-weight-bold">CONDICIONES</span>
+                </div>
+                <hr color="black" class="mb-3" />
+                <div class="mt-1" style="font-size: 0.95em;">
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            PRIMERA. Operación
+                            accesoria.
+                        </span>
+                        La cesión del medio de frío se
+                        realiza como operación accesoria a las operaciones de
+                        suministro de los productos marca Frigo, Ben&amp;Jerry´s,
+                        Café Zero, Calippo® Slush o My Cornetto, según proceda,
+                        que el Concesionario efectuará al Cliente para que
+                        pueda desarrollar su actividad de venta al público de
+                        los mismos, manteniéndolos en condiciones óptimas para
+                        su consumo, para lo cual resulta esencial la compra por
+                        parte del Cliente de los productos directamente al
+                        Concesionario o, en su caso, a Unilever.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">SEGUNDA. Uso y destino.</span>
+                        El uso del medio de frío será exclusivamente el
+                        almacenamiento, para su venta, de productos helados
+                        para su reventa a los consumidores. En caso de existir
+                        solo un medio en el cliente este será usado para el
+                        almacenamiento de cuantos productos helados disponga el
+                        cliente. En caso de existir más de un medio de frío en
+                        el cliente uno de los medios será exclusivamente para
+                        el almacenamiento de los productos marca Frigo,
+                        Ben&amp;Jerry´s, Café Zero, Calippo® Slush o My
+                        Cornetto que le suministrará al Cliente. Cualquier otro
+                        uso o cesión a terceros, así como cualquier cambio de
+                        ubicación del medio sin la previa autorización expresa
+                        del Concesionario o, en su caso, Unilever, queda
+                        totalmente prohibido, por lo que el Cliente será el
+                        único responsable de cualquier daño que dicho cambio de
+                        ubicación no autorizado cause sobre bienes y personas.
+                        Asimismo, Unilever queda autorizada, adicionalmente a
+                        cualquier otra acción, a exigir al Cliente una
+                        indemnización por el valor de reposición del medio.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">TERCERA. Vigencia.</span>
+                        Este Contrato tendrá una duración de un mes, si bien se
+                        entenderá renovado tácitamente por periodos iguales,
+                        siempre que no sea denunciado por ninguna de las partes
+                        con una antelación de quince (15) días. No obstante, la
+                        vigencia del presente contrato está plenamente
+                        condicionada a la vigencia del acuerdo comercial con el
+                        Cliente, por lo que la resolución de dicho acuerdo
+                        supondrá, en los mismos términos, la resolución
+                        automática de este Contrato.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            CUARTA. Precio de la
+                            Cesión.
+                        </span>
+                        El medio de frío se cede al Cliente
+                        a título oneroso, entendiéndose incluida la
+                        contraprestación por su uso en el precio de los
+                        productos marca Frigo, Magnum, Ben&amp;Jerry´s, Café Zero,
+                        Calippo® Slush o My Cornetto y cualesquiera otras,
+                        propiedad de Unilever que se venderán al Cliente para
+                        su reventa a los consumidores.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            QUINTA. Identificación
+                            y mantenimiento.
+                        </span>
+                        Los medios de frío de
+                        Unilever llevan impresa la marca Frigo, Ben&amp;Jerry´s,
+                        Café Zero, Calippo® Slush o My Cornetto y cualesquiera
+                        otras, propiedad de Unilever que junto con la matrícula
+                        no podrán ser alterados de ningún modo por parte del
+                        Cliente.
+                    </p>
+                    <p class="mb-0">
+                        El Cliente se responsabiliza de la correcta instalación
+                        y mantenimiento del medio de frío. En todos los casos,
+                        el Cliente debe cumplir estrictamente con las
+                        siguientes normas de seguridad:
+                    </p>
+                    <ol style="list-style-type: lower-alpha;" class="ml-4 mb-0">
+                        <li class="mt-0">
+                            Todos los medios de frío deben conectarse siempre
+                            con un enchufe con toma de tierra.
+                        </li>
+                        <li class="mt-0">
+                            Enchufar el medio de frío a una toma de
+                            alimentación eléctrica reservada sólo para éste y
+                            sin adaptadores intermedios. La instalación donde
+                            se enchufe el medio de frío debe estar debidamente
+                            protegida de acuerdo con el actual Reglamento de
+                            Baja Tensión (magneto-térmico, diferencial de alta,
+                            etc.).
+                        </li>
+                        <li class="mt-0">
+                            No obstaculizar las rejillas de ventilación del
+                            medio, debiendo dejar siempre un espacio libre de
+                            cómo mínimo 15 centímetros para que el equipo
+                            ventile bien. Las rejillas deberán mantenerse
+                            asimismo limpias y libres de obstrucciones debidas
+                            a polvo acumulado.
+                        </li>
+                        <li class="mt-0">
+                            No enchufar el medio de frío a tomas de corrientes
+                            cercanas a fuentes de calor y/o elementos
+                            fácilmente inflamables.
+                        </li>
+                    </ol>
+                    <p class="mb-0">
+                        Asimismo, el Cliente se obliga a utilizar el medio
+                        de frío con la diligencia de un buen comerciante,
+                        atendiendo los gastos de su reparación y
+                        conservación, cuando sufra averías motivadas por
+                        negligencia, mal uso o abandono.
+                    </p>
+                    <p class="mb-0">
+                        En caso de avería no causada por negligencia, mal
+                        uso o abandono, el Cliente deberá notificarlo a
+                        Unilever o a quién ésta designe en cada momento,
+                        el cual tomará las acciones oportunas para llevar
+                        a cabo la reparación del mismo.
+                    </p>
+                    <p class="mb-0">
+                        En el caso de cualquier siniestro en que el medio
+                        de frío se vea involucrado,
+                        <span class="font-weight-bold">
+                            el Cliente deberá
+                            comunicarlo de inmediato a Unilever
+                            (900 81 25 10)
+                        </span>
+                        para que esta pueda tomar
+                        las medidas adecuadas.   En caso de que Unilever no
+                        sea notificada inmediatamente desde que hubiese
+                        ocurrido el evento antes citado y ello causara que
+                        no pueda intervenir activamente en el estudio de sus
+                        causas y su solución, Unilever quedará completamente
+                        exonerada de cualquier responsabilidad, renunciando
+                        el Cliente a cualquier cantidad o indemnización o
+                        compensación que le pudiera corresponder reclamar.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            SEXTA.- Comunicación de
+                            la propiedad del medio:
+                        </span>
+                        En caso de tener
+                        arrendado el Cliente el establecimiento donde se sitúe
+                        el medio de frío, en calidad de arrendatario, se obliga
+                        a comunicar a su arrendador que el mismo es propiedad
+                        de Unilever. En caso de cierre, traspaso o venta del
+                        local o de cualquier otra incidencia, el cliente se
+                        obliga a notificarlo por escrito con una antelación
+                        mínima de (7) días laborales.
+                    </p>
+                    <p class="mb-0">
+                        En caso de cualquier actuación judicial o embargo que
+                        pueda afectar a los bienes del Cliente, este vendrá
+                        obligado a avisar inmediatamente a Unilever de tales
+                        eventos y pondrá en conocimiento de los adquirentes,
+                        demandantes, acreedores y personal judicial, que el
+                        medio de frío es propiedad de Unilever.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            SÉPTIMA. Verificaciones.
+                        </span>
+                        El Cliente, en cualquier momento, permitirá al
+                        personal del Concesionario o, en su caso, de Unilever,
+                        la inspección del medio o medios de frío. Asimismo, el
+                        Cliente se obliga a informar inmediatamente al
+                        Concesionario o, en su caso, a Unilever sobre cualquier
+                        cambio de ubicación del medio o medios propiedad de
+                        Unilever.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            OCTAVA. Responsabilidades.
+                        </span>
+                        El Cliente pagará al
+                        propietario del medio de frio los daños y perjuicios
+                        que sufran, y será responsable por los daños y
+                        perjuicios o lesiones que pudiera causar, como
+                        consecuencia de no seguir las instrucciones sobre la
+                        correcta instalación, mantenimiento y/o utilización del
+                        medio de frío. Salvo caso fortuito o de fuerza mayor,
+                        el Cliente responderá de la pérdida del medio de frío y
+                        de los desperfectos que puedan sufrir los productos por
+                        cualquier causa dentro del medio de frío.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            NOVENA.- Consecuencias de la resolución:
+                        </span>
+                        Resuelto este Acuerdo será exigible la
+                        devolución del medio o medios de frío en un plazo
+                        máximo de siete (7) días naturales, siendo el Cliente
+                        responsable tanto de su devolución como de los daños o
+                        averías debidas a negligencia o incorrecto uso, por lo
+                        que Unilever queda facultada para utilizar todas las
+                        acciones necesarias para hacer efectiva esta
+                        restitución de los medios, así como exigir los
+                        daños y perjuicios irrogados o que se irroguen desde
+                        ese momento. En este sentido, el Cliente permitirá que
+                        el personal de Unilever, lo desmonte y lo transporte.
+                        Unilever se reserva el derecho de reclamar al Cliente
+                        las cantidades que procedan si, desmontado el medio de
+                        frío, se aprecian en él daños ajenos a su uso. En caso
+                        contrario las partes acuerdan expresamente que será de
+                        aplicación una penalización equivalente a diez euros
+                        (€ 10) por cada día de retraso que transcurra desde la
+                        finalización, por la causa que fuere, del Contrato
+                        hasta la efectiva entrega del medio/s a Unilever o a
+                        quien ésta designe.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            DÉCIMA.- Subrogación:
+                        </span>
+                        El cambio de Concesionario Frigo en la zona del
+                        Cliente supondrá la subrogación automática del nuevo
+                        concesionario a la posición del concesionario saliente,
+                        por lo que no se producirá la resolución de este
+                        Contrato en este supuesto y el Cliente deberá seguir
+                        únicamente las indicaciones de Unilever.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            UNDÉCIMA.- Seguro:
+                        </span>
+                        los medios de frio están asegurados por
+                        Unilever como titular del bien. En caso de siniestro el
+                        Cliente está obligado a comunicar el siniestro dentro
+                        de las 48 horas siguientes al siniestro. En caso
+                        contrario, Unilever no será responsable de los daños
+                        que hubiere podido causar dicho medio en el Cliente o
+                        en cualquier tercero.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            DUODÉCIMA.- Protección de Datos:
+                        </span>
+                        UNILEVER informa a los intervinientes que sus
+                        datos personales serán tratados por UNILEVER y el Grupo
+                        Unilever con el fin de mantener las relaciones
+                        mercantiles existentes, dirigirles la oportuna
+                        información empresarial y gestionar la entrega,
+                        conservación y mantenimiento de las Conservadoras.
+                    </p>
+                    <p class="mb-0">
+                        El tratamiento de los citados datos personales se
+                        fundamenta en la ejecución del presente Contrato y
+                        se realizará durante todo el período de vigencia del
+                        mismo. Una vez finalizado el Contrato, los datos serán
+                        conservados por los plazos de prescripción de las
+                        obligaciones que puedan derivar de la relación
+                        mercantil.
+                    </p>
+                    <p class="mb-0">
+                        Dichos datos podrán ser cedidos a aseguradoras,
+                        empresas de mantenimiento de neveras y otras
+                        prestadoras de servicios, siempre que dicha cesión
+                        sea necesaria para la prestación de los servicios de
+                        conservación y mantenimiento de las Conservadoras y
+                        para otros servicios relacionados con el negocio.
+                    </p>
+                    <p class="mb-0">
+                        Los intervinientes quedan informados de que, para
+                        ejercitar sus derechos de acceso, rectificación,
+                        supresión, oposición o limitación del tratamiento,
+                        así como solicitar la portabilidad de sus datos, pueden
+                        dirigirse por escrito, adjuntando una copia de su
+                        documento de identidad, a la siguiente dirección
+                        electrónica: info.spain@unilever.com, con el asunto
+                        "Protección de Datos".
+                    </p>
+                    <p class="mb-0">
+                        Unilever informa a los intervinientes de su derecho a
+                        presentar una reclamación ante la Autoridad de
+                        Control   en   materia   de   Protección   de
+                        Datos competente cuando consideren que el tratamiento
+                        de sus datos personales infringe la normativa de
+                        protección de datos aplicable.
+                    </p>
+                    <p class="mb-0">
+                        Los intervinientes podrán obtener más información sobre
+                        las empresas que integran el Grupo Unilever
+                        en www.unilever.com y podrán obtener más detalles sobre
+                        el tratamiento de sus datos en
+                        www.unileverprivacypolicy.com.
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-weight-bold">
+                            DUODÉCIMA.- Fuero:
+                        </span>
+                        Las partes, con renuncia expresa al fuero que
+                        pudiera corresponderles, se someten, para cualesquiera
+                        controversias que pudieran surgir en la interpretación
+                        y ejecución de ese documento, a los Juzgados y
+                        Tribunales de Barcelona.
+                    </p>
+                    <p class="mb-0">
+                        Las partes, conformes, firman el presente Acuerdo en
+                        tres versiones originales, en el lugar y fecha
+                        indicados en el encabezamiento.
+                    </p>
+                    <div class="row mt-1">
+                        <div class="col-5">
+                            <p class="font-weight-bold text-left">
+                                Por Unilever España, S.A.
+                            </p>
+                            <img
+                                src="/agreement_unilever_mef/static/src/img/Albert_Godayol.JPG"
+                                width="40%"
+                                class="text-center"
+                            />
+                        </div>
+                        <div class="col-3">
+                            <p class="font-weight-bold text-center">
+                                El Concesionario
+                            </p>
+                        </div>
+                        <div class="col-4">
+                            <p class="font-weight-bold text-right">
+                                Por el Cliente
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+    <template id="mef_report_concession_agreement">
+        <t t-call="web.html_container">
+            <t t-set="partner_ref_field" t-value="partner_ref_field or 'ref'" />
+            <t t-foreach="docs" t-as="doc">
+                <t
+                    t-call="agreement_unilever_mef.mef_report_concession_document"
+                    t-lang="doc.partner_id.lang"
+                />
+            </t>
+        </t>
+    </template>
+</odoo>
