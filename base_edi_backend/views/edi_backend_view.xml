@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_backend_tree" model="ir.ui.view">
+        <field name="model">edi.backend</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="action_type" />
+                <field name="name" />
+                <field name="code" />
+                <field name="last_sync_date" />
+                <field name="export_config_id" />
+            </tree>
+        </field>
+    </record>
+    <record id="edi_backend_form" model="ir.ui.view">
+        <field name="model">edi.backend</field>
+        <field name="arch" type="xml">
+            <form string="Edi Backend">
+                <header>
+                    <button
+                        name="action_ftp_test_connection"
+                        type="object"
+                        string="Test FTP"
+                        groups="base.group_no_one"
+                        attrs="{'invisible': [('communication_type', '!=', 'ftp')]}"
+                    />
+                    <button
+                        name="action_sftp_test_connection"
+                        type="object"
+                        string="Test SFTP"
+                        groups="base.group_no_one"
+                        attrs="{'invisible': [('communication_type', '!=', 'sftp')]}"
+                    />
+                    <button
+                        name="action_export"
+                        type="object"
+                        string="Export"
+                        attrs="{'invisible': [('action_type', '!=', 'export')]}"
+                    />
+                    <button
+                        name="action_import"
+                        type="object"
+                        string="Import"
+                        attrs="{'invisible': [('action_type', '!=', 'import')]}"
+                    />
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            class="oe_stat_button"
+                            name="create_cron"
+                            icon="fa-th-list"
+                            type="object"
+                        >
+                            <span class="o_stat_text">Cron</span>
+                        </button>
+                        <button
+                            class="oe_stat_button"
+                            name="action_communication_history"
+                            icon="fa-th-list"
+                            type="object"
+                        >
+                            <field
+                                string="History"
+                                name="history_count"
+                                widget="statinfo"
+                            />
+                        </button>
+                    </div>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}"
+                    />
+                    <field name="active" invisible="1" />
+                    <group>
+                        <field name="name" />
+                        <field name="code" />
+                        <field name="communication_type" />
+                        <field name="action_type" widget="radio" />
+                        <field name="provider" />
+                        <field name="extension" />
+                        <field name="encoding" />
+                        <field name="last_sync_date" invisible="1" />
+                        <field
+                            name="export_config_id"
+                            attrs="{'invisible': [('action_type', '!=', 'export')], 'required': [('action_type', '=', 'export')]}"
+                        />
+                        <field
+                            name="import_config_id"
+                            attrs="{'invisible': [('action_type', '!=', 'import')], 'required': [('action_type', '=', 'import')]}"
+                        />
+                    </group>
+                    <group>
+                        <field name="sequence_id" />
+                        <field name="sequence_number_next" />
+                        <field name="file_name" invisible="1" />
+                        <field
+                            name="data"
+                            readonly="1"
+                            filename="file_name"
+                            attrs="{'invisible': [('action_type', '!=', 'export')]}"
+                        />
+                    </group>
+                    <group
+                        string="FTP transfer"
+                        attrs="{'invisible': [('communication_type', '!=', 'ftp')]}"
+                    >
+                        <field name="ftp_host" />
+                        <field name="ftp_user" />
+                        <field name="ftp_password" password="True" />
+                        <field name="remote_path" />
+                        <field name="ftp_file_special_name" />
+                    </group>
+                    <group
+                        string="SFTP transfer"
+                        attrs="{'invisible': [('communication_type', '!=', 'sftp')]}"
+                    >
+                        <field name="sftp_host" />
+                        <field name="sftp_port" />
+                        <field name="sftp_user" />
+                        <field name="sftp_password" password="True" />
+                        <field name="remote_path" />
+                        <field
+                            name="sftp_file_special_name"
+                            attrs="{'invisible': [('action_type', '=', 'export')]}"
+                        />
+                        <label
+                            for="sftp_file_special_name"
+                            string="Field used to search on the server the files that start by this name"
+                            class="o_form_label text-muted"
+                            attrs="{'invisible': [('action_type', '!=', 'import')]}"
+                        />
+                    </group>
+                    <group
+                        string="E-Mail"
+                        attrs="{'invisible': [('communication_type', '!=', 'email')]}"
+                    >
+                        <field name="destination_partner_ids" widget="many2many_tags" />
+                        <field
+                            name="email_author"
+                            attrs="{'required': [('communication_type', '=', 'email'),
+                                                ('action_type', '=', 'export')],
+                                    'invisible':[('action_type','!=','export')]}"
+                        />
+                        <label
+                            for="alias_name"
+                            string="Email Alias"
+                            attrs="{'invisible': [('action_type', '!=', 'import')]}"
+                        />
+                        <div
+                            name="alias_def"
+                            attrs="{'invisible': [('action_type', '!=', 'import')]}"
+                        >
+                            <field
+                                name="alias_id"
+                                class="oe_read_only oe_inline"
+                                string="Email Alias"
+                                required="0"
+                            />
+                                <div
+                                class="oe_edit_only oe_inline"
+                                name="edit_alias"
+                                style="display: inline;"
+                            >
+                                    <field name="alias_name" class="oe_inline" />@<field
+                                    name="alias_domain"
+                                    class="oe_inline"
+                                    readonly="1"
+                                />
+                                </div>
+                            </div>
+                         <field
+                            name="alias_contact"
+                            class="oe_inline oe_edit_only"
+                            attrs="{'invisible': [('action_type', '!=', 'import')]}"
+                            string="Accept Emails From"
+                        />
+                    </group>
+                    <notebook>
+                        <page name="records_tab" string="Records">
+                            <group>
+                                <field name="model_id" />
+                                <field name="model_name" invisible="1" />
+                                <field
+                                    name="filter_domain"
+                                    widget="domain"
+                                    options="{'model': 'model_name'}"
+                                />
+                                <field
+                                    name="date_field"
+                                    domain="[('model_id', '=', model_id), ('ttype', 'in', ['datetime', 'date'])]"
+                                />
+                                <field
+                                    name="date_range"
+                                    attrs="{'invisible': [('date_field', '=', False)]}"
+                                />
+                                <field name="security_days" />
+                                <field name="special_domain" />
+                            </group>
+                        </page>
+                        <page name="anonymize_tab" string="Anonimize">
+                            <group>
+                                <field name="anonymize_entries" />
+                                <field name="char_for_anonymize" />
+                                <field
+                                    name="anonymized_domain"
+                                    widget="domain"
+                                    options="{'model': 'model_name'}"
+                                />
+                            </group>
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="notes" />
+                        </page>
+                </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="edi_backend_search">
+        <field name="name">Edi Backend Search</field>
+        <field name="model">edi.backend</field>
+        <field name="arch" type="xml">
+            <search>
+                <field
+                    name="name"
+                    filter_domain="['|', ('name', 'ilike', self), ('code', '=', self)]"
+                />
+                <filter
+                    name="export"
+                    string="Export"
+                    domain="[('action_type','=','export')]"
+                />
+                <filter
+                    name="import"
+                    string="Import"
+                    domain="[('action_type','=','import')]"
+                />
+                <separator />
+                <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active', '=', False)]"
+                />
+                <separator />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Action type"
+                        name="group_action_type"
+                        context="{'group_by': 'action_type'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_edi_backend">
+        <field name="name">Edi Backend</field>
+        <field name="res_model">edi.backend</field>
+        <field name="view_mode">tree,form</field>
+        <field
+            name="view_ids"
+            eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('base_edi_backend.edi_backend_tree')}),
+            (0, 0, {'view_mode': 'form'})]"
+        />
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+</odoo>

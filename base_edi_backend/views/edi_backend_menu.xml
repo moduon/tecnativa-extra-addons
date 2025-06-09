@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        id="edi_backend_menu"
+        name="Edi Backend"
+        parent="base_edi.menu_edi_root"
+        action="action_edi_backend"
+        sequence="10"
+    />
+    <menuitem
+        id="menu_edi_backend_reporting"
+        parent="base_edi.menu_edi_root"
+        name="Reporting"
+        sequence="20"
+    />
+    <menuitem
+        id="edi_backend_setting_menu"
+        parent="base_edi.menu_edi_root"
+        name="Settings"
+        sequence="30"
+    />
+    <menuitem
+        id="edi_backend_export_import_config_menu"
+        parent="edi_backend_setting_menu"
+        action="action_edi_backend_config"
+        name="Configuration"
+        sequence="10"
+    />
+</odoo>

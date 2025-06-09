@@ -1,0 +1,835 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_edi_backend
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-27 09:54+0000\n"
+"PO-Revision-Date: 2022-09-27 09:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_edi_backend
+#: code:addons/base_edi_backend/wizard/edi_backend_file_wiz.py:0
+#, python-format
+msgid "%s_report_%s.txt"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+msgid "<span class=\"o_stat_text\">Cron</span>"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__action_type
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__action_type
+msgid "Action Type"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_search
+msgid "Action type"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__active
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__active
+msgid "Active"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__alignment
+msgid "Alignment"
+msgstr ""
+
+#. module: base_edi_backend
+#: code:addons/base_edi_backend/models/edi_backend.py:0
+#, python-format
+msgid "An error ocurred when trying to import file: %s"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+msgid "Anonimize"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__anonymize_entries
+msgid "Anonymize Entries"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__anonymize_value
+msgid "Anonymize Value"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__anonymized_domain
+msgid "Anonymized Domain"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__applied_domain
+msgid "Applied Domain"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__applied_records
+msgid "Applied Records"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__applied_sequence
+msgid "Applied Sequence"
+msgstr ""
+
+#. module: base_edi_backend
+#: code:addons/base_edi_backend/models/edi_backend.py:0
+#, python-format
+msgid "Applied records ({})"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__apply_separator_char
+msgid "Apply Separator Char"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__filter_domain
+msgid "Apply on"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__apply_sign
+msgid "Apply sign"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.product_template_form_view
+msgid "Backend info"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_mixin__backend_state_base
+msgid "Backend state"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_config__filler_zero_with__blank
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_config_line__filler_zero_with__blank
+msgid "Blank"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_communication_history__state__cancelled
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_mixin__backend_state_base__cancelled
+msgid "Cancelled"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__char_for_anonymize
+msgid "Char For Anonymize"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__code
+msgid "Code"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__columns_definition
+msgid "Columns Definition"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__communication_type
+msgid "Communication Type"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__company_id
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__company_id
+msgid "Company"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__conditional
+msgid "Conditional"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__conditional_expression
+msgid "Conditional expression"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__export_config_id
+msgid "Config parent"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.ui.menu,name:base_edi_backend.menu_edi_backend_export_config
+msgid "Configuration"
+msgstr ""
+
+#. module: base_edi_backend
+#: code:addons/base_edi_backend/models/edi_backend.py:0
+#: code:addons/base_edi_backend/models/edi_backend.py:0
+#, python-format
+msgid "Connection Test Failed! %s"
+msgstr ""
+
+#. module: base_edi_backend
+#: code:addons/base_edi_backend/models/edi_backend.py:0
+#: code:addons/base_edi_backend/models/edi_backend.py:0
+#: code:addons/base_edi_backend/models/edi_backend.py:0
+#: code:addons/base_edi_backend/models/edi_backend.py:0
+#, python-format
+msgid "Connection Test OK!"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__create_uid
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__create_uid
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__create_uid
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__create_uid
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__create_date
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__create_date
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__create_date
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__create_date
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend__date_range__current_month
+msgid "Current Month"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__date_range
+msgid "Date Field Range"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__date_field
+msgid "Date field to filter"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__destination_partner_ids
+msgid "Destination Partner"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__display_name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__display_name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__display_name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__display_name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz__display_name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_mixin__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend__communication_type__email
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+msgid "E-Mail"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model,name:base_edi_backend.model_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__edi_backend_id
+msgid "EDI Backend"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model,name:base_edi_backend.model_edi_backend_config
+msgid "EDI Backend Config"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model,name:base_edi_backend.model_edi_backend_config_line
+msgid "EDI Backend Config Line"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model,name:base_edi_backend.model_edi_backend_file_wiz
+msgid "EDI Backend File Wizard"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.actions.act_window,name:base_edi_backend.action_edi_backend_communication_history
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_communication_history_form
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_communication_history_tree
+msgid "EDI Backend History"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_communication_history_search
+msgid "EDI Backend History Search"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model,name:base_edi_backend.model_edi_backend_communication_history
+msgid "EDI Backend communication history"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.actions.act_window,name:base_edi_backend.action_edi_backend_config
+msgid "EDI Backend config"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_config_form
+msgid "EDI Backend configuration"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_config_line_form
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_config_line_tree
+msgid "EDI Backend configuration line"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_config_tree
+msgid "EDI Backend configurations"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model,name:base_edi_backend.model_edi_backend_mixin
+msgid "EDI Backend mixin for records"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.actions.act_window,name:base_edi_backend.action_edi_backend
+#: model:ir.ui.menu,name:base_edi_backend.menu_edi_backend_setting
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_import_tree
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_tree
+msgid "Edi Backend"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__email_author
+msgid "Email Author"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__date_end
+msgid "Ending date"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_communication_history__state__sent_errors
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_mixin__backend_state_base__sent_error
+msgid "Errors"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend__action_type__export
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_search
+msgid "Export"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__export_config_id
+msgid "Export config"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__export_type
+msgid "Export field type"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__state
+msgid "Export state"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__expression
+msgid "Expression"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__extension
+msgid "Extension"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend__communication_type__ftp
+msgid "FTP"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+msgid "FTP transfer"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__size
+msgid "Field size"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+msgid ""
+"Field used to search on the server the files that start by\n"
+"                            this name"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz__data
+msgid "File"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__ftp_file_special_name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__sftp_file_special_name
+msgid "File Special Name"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__file_name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__file_name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz__name
+msgid "File name"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,help:base_edi_backend.field_edi_backend__ftp_file_special_name
+#: model:ir.model.fields,help:base_edi_backend.field_edi_backend__sftp_file_special_name
+msgid "File will allways be synced with this name"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__filler_zero_with
+msgid "Fill left zeros with..."
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__filler_zero_with
+msgid "Filler left zeros with ..."
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__fixed_value
+msgid "Fixed value"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__ftp_host
+msgid "Ftp Host"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__ftp_password
+msgid "Ftp Password"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__ftp_user
+msgid "Ftp User"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend__provider__base
+msgid "Generic"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__group_key
+msgid "Group key"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+msgid "History"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__history_count
+msgid "History Count"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__id
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__id
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__id
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__id
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz__id
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_mixin__id
+msgid "ID"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,help:base_edi_backend.field_edi_backend__register_record_state
+msgid "If set the record state will be set on every backend communication"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,help:base_edi_backend.field_edi_backend_config_line__repeat_expression
+msgid ""
+"If set, this expression will be used for getting the list of elements to "
+"iterate on"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,help:base_edi_backend.field_edi_backend_config_line__conditional_expression
+msgid ""
+"If set, this expression will be used to evaluate if this line should be "
+"added"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend__action_type__import
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_search
+msgid "Import"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__import_config_id
+msgid "Import config"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_communication_history_form
+msgid "Import from file"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,help:base_edi_backend.field_edi_backend_mixin__backend_state_base
+msgid "Indicates the state of the Backend send state"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,help:base_edi_backend.field_edi_backend_communication_history__state
+msgid "Indicates the state of the Export send state"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__key
+msgid "Key"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__last_sync_date
+msgid "Last Export"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__data
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__data
+msgid "Last File"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend____last_update
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history____last_update
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config____last_update
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line____last_update
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz____last_update
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_mixin____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend__date_range__last_month
+msgid "Last Month"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__write_uid
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__write_uid
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__write_uid
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__write_uid
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__write_date
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__write_date
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__write_date
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__write_date
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__config_line_ids
+msgid "Lines"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_communication_history__model_name
+msgid "Model"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__model_name
+msgid "Model Name"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__model_number
+msgid "Model number"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__name
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__name
+msgid "Name"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__negative_sign
+msgid "Negative sign character"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,help:base_edi_backend.field_edi_backend__sequence_number_next
+msgid ""
+"Next number that will be used. This number can be incremented frequently so "
+"the displayed value might already be obsolete"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__sequence_number_next
+msgid "Next sequence"
+msgstr ""
+
+#. module: base_edi_backend
+#: code:addons/base_edi_backend/models/edi_backend.py:0
+#: code:addons/base_edi_backend/wizard/edi_backend_file_wiz.py:0
+#, python-format
+msgid "No export configuration selected."
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_communication_history__state__not_sent
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_mixin__backend_state_base__not_sent
+msgid "Not sent"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__decimal_size
+msgid "Number of char for decimals"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__model_id
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__model_id
+msgid "Odoo model"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_communication_history_form
+msgid "Open records"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__position
+msgid "Position"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_config__columns_definition__positional
+msgid "Positional"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__positive_sign
+msgid "Positive sign character"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__provider
+msgid "Provider"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_communication_history_form
+msgid "Rebuild"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+msgid "Records"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__register_record_state
+msgid "Register Record State"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__remote_path
+msgid "Remote path"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__repeat
+msgid "Repeat"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__repeat_expression
+msgid "Repeat expression"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend__communication_type__sftp
+msgid "SFTP"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+msgid "SFTP transfer"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__security_days
+msgid "Security days"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_communication_history__state__sent
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_mixin__backend_state_base__sent
+msgid "Sent"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_config__columns_definition__separator
+msgid "Separator"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__separator_char
+msgid "Separator Char"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__sequence_id
+msgid "Sequence file"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_communication_history_form
+msgid "Set no send"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__sftp_host
+msgid "Sftp Host"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__sftp_password
+msgid "Sftp Password"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__sftp_user
+msgid "Sftp User"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend__special_domain
+msgid "Special domain"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config__date_start
+msgid "Starting date"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_file_wiz__state
+msgid "State"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__subconfig_id
+msgid "Sub-configuration"
+msgstr ""
+
+#. module: base_edi_backend
+#: model_terms:ir.ui.view,arch_db:base_edi_backend.edi_backend_form
+msgid "Test FTP"
+msgstr ""
+
+#. module: base_edi_backend
+#: code:addons/base_edi_backend/wizard/edi_backend_file_wiz.py:0
+#, python-format
+msgid "The formated string must match the given length: %d"
+msgstr ""
+
+#. module: base_edi_backend
+#: code:addons/base_edi_backend/wizard/edi_backend_file_wiz.py:0
+#, python-format
+msgid "The formated string must match the given length: %s"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__value
+msgid "Value"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__bool_no
+msgid "Value for no"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,field_description:base_edi_backend.field_edi_backend_config_line__bool_yes
+msgid "Value for yes"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields,help:base_edi_backend.field_edi_backend__destination_partner_ids
+msgid ""
+"When mailing is enabled these will be the partners we'll communicate to"
+msgstr ""
+
+#. module: base_edi_backend
+#: code:addons/base_edi_backend/wizard/edi_backend_file_wiz.py:0
+#, python-format
+msgid "Wrong aling option. It should be < or >"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_config__filler_zero_with__zero
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_config_line__filler_zero_with__zero
+msgid "Zeros"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_file_wiz__state__get
+msgid "get"
+msgstr ""
+
+#. module: base_edi_backend
+#: model:ir.model.fields.selection,name:base_edi_backend.selection__edi_backend_file_wiz__state__open
+msgid "open"
+msgstr ""

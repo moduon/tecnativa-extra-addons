@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_edi_backend_export_config_admin,edi.backend.export.config admin,model_edi_backend_config,base_edi.group_edi_manager,1,1,1,1
+access_edi_backend_export_config_user,edi.backend.export.config user,model_edi_backend_config,base_edi.group_edi_user,1,1,1,0
+access_edi_backend_export_config_line_admin,edi.backend.export.config admin,model_edi_backend_config_line,base_edi.group_edi_manager,1,1,1,1
+access_edi_backend_export_config_line_user,edi.backend.export.config user,model_edi_backend_config_line,base_edi.group_edi_user,1,1,1,0
+access_edi_backend_admin,edi.backend admin,model_edi_backend,base_edi.group_edi_manager,1,1,1,1
+access_edi_backend_user,edi.backend user,model_edi_backend,base_edi.group_edi_user,1,1,1,0
+access_edi_backend_communication_history_admin,edi.backend.communication.history admin,model_edi_backend_communication_history,base_edi.group_edi_manager,1,1,1,1
+access_edi_backend_communication_history_user,edi.backend.communication.history user,model_edi_backend_communication_history,base_edi.group_edi_user,1,1,1,0
+access_edi_backend_file_wiz,access_edi_backend_file_wiz,base_edi_backend.model_edi_backend_file_wiz,base.group_user,1,1,1,0

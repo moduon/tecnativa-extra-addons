@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_backend_config_search" model="ir.ui.view">
+        <field name="inherit_id" ref="l10n_es_aeat.aeat_model_export_config_search" />
+        <field name="mode">primary</field>
+        <field name="model">edi.backend.config</field>
+        <field name="arch" type="xml">
+            <field name="name" />
+        </field>
+    </record>
+    <record id="edi_backend_config_tree" model="ir.ui.view">
+        <field name="inherit_id" ref="l10n_es_aeat.aeat_model_export_config_tree" />
+        <field name="mode">primary</field>
+        <field name="model">edi.backend.config</field>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="string">EDI Backend configurations</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="edi_backend_config_form" model="ir.ui.view">
+        <field name="inherit_id" ref="l10n_es_aeat.aeat_model_export_config_form" />
+        <field name="mode">primary</field>
+        <field name="model">edi.backend.config</field>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="string">EDI Backend configuration</attribute>
+            </xpath>
+            <field name="model_id" position="after">
+                <field name="filler_zero_with" />
+                <field name="columns_definition" />
+                <field name="separator_char" />
+            </field>
+        </field>
+    </record>
+    <record id="edi_backend_config_line_tree" model="ir.ui.view">
+        <field
+            name="inherit_id"
+            ref="l10n_es_aeat.aeat_model_export_config_line_tree"
+        />
+        <field name="mode">primary</field>
+        <field name="model">edi.backend.config.line</field>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="string">EDI Backend configuration line</attribute>
+            </xpath>
+            <field name="name" position="before">
+                <field name="export_config_id" />
+            </field>
+            <field name="conditional" position="after">
+                <field name="anonymize_value" widget="boolean_toggle" />
+                <field name="allow_special_character" widget="boolean_toggle" />
+            </field>
+            <field name="value" position="after">
+                <field name="key" optional="hide" />
+            </field>
+        </field>
+    </record>
+    <record id="edi_backend_config_line_form" model="ir.ui.view">
+        <field
+            name="inherit_id"
+            ref="l10n_es_aeat.aeat_model_export_config_line_form"
+        />
+        <field name="mode">primary</field>
+        <field name="model">edi.backend.config.line</field>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="attributes">
+                <attribute name="string">EDI Backend configuration line</attribute>
+                <field name="export_config_id" />
+            </xpath>
+            <field name="name" position="before">
+                <field name="export_config_id" />
+            </field>
+            <field name="size" position="after">
+                <field name="apply_separator_char" />
+            </field>
+            <field name="fixed_value" position="after">
+                <field name="key" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_edi_backend_config">
+        <field name="name">EDI Backend config</field>
+        <field name="res_model">edi.backend.config</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

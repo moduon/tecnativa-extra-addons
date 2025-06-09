@@ -2,6 +2,7 @@ exclude: |
   (?x)
   # NOT INSTALLABLE ADDONS
   ^agreement_unilever_mef/|
+  ^base_edi_backend/|
   ^edi_backend_ulv/|
   ^edi_unilever_sale_product_set/|
   # END NOT INSTALLABLE ADDONS

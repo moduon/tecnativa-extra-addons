@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- To extend by other sub-modules -->
+    <record id="product_template_form_view" model="ir.ui.view">
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="model">product.template</field>
+        <field name="priority" eval="200" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='inventory']" position="after">
+                <page name="base_edi_backend" string="Backend info" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

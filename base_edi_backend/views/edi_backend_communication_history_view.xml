@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="edi_backend_communication_history_search" model="ir.ui.view">
+        <field name="model">edi.backend.communication.history</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="edi_backend_id" />
+                <field name="file_name" />
+            </tree>
+        </field>
+    </record>
+    <record id="edi_backend_communication_history_tree" model="ir.ui.view">
+        <field name="model">edi.backend.communication.history</field>
+        <field name="arch" type="xml">
+            <tree create="false">
+                <field name="edi_backend_id" invisible="1" />
+                <field name="create_date" />
+                <field name="write_date" />
+                <field name="file_name" invisible="0" readonly="1" />
+                <field name="data" readonly="1" filename="file_name" invisible="1" />
+            </tree>
+        </field>
+    </record>
+    <record id="edi_backend_communication_history_form" model="ir.ui.view">
+        <field name="model">edi.backend.communication.history</field>
+        <field name="arch" type="xml">
+            <form string="EDI Backend History" create="false">
+                <header>
+                    <button
+                        name="action_set_no_send"
+                        type="object"
+                        string="Set no send"
+                        attrs="{'invisible': [('action_type', '!=', 'export')]}"
+                    />
+                    <button
+                        name="action_rebuild_file"
+                        type="object"
+                        string="Rebuild"
+                        attrs="{'invisible': [('action_type', '!=', 'export')]}"
+                    />
+                    <button
+                        name="action_open_applied_records"
+                        type="object"
+                        string="Open records"
+                    />
+                    <button
+                        name="action_import_run"
+                        type="object"
+                        string="Import from file"
+                        attrs="{'invisible': [('action_type', '!=', 'import')]}"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        attrs="{'invisible': [('action_type', '!=', 'export')]}"
+                    />
+                </header>
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        attrs="{'invisible': [('active', '=', True)]}"
+                    />
+                    <field name="active" invisible="1" />
+                    <group>
+                        <field name="edi_backend_id" />
+                        <field name="action_type" invisible="1" />
+                        <field name="create_date" />
+                        <field name="write_date" />
+                        <field name="state" />
+                    </group>
+                    <group>
+                        <field name="model_name" invisible="1" />
+                        <field
+                            name="applied_domain"
+                            widget="domain"
+                            options="{'model': 'model_name'}"
+                            attrs="{'invisible': [('action_type', '!=', 'export')]}"
+                        />
+                        <field name="applied_records" />
+                    </group>
+                    <group>
+                        <field name="file_name" invisible="1" />
+                        <field name="data" readonly="1" filename="file_name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_edi_backend_communication_history">
+        <field name="name">EDI Backend History</field>
+        <field name="res_model">edi.backend.communication.history</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="edi_backend_communication_history_search" />
+    </record>
+</odoo>
